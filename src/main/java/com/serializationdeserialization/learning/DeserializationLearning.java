@@ -5,8 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
-import com.generic.models.Student;
-
 /* Deserialization is the process of reconstructing the object from the serialized state. */
 
 public class DeserializationLearning {
@@ -14,7 +12,7 @@ public class DeserializationLearning {
 		try {
 			ObjectInputStream in = new ObjectInputStream(new FileInputStream("SerializationLearning.txt"));
 			Student s = (Student) in.readObject();
-			System.out.println(s.getId() + " " + s.getName());
+			System.out.println(s.getId() + " " + s.getName() + " " + s.getAge());
 			in.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

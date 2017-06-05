@@ -5,16 +5,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-import com.generic.models.Student;
-
 /* Serialization in java is a mechanism of writing the state of an object into a byte stream.
- * Serializable is a marker interface. */
+ * Serializable is a marker interface.
+ * It is mainly used in Hibernate, RMI, JPA, EJB and JMS technologies.
+ * Used to travel object's state on the network (known as marshaling).*/
 
 public class SerializationLearning {
 
 	public static void main(String[] args) {
 
-		Student s1 = new Student(211, "ravi");
+		Student s1 = new Student(211, "ravi", 22);
 
 		ObjectOutputStream out;
 		try {
