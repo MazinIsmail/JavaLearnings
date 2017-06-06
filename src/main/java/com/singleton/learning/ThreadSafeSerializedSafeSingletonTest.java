@@ -9,10 +9,10 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
-public class SerializedSingletonTest {
+public class ThreadSafeSerializedSafeSingletonTest {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
-		SerializedSingleton instanceOne = SerializedSingleton.getInstance();
+		ThreadSafeSerializedSafeSingleton instanceOne = ThreadSafeSerializedSafeSingleton.getInstance();
 		
 		// serailize
 		ObjectOutput out = new ObjectOutputStream(new FileOutputStream("SerializedSingleton.txt"));
@@ -21,7 +21,7 @@ public class SerializedSingletonTest {
 
 		// deserailize from file to object
 		ObjectInput in = new ObjectInputStream(new FileInputStream("SerializedSingleton.txt"));
-		SerializedSingleton instanceTwo = (SerializedSingleton) in.readObject();
+		ThreadSafeSerializedSafeSingleton instanceTwo = (ThreadSafeSerializedSafeSingleton) in.readObject();
 		in.close();
 
 		System.out.println("instanceOne hashCode=" + instanceOne.hashCode());

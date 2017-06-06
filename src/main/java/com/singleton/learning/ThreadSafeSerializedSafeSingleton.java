@@ -3,18 +3,18 @@ package com.singleton.learning;
 import java.io.Serializable;
 
 /*Bill pugh solution. Inner class to create singleton.*/
-public class SerializedSingleton implements Serializable {
+public class ThreadSafeSerializedSafeSingleton implements Serializable {
 
 	private static final long serialVersionUID = -7604766932017737115L;
 
-	private SerializedSingleton() {
+	private ThreadSafeSerializedSafeSingleton() {
 	}
 
 	private static class SingletonHelper {
-		private static final SerializedSingleton instance = new SerializedSingleton();
+		private static final ThreadSafeSerializedSafeSingleton instance = new ThreadSafeSerializedSafeSingleton();
 	}
 
-	public static SerializedSingleton getInstance() {
+	public static ThreadSafeSerializedSafeSingleton getInstance() {
 		return SingletonHelper.instance;
 	}
 
