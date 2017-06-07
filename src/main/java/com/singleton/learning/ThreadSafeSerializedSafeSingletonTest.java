@@ -15,12 +15,12 @@ public class ThreadSafeSerializedSafeSingletonTest {
 		ThreadSafeSerializedSafeSingleton instanceOne = ThreadSafeSerializedSafeSingleton.getInstance();
 		
 		// serailize
-		ObjectOutput out = new ObjectOutputStream(new FileOutputStream("SerializedSingleton.txt"));
+		ObjectOutput out = new ObjectOutputStream(new FileOutputStream("res/SerializedSingleton.txt"));
 		out.writeObject(instanceOne);
 		out.close();
 
 		// deserailize from file to object
-		ObjectInput in = new ObjectInputStream(new FileInputStream("SerializedSingleton.txt"));
+		ObjectInput in = new ObjectInputStream(new FileInputStream("res/SerializedSingleton.txt"));
 		ThreadSafeSerializedSafeSingleton instanceTwo = (ThreadSafeSerializedSafeSingleton) in.readObject();
 		in.close();
 

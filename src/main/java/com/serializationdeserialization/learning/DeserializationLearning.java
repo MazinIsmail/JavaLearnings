@@ -10,7 +10,7 @@ import java.io.ObjectInputStream;
 public class DeserializationLearning {
 	public static void main(String[] args) {
 		try {
-			ObjectInputStream in = new ObjectInputStream(new FileInputStream("SerializationLearning.txt"));
+			ObjectInputStream in = new ObjectInputStream(new FileInputStream("res/SerializationLearning.txt"));
 			Student s = (Student) in.readObject();
 			System.out.println(s.getId() + " " + s.getName() + " " + s.getAge());
 			in.close();

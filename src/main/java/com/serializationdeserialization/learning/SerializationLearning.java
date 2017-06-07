@@ -18,7 +18,7 @@ public class SerializationLearning {
 
 		ObjectOutputStream out;
 		try {
-			FileOutputStream fout = new FileOutputStream("SerializationLearning.txt");
+			FileOutputStream fout = new FileOutputStream("res/SerializationLearning.txt");
 			out = new ObjectOutputStream(fout);
 			out.writeObject(s1);
 			out.flush();
