@@ -1,4 +1,4 @@
-package com.singleton.learning;
+package com.pattern.singleton;
 
 public class ThreadSafeSingleton2 {
 	private static ThreadSafeSingleton2 instance;

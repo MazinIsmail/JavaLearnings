@@ -1,4 +1,4 @@
-package com.singleton.learning;
+package com.pattern.singleton;
 
 /*Not Thread Safe*/
 public class LazyInitializedSingleton {
