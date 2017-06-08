@@ -1,0 +1,25 @@
+public class Blip {
+	protected int blipvert(int x) { return 0; }
+	}
+
+class Vert extends Blip {
+	// insert code here
+}
+
+
+A. public int blipvert(int x) { return 0; }
+Correct. You can't lower the accessibility of a method.
+
+B. private int blipvert(int x) { return 0; } 
+Wrong. The compiler will say that you are assigning a weaker access specifier.
+
+C. private int blipvert(long x) { return 0; }
+This will perfectly compile because here method "overloading" comes into action because the base class and this method differ in their argument type. So based on type of argument type the method will be called.
+
+D. protected long blipvert(int x) { return 0; }
+This wont compile because you are creating virtually the "same" methods but you are varying the return types. But there's a catch here. You can vary return types if the types can be safely casted. eg. double and int etc... Here that is not possible. Hence you get a compile time error.
+
+E. protected int blipvert(long x) { return 0; }
+F. protected long blipvert(long x) { return 0; }
+G. protected long blipvert(int x, int y) { return 0; }
+This will perfectly compile and method overloading comes into action.

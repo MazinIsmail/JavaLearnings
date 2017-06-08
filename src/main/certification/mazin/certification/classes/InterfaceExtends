@@ -1,0 +1,22 @@
+class Foo { } // OK
+class Bar implements Foo { } // No! Can't implement a class
+interface Baz { } // OK
+interface Fi { } // OK
+interface Fee implements Baz { } // No! Interface can't implement an interface
+interface Zee implements Foo { } // No! Interface can't implement a class
+interface Zoo extends Foo { } // No! Interface can't extend a class
+interface Boo extends Fi { } // OK. Interface can extend an interface
+class Toon extends Foo, Button { } // No! Class can't extend multiple classes
+class Zoom implements Fi, Baz { } // OK. Class can implement multiple interfaces
+interface Vroom extends Fi, Baz { } // OK. Interface can extend multiple interfaces
+class Yow extends Foo implements Fi { } // OK. Class can do both (extends must be 1st)
+
+
+Interface cant implement a interface or a class.
+Interface can extend an interface or multiple interface but cant extend a class
+Class can implement multiple interface but cant extend multiple class
+Class can implement and extend for a interface and class respectively both but extend should be first 
+
+
+Loose coupling means there should be less dependency between two class. 
+Higher Cohesion means a class should be made only for one work not for more. Means highly focused on one topic.
