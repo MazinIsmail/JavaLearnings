@@ -1,6 +1,7 @@
 package com.puzzles.string;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class DuplicateWords {
@@ -21,6 +22,13 @@ public class DuplicateWords {
 				System.out.println(word + " : " + wordCount.get(word));
 			}
 		}
+
+		System.out.println();
+
+		for (Map.Entry<String, Integer> wordEntrySet : wordCount.entrySet()) {
+			System.out.println(wordEntrySet.getKey() + " : " + wordEntrySet.getValue());
+		}
+
 	}
 
 	public static void main(String[] args) {
