@@ -1,4 +1,4 @@
-package com.puzzles.string;
+package com.puzzles.numbers;
 
 import java.util.Arrays;
 
