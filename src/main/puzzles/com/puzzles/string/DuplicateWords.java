@@ -7,7 +7,7 @@ import java.util.Set;
 public class DuplicateWords {
 	private static void duplicateWords(String inputString) {
 		String[] words = inputString.split(" ");
-		HashMap<String, Integer> wordCount = new HashMap<>();
+		Map<String, Integer> wordCount = new HashMap<>();
 		for (String word : words) {
 			if (wordCount.containsKey(word.toLowerCase())) {
 				wordCount.put(word.toLowerCase(), wordCount.get(word.toLowerCase()) + 1);
