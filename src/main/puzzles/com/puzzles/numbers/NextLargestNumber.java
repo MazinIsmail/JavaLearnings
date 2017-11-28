@@ -6,33 +6,37 @@ public class NextLargestNumber {
 
 	private static int findNextLargest(int number) {
 		int[] digits = getDigits(number);
-		int rightIndex = -1;
-		int leftIndex = -1;
-		
-		// Find the indices of the digits to be swapped.
-		for (int i = digits.length - 1; i > 0; i--) {
-			for (int j = i - 1; j >= 0; j--) {
-				if (digits[i] > digits[j]) {
-					System.out.println(digits[j] + " : " + digits[i]);
-					if (rightIndex == -1) {
-						rightIndex = i;
-						leftIndex = j;
-					} else if (leftIndex < j && rightIndex > i) {
-						rightIndex = i;
-						leftIndex = j;
-					}
-					break;
-				}
+		int digitLength = digits.length;
+		int i;
+		// Start from the right most digit
+		// and find the first digit that is smaller
+		// than the digit next to it.
+		for (i = digitLength - 1; i > 0; i--) {
+			if (digits[i] > digits[i - 1]) {
+				break;
 			}
 		}
-
-		if (rightIndex == -1)
-			throw new RuntimeException(
-					"Not possible to make next greater number. Input number is the greatest number that can be formed from the digits.");
-
-		swap(digits, rightIndex, leftIndex);
-		sort(digits, leftIndex + 1);
-		return formNumber(digits);
+		int currentIndex = i;
+		int previousIndex = i - 1;
+		int numberCurrentIndex = digits[i];
+		int numberPreviousIndex = digits[i - 1];
+		if (i == 0) {
+			System.out.println("Not possible, no greater number available.");
+			return 0;
+		} else {
+			Integer swapIndex = null;
+			// Find the smallest digit on right
+			// side of numberCurrentIndex that is greater than the
+			// numberPreviousIndex
+			for (int j = i; j < digitLength; j++) {
+				if (digits[j] > numberPreviousIndex) {
+					swapIndex = j;
+				}
+			}
+			swap(digits, swapIndex, previousIndex);
+			sort(digits, i);
+			return formNumber(digits);
+		}
 	}
 
 	private static int[] getDigits(int number) {
@@ -55,7 +59,6 @@ public class NextLargestNumber {
 		int endIndex = digits.length;
 		if (startIndex == endIndex)
 			return;
-		// Sort array from start index to end index
 		Arrays.sort(digits, startIndex, endIndex);
 	}
 
@@ -68,11 +71,18 @@ public class NextLargestNumber {
 	}
 
 	public static void main(String[] args) {
-		int number = 12344321;
-		System.out.println("Input number is:        " + number);
 		try {
-			int nextLargest = findNextLargest(number);
-			System.out.println("Next largest number is: " + nextLargest);
+			System.out.println("Input number is:        " + 12344321);
+			System.out.println("Next largest number is: " + findNextLargest(12344321));
+
+			System.out.println("Input number is:        " + 123454321);
+			System.out.println("Next largest number is: " + findNextLargest(123454321));
+
+			System.out.println("Input number is:        " + 13520);
+			System.out.println("Next largest number is: " + findNextLargest(13520));
+			
+			System.out.println("Input number is:        " + 135420);
+			System.out.println("Next largest number is: " + findNextLargest(135420));
 		} catch (RuntimeException ex) {
 			System.out.println(ex.getMessage());
 		}
