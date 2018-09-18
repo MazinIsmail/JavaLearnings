@@ -8,12 +8,14 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Set;
 
 public class DateAPILearning {
 	public static void main(String[] args) {
@@ -74,5 +76,28 @@ public class DateAPILearning {
 		LocalDateTime parsed = LocalDateTime.parse("Nov 03, 2014 - 07:13", formatter);
 		String string = formatter.format(parsed);
 		System.out.println(string); // Nov 03, 2014 - 07:13
+
+		System.out.println();
+		System.out.println("ZonedDateTime");
+		ZonedDateTime nowZonedDateTime = ZonedDateTime.now(); // 2018-05-02T15:45:20.981-04:00[America/New_York]
+		System.out.println("nowZonedDateTime: " + nowZonedDateTime);
+
+		ZonedDateTime nowInParis = ZonedDateTime.now(ZoneId.of("Europe/Paris")); // 2018-05-02T21:45:20.982+02:00[Europe/Paris]
+		System.out.println("nowInParis: " + nowInParis);
+
+		Set<String> zoneIds = ZoneId.getAvailableZoneIds();
+		System.out.println("zoneIds: " + zoneIds);
+
+		ZonedDateTime departureTime = ZonedDateTime.parse("2018-07-01T10:00:00Z[America/New_York]");
+		ZonedDateTime arrivalTime = ZonedDateTime.parse("2018-07-01T22:00:00Z[Europe/London]");
+		System.out.println("departureTime: " + departureTime);
+		System.out.println("arrivalTime: " + arrivalTime);
+
+		System.out.println();
+		System.out.println("Convert LocalDateTime to ZonedDateTime");
+		LocalDateTime ldt = LocalDateTime.parse("2018-07-01T08:00");
+		ZoneId zoneId = ZoneId.of("Europe/Paris");
+		ZonedDateTime zdt = ZonedDateTime.of(ldt, zoneId); // 2018-07-01T08:00+02:00[Europe/Paris]
+		System.out.println("zdt: " + zdt);
 	}
 }
