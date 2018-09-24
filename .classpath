@@ -9,6 +9,7 @@
 	<classpathentry kind="src" path="src/main/certification"/>
 	<classpathentry kind="src" path="src/main/java8"/>
 	<classpathentry kind="src" path="src/main/designpattern"/>
+	<classpathentry kind="src" path="src/main/oops"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
