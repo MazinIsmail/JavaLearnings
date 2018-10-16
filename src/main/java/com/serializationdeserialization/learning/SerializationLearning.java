@@ -13,23 +13,20 @@ import java.io.ObjectOutputStream;
 public class SerializationLearning {
 
 	public static void main(String[] args) {
-
 		Student s1 = new Student(211, "ravi", 22);
-
 		ObjectOutputStream out;
 		try {
-			FileOutputStream fout = new FileOutputStream("res/SerializationLearning.txt");
+			FileOutputStream fout = new FileOutputStream("src/main/resources/SerializationLearning.txt");
 			out = new ObjectOutputStream(fout);
 			out.writeObject(s1);
 			out.flush();
 			out.close();
+			System.out.println("success");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-		System.out.println("success");
 	}
 
 }
