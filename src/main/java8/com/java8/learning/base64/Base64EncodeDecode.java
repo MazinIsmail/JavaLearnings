@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.nio.file.Files;
 import java.util.Base64;
 
 public class Base64EncodeDecode {
@@ -34,7 +35,7 @@ public class Base64EncodeDecode {
 			byte[] base64MimeDecodedString = Base64.getUrlDecoder().decode(base64MimeEncodedString);
 			System.out.println("Base64 Decoded String (URL): " + new String(base64MimeDecodedString, "utf-8"));
 
-			byte[] fileContent = readFileToByteArray(filePath);
+			byte[] fileContent = readFileToByteArrayNew(filePath);
 			String fileEncodedString = Base64.getEncoder().encodeToString(fileContent);
 			System.out.println("Base64 Encoded File (Basic): " + fileEncodedString);
 			byte[] fileDecodedString = Base64.getDecoder().decode(fileEncodedString);
@@ -44,6 +45,11 @@ public class Base64EncodeDecode {
 		} catch (Exception e) {
 			System.out.println("Error :" + e.getMessage());
 		}
+	}
+
+	private static byte[] readFileToByteArrayNew(String filePath) throws IOException {
+		File file = new File(filePath);
+		return Files.readAllBytes(file.toPath());
 	}
 
 	private static byte[] readFileToByteArray(String filePath) {
@@ -65,7 +71,7 @@ public class Base64EncodeDecode {
 					e.printStackTrace();
 				}
 			}
-
+	
 		}
 		return bytesArray;
 	}
