@@ -26,14 +26,16 @@ public class HashSetMethods {
 
 		hset1.add("Value N");
 		// Using removeAll() method
+		System.out.println("Before remove All Set1 values" + hset1);
 		hset1.removeAll(hset);
-		System.out.println("After remove All Set2 values" + hset1);
+		System.out.println("After remove hset2 values from hset1" + hset1);
 
 		// Using removeIF
 		hsetNum.add(1);
 		hsetNum.add(2);
 		hsetNum.add(3);
 		hsetNum.add(4);
+		System.out.println("Before removeIf() :: " + hsetNum);
 		hsetNum.removeIf(num -> num % 2 == 0);
 		System.out.println("After removeIf() => " + hsetNum);
 
@@ -43,6 +45,7 @@ public class HashSetMethods {
 		hset.add("Value4");
 
 		// returns a shallow copy of the set
+		// TODO: 
 		clonedHset1 = (HashSet) hset.clone();
 		System.out.println("Value of Hset" + hset);
 		System.out.println("Cloned set of hset :" + clonedHset1);

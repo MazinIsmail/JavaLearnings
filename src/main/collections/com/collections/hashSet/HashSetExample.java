@@ -5,6 +5,7 @@ import java.util.HashSet;
 public class HashSetExample {
 
 	public static void main(String[] args) {
+		//TODO: duplicates not allowed
 		HashSet<String> hset = new HashSet<String>();
 		hset.add("Vision");
 		hset.add("DoctorStrange");
@@ -15,8 +16,11 @@ public class HashSetExample {
 		System.out.println("Avengers :" + hset);
 
 		hset.add("Thor");
-
+		hset.add("Witch");
+		
 		System.out.println("Avengers : " + hset);
+		
+		
 
 	}
 

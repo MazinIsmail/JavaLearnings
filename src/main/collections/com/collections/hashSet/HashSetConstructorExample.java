@@ -14,6 +14,7 @@ public class HashSetConstructorExample {
 		Arr.add("Uno");
 
 		// Parameterized : converting other collections
+		//TODO: Duplicate removal
 		HashSet<String> hset2 = new HashSet<String>(Arr);
 		System.out.println(hset2);
 
@@ -23,7 +24,7 @@ public class HashSetConstructorExample {
 		System.out.println(hset3);
 
 		// Default capacity : 16 and Load Factor : 0.75
-		HashSet<String> hset4 = new HashSet<>(32, 8);
+		HashSet<String> hset4 = new HashSet<>(32, 0.8f);
 		hset3.add("one");
 		System.out.println(hset4);
 

@@ -1,4 +1,4 @@
-package mazin.certification.puzzle;
+package com.string.puzzle;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -15,6 +15,8 @@ public class StringPuzzle {
 	}
 
 	public static void main(String args[]) {
+		String revertCheck = reverseWordChar("Apple");
+		System.out.println(revertCheck);
 //		strReversal("This is a String");
 		strWordReversal("This is a String");
 		/*
@@ -195,5 +197,17 @@ public class StringPuzzle {
 			reverse = reverse + str.charAt(i);
 		}
 		return reverse;
+	}
+	
+	private static String reverseWordChar(String str) {
+		int length = str.length();
+		char[] charArray = str.toCharArray();
+		char[] reverseCharArray= new char[length];
+		int j = 0;
+		for (int i = length - 1; i >= 0; i--) {
+			reverseCharArray[j] = charArray[i];
+			j++;
+		}
+		return String.valueOf(reverseCharArray);
 	}
 }
