@@ -1,0 +1,51 @@
+/**
+ * A Java program to demonstrate deep copy using clone() 
+ */
+package com.markableinterfaces.learning;
+
+class Demo {
+	int x, y;
+}
+
+// Contains a reference of Test and implements 
+// clone with deep copy. 
+class Demo2 implements Cloneable {
+	int a, b;
+
+	Demo c = new Demo();
+
+	public Object clone() throws CloneNotSupportedException {
+		// Assign the shallow copy to new refernce variable t
+		Demo2 t = (Demo2) super.clone();
+
+		t.c = new Demo();
+
+		// Create a new object for the field c and assign it to shallow copy obtained,
+		// to make it a deep copy
+		return t;
+	}
+}
+
+public class CloneableDeepCopy {
+
+	public static void main(String[] args) throws CloneNotSupportedException {
+
+		Demo2 t1 = new Demo2();
+		t1.a = 10;
+		t1.b = 20;
+		t1.c.x = 30;
+		t1.c.y = 40;
+
+		Demo2 t3 = (Demo2) t1.clone();
+		t3.a = 100;
+
+		// Change in primitive type of t2 will not be reflected in t1 field
+		t3.c.x = 300;
+
+		// Change in object type field of t2 will not be reflected in t1(deep copy)
+		System.out.println("values t1 : " + t1.a + " " + t1.b + " " + t1.c.x + " " + t1.c.y);
+		System.out.println("values t3 : " + t3.a + " " + t3.b + " " + t3.c.x + " " + t3.c.y);
+
+	}
+
+}
