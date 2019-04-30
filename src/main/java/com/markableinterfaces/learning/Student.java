@@ -1,6 +1,12 @@
 package com.markableinterfaces.learning;
 
-public class Student  implements java.io.Serializable {
+import java.io.Serializable;
+
+public class Student  implements Serializable {
+	/**
+	 * TODO: Comment
+	 */
+	private static final long serialVersionUID = 1L;
 	public int a;
 	public String b;
 

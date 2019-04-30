@@ -27,23 +27,23 @@ public class CloneableShallowCopy {
 
 	public static void main(String[] args) throws CloneNotSupportedException{
 		
-		 Test2 t1 = new Test2(); 
-	       t1.a = 10; 
-	       t1.b = 20; 
-	       t1.c.x = 30; 
-	       t1.c.y = 40; 
+		 Test2 test2orginal = new Test2(); 
+	       test2orginal.a = 10; 
+	       test2orginal.b = 20; 
+	       test2orginal.c.x = 30; 
+	       test2orginal.c.y = 40; 
 	  
-	       Test2 t2 = (Test2)t1.clone(); 
+	       Test2 test2cloned = (Test2)test2orginal.clone(); 
 	  
 	       // Creating a copy of object t1 and passing   it to t2 
-	       t2.a = 100; 
+	       test2cloned.a = 100; 
 	  
 	       // Change in primitive type of t2 will not  be reflected in t1 field 
-	       t2.c.x = 300; 
+	       test2cloned.c.x = 300; 
 	  
 	       // Change in object type field will be reflected in both t2 and t1(shallow copy) 
-	       System.out.println("values t1 : "+t1.a + " " + t1.b + " " + "valus in Test1 : "+t1.c.x + " " + t1.c.y); 
-	       System.out.println("values t2 : "+t2.a + " " + t2.b + " " + "valus in Test1 : "+t2.c.x + " " + t2.c.y); 
+	       System.out.println("values t1 : "+test2orginal.a + " " + test2orginal.b + " " + "valus in Test1 : "+test2orginal.c.x + " " + test2orginal.c.y); 
+	       System.out.println("values t2 : "+test2cloned.a + " " + test2cloned.b + " " + "valus in Test1 : "+test2cloned.c.x + " " + test2cloned.c.y); 
 
 	}
 

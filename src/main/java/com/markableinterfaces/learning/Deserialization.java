@@ -12,7 +12,7 @@ public class Deserialization {
 
 	public static void main(String[] args) {
 		Employee employee = new Employee("ab", 20, 2, 1000);
-		String filename = "D:\\sessionfiles\\file1.txt";
+		String filename = "D:\\file1.txt";
 		// Serialization
 		try {
 			// Saving of object in a file
@@ -25,7 +25,8 @@ public class Deserialization {
 			System.out.println("Object has been serialized\n" + "Data before Deserialization.");
 			printdata(employee);
 			// value of static variable changed
-			employee.b = 2000;
+			//employee.b = 2000;
+			employee.age=77;
 		} catch (IOException ex) {
 			System.out.println("IOException is caught");
 		}

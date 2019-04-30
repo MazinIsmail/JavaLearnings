@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Employee implements Serializable {
 	private static final long serialversionUID = 129348938L;
 	transient int a;
-	static int b;
+	static int b; // TODO static will under go serialization?
 	String name;
 	int age;
 

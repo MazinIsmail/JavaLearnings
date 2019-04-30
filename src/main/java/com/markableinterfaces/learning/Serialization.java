@@ -5,6 +5,8 @@ package com.markableinterfaces.learning;
  *  Deserialization is the reverse process;
  *  where the byte stream is used to recreate the actual Java object in memory.
  *  The byte stream created is platform independent
+ *  
+ *  TODO: Realtime  example???
  */
 
 import java.io.*;
@@ -13,7 +15,7 @@ class Serialization {
 	public static void main(String[] args) {
 		
 		Student student = new Student(1, "Demo");
-		String filename = "D:\\sessionfiles\\file.txt";
+		String filename = "D:\\file.txt";
 
 		// Serialization
 		try {
@@ -21,7 +23,7 @@ class Serialization {
 			FileOutputStream file = new FileOutputStream(filename);
 			ObjectOutputStream out = new ObjectOutputStream(file);
 
-			// Method for serialization of object
+			// Method to write the data into file
 			out.writeObject(student);
 
 			out.close();
@@ -54,6 +56,8 @@ class Serialization {
 			System.out.println("a = " + object1.a);
 			System.out.println("b = " + object1.b);
 		}
+		
+		// TODO:  array of objects, 
 
 		catch (IOException ex) {
 			System.out.println("IOException is caught");
