@@ -2,10 +2,16 @@ package com.collections.hashSet;
 
 import java.util.HashSet;
 
+/*
+ * HASHSET
+ * No duplicate values allowed.
+ * Insertion order not maintained.
+ * Default capacity : 16.
+ * Default load factor : 0.75
+ */
 public class HashSetExample {
 
 	public static void main(String[] args) {
-		//TODO: duplicates not allowed
 		HashSet<String> hset = new HashSet<String>();
 		hset.add("Vision");
 		hset.add("DoctorStrange");
@@ -17,10 +23,8 @@ public class HashSetExample {
 
 		hset.add("Thor");
 		hset.add("Witch");
-		
+
 		System.out.println("Avengers : " + hset);
-		
-		
 
 	}
 

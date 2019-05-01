@@ -45,7 +45,7 @@ public class HashSetMethods {
 		hset.add("Value4");
 
 		// returns a shallow copy of the set
-		// TODO: 
+		// TODO:
 		clonedHset1 = (HashSet) hset.clone();
 		System.out.println("Value of Hset" + hset);
 		System.out.println("Cloned set of hset :" + clonedHset1);
