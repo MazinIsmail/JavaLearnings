@@ -1,7 +1,6 @@
 package com.collections.arrayList;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ArrayListDiff {

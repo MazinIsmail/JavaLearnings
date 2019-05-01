@@ -1,5 +1,6 @@
 package com.collections.linkedList;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
@@ -44,6 +45,27 @@ public class LinkedListListIterating {
 		System.out.println("Backward Traverse");
 		while (listIterateObj.hasPrevious()) {
 			System.out.println(listIterateObj.previous());
+		}
+
+		/**
+		 * LinkedList Forward Iteration
+		 */
+		LinkedList<String> listObjString = new LinkedList<String>();
+		// Adding values to the list(List1)
+		listObjString.add("Ram");
+		listObjString.add("Raj");
+		listObjString.add("Ravi");
+		listObjString.add("Raj");
+		listObjString.add("Sai");
+		listObjString.add("Steve");
+		listObjString.add("John");
+		listObjString.add("Tom");
+		listObjString.add("John");
+		System.out.println(listObjString);
+
+		Iterator it = listObjString.iterator();
+		while (it.hasNext()) {
+			System.out.println(it.next());
 		}
 	}
 }

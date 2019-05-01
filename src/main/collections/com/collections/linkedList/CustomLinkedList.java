@@ -1,4 +1,4 @@
-package com.datastructure;
+package com.collections.linkedList;
 
 class CustomLinkedList {
 
@@ -168,5 +168,10 @@ class CustomLinkedList {
 			next = nextValue;
 		}
 
+	}
+
+	public static void main(String[] args) {
+		CustomLinkedList customLinkedList = new CustomLinkedList();
+		
 	}
 }

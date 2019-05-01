@@ -1,5 +1,6 @@
 package com.collections.linkedList;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -60,6 +61,27 @@ public class LinkedListSublist {
 
 		// Get an element from specific index
 		System.out.println("Value from index position 3 : " + listObj.get(3));
+
+		// LinkedList Reverse
+		LinkedList<String> list = new LinkedList<String>();
+		// Adding elements to the LinkedList
+		list.add("Harry");
+		list.add("Ajeet");
+		list.add("Tom");
+		list.add("Steve");
+		list.add("John");
+		list.add("Tom");
+
+		// Displaying LinkedList elements
+		System.out.println("LinkedList elements: " + list);
+
+		Iterator it = list.descendingIterator();
+
+		// Displaying list in reverse order
+		System.out.println("Elements in Reverse Order:");
+		while (it.hasNext()) {
+			System.out.println(it.next());
+		}
 
 	}
 
