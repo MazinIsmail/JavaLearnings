@@ -8,7 +8,7 @@ public class Deserialization {
 		FileInputStream fileInputStream = null;
 		ObjectInputStream objectInputStream = null;
 		try {
-			String filename = "D:\\sessionfiles\\file1.txt";
+			String filename = "D:\\file1.txt";
 			Employee employee = new Employee();
 
 			// Reading the object from a file

@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.Set;
 import java.util.TreeSet;
 
 /*TreeSet internally uses a TreeMap to store elements.
@@ -12,24 +13,24 @@ public class TreesetConstructors {
 
 	public static void main(String[] args) {
 		
-		HashSet<String> Hset= new HashSet<>();
-		Hset.add("Uno");
-		Hset.add("Dos");
+		HashSet<String> hSet= new HashSet<>();
+		hSet.add("Uno");
+		hSet.add("Dos");
 		// from another collection. Passed as parameter to treeset constructor.
-		TreeSet<String> Tset1=new TreeSet<>(Hset);  
-		System.out.println("TreeSet created from HashSet : "+Tset1);	
+		TreeSet<String> tSet1=new TreeSet<>(hSet);  
+		System.out.println("TreeSet created from HashSet : "+tSet1);	
 		
-		TreeSet<String> Normalfruits = new TreeSet<>();
-		Normalfruits.add("Uno");
-		Normalfruits.add("Dos");
-		Normalfruits.add("aEo");
-		System.out.println("Values from fruits : "+Normalfruits);
+		TreeSet<String> normalFruits = new TreeSet<>();
+		normalFruits.add("Uno");
+		normalFruits.add("Dos");
+		normalFruits.add("aEo");
+		System.out.println("Values from fruits : "+normalFruits);
 		
 		TreeSet<String> fruits = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
 		fruits.add("Uno");
 		fruits.add("Dos");
 		fruits.add("aEo");
-		System.out.println("Values from fruits : "+fruits);
+		System.out.println("Values from fruits CASE_INSENSITIVE_ORDER  : "+fruits);
 				
 		TreeSet<String> fruitsReverse = new TreeSet<>(Comparator.reverseOrder()); 
 		fruitsReverse.add("Aeo");
@@ -38,8 +39,8 @@ public class TreesetConstructors {
 		System.out.println("Values from fruitsReverse : "+fruitsReverse);
 		
 		// To make Treeset threadsafe.
-		Collections.synchronizedSet(fruitsReverse);
-		System.out.println("ThreadSafe fruitsReverse : "+fruitsReverse);
+		Set<String> temp = Collections.synchronizedSet(fruitsReverse);
+		System.out.println("ThreadSafe fruitsReverse : "+temp);
 	}
 
 }

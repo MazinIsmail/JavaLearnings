@@ -23,7 +23,7 @@ public class TreesetMethods2 {
 		  treeSetObject1.add(4);
 		  treeSetObject1.add(1);
 		  treeSetObject1.add(2);
-		  
+		  //TODO: ceiling vs higher
 		  /*Higher() : This method returns the least element in the TreeSet which is strictly greater than the given element
 		  *in the argument of this method, or it will return null if there is no such element
 		  */
@@ -43,9 +43,10 @@ public class TreesetMethods2 {
 		    System.out.print(iteratorobj.next() + " ");
 		  }
 		  
-		  /*last(): This method returns the highest element present in the Treeset*/
+		  /*last(): This method returns the last element present in the Treeset*/
 		  System.out.println("Last elememt in Tree Set object is: "+treeSetObject1.last());
 		  
+		  //TODO: floor vs lower
 		  /*lower(Object o): This method returns the greatest element in this treeset which is strictly less than the given element in the set*/
 		  System.out.println("Greatest Element Less than 5: "+treeSetObject1.lower(5));
 		  
@@ -69,7 +70,7 @@ public class TreesetMethods2 {
 		  System.out.println("Subset : true : false "+treeSetObject2.subSet(1, true, 5, false));
 		  System.out.println("Subset : false : true "+treeSetObject2.subSet(1, false, 5, true));
 		  
-		  /*SortedSet subSet(Object fromElement, Object toElement):*/
+		  /*SortedSet subSet(Object fromElement, Object toElement): Default : inclusive : true , false */
 		  System.out.println("Normal Subset : "+treeSetObject2.subSet(1,5));
 
 

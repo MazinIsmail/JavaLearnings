@@ -75,11 +75,11 @@ public class TreesetMethods1 {
 		treeSetObject2= (TreeSet<Integer>) treeSetObject1.descendingSet();
 		System.out.println("Values in TreeSetObject2 after descendingSet(): " +treeSetObject2);
 		
-		//First() : This method returns the lowest element in the Set.
-		System.out.println("Lowest element in the tree set is : " +treeSetObject1.first());
+		//First() : This method returns the first element in the Set.
+		System.out.println("Lowest element in the tree set is : " +treeSetObject2.first());
 		
-		//headSet(Object toElement): This method returns group of elements that are strictly less than toElement
-		treeSetObject2=(TreeSet<Integer>) treeSetObject1.headSet(4);
+		//headSet(Object toElement): This method returns group of elements that are strictly less than toElement, excluding the parameter.
+		treeSetObject2=(TreeSet<Integer>) treeSetObject1.headSet(7);
 		System.out.println("Values in Tress Set Head Set : " + treeSetObject2 );
 		
 		//headSet(Object toElement, boolean inclusive):

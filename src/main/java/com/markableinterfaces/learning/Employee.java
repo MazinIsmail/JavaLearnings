@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Employee implements Serializable, Cloneable {
 
 	private transient int transientVariable;
-	private static int staticVariable; // TODO static will under go serialization?
+	private static int staticVariable;
 	private String name;
 	private int age;
 
