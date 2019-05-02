@@ -1,70 +1,50 @@
 package com.markableinterfaces.learning;
 
-/**
- * Serialization is a mechanism of converting the state of an object into a byte stream.
- *  Deserialization is the reverse process;
- *  where the byte stream is used to recreate the actual Java object in memory.
- *  The byte stream created is platform independent
- *  
- *  TODO: Realtime  example???
- */
-
 import java.io.*;
 
-class Serialization {
-	public static void main(String[] args) {
-		
-		Student student = new Student(1, "Demo");
-		String filename = "D:\\file.txt";
+/**
+ * Serialization is a mechanism of converting the state of an object into a byte
+ * stream. Deserialization is the reverse process; where the byte stream is used
+ * to recreate the actual Java object in memory. The byte stream created is
+ * platform independent
+ * If a parent class has implemented Serializable interface then child class doesn’t need to implement it but vice-versa is not true.
+ * Only non-static data members are saved via Serialization process.
+ * Static data members and transient data members are not saved via Serialization process.So, if you don’t want to save value of a non-static data member then make it transient.
+ * Constructor of object is never called when an object is deserialized.
+ * Associated objects must be implementing Serializable interface.
+ * TODO: Realtime example??? Game
+ */
 
+class Serialization {
+	public static void main(String[] args) throws IOException {
+
+		Employee employee = new Employee(10, 1000, "Hello", 20);
+		String filename = "D:\\sessionfiles\\file1.txt";
+		FileOutputStream fileOutputStream = null;
+		ObjectOutputStream objectOutputStream = null;
 		// Serialization
 		try {
 			// Saving of object in a file
-			FileOutputStream file = new FileOutputStream(filename);
-			ObjectOutputStream out = new ObjectOutputStream(file);
+			fileOutputStream = new FileOutputStream(filename);
+			objectOutputStream = new ObjectOutputStream(fileOutputStream);
 
-			// Method to write the data into file
-			out.writeObject(student);
+			// Method for serialization of object
+			objectOutputStream.writeObject(employee);
 
-			out.close();
-			file.close();
+			System.out.println("Object has been serialized\n" + "Data before Deserialization.");
+			System.out.println("getTransientVariable : " + employee.getTransientVariable());
+			System.out.println("getStaticVariable : " + Employee.getStaticVariable());
+			System.out.println("Age : " + employee.getAge());
+			System.out.println("Name : " + employee.getName());
+			Employee.setStaticVariable(2000);
+			// value of static variable changed
+			// employee.setStaticVariable(2000);
 
-			System.out.println("Object has been serialized");
-			System.out.println("a = " + student.a);
-			System.out.println("b = " + student.b);
-		}
-
-		catch (IOException ex) {
+		} catch (IOException ex) {
 			System.out.println("IOException is caught");
-		}
-
-		Student object1 = null;
-
-		// Deserialization
-		try {
-			// Reading the object from a file
-			FileInputStream file = new FileInputStream(filename);
-			ObjectInputStream in = new ObjectInputStream(file);
-
-			// Method for deserialization of object
-			object1 = (Student) in.readObject();
-
-			in.close();
-			file.close();
-
-			System.out.println("Object has been deserialized ");
-			System.out.println("a = " + object1.a);
-			System.out.println("b = " + object1.b);
-		}
-		
-		// TODO:  array of objects, 
-
-		catch (IOException ex) {
-			System.out.println("IOException is caught");
-		}
-
-		catch (ClassNotFoundException ex) {
-			System.out.println("ClassNotFoundException is caught");
+		} finally {
+			objectOutputStream.close();
+			fileOutputStream.close();
 		}
 
 	}

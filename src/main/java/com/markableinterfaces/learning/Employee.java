@@ -2,18 +2,66 @@ package com.markableinterfaces.learning;
 
 import java.io.Serializable;
 
-public class Employee implements Serializable {
-	private static final long serialversionUID = 129348938L;
-	transient int a;
-	static int b; // TODO static will under go serialization?
-	String name;
-	int age;
+public class Employee implements Serializable, Cloneable {
 
-	// Default constructor
-	public Employee(String name, int age, int a, int b) {
+	private transient int transientVariable;
+	private static int staticVariable; // TODO static will under go serialization?
+	private String name;
+	private int age;
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		Employee employee = (Employee) super.clone();
+		return employee;
+	}
+
+	public Employee() {
+		super();
+	}
+
+	public Employee(int transientVariable, int staticVariable, String name, int age) {
+		super();
+		this.transientVariable = transientVariable;
+		Employee.staticVariable = staticVariable;
 		this.name = name;
 		this.age = age;
-		this.a = a;
-		this.b = b;
 	}
+
+	public int getTransientVariable() {
+		return transientVariable;
+	}
+
+	public void setTransientVariable(int transientVariable) {
+		this.transientVariable = transientVariable;
+	}
+
+	public static int getStaticVariable() {
+		return staticVariable;
+	}
+
+	public static void setStaticVariable(int staticVariable) {
+		Employee.staticVariable = staticVariable;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [transientVariable=" + transientVariable + ", name=" + name + ", age=" + age + "]";
+	}
+
 }

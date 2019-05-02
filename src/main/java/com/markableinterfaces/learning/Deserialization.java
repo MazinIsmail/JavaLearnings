@@ -3,49 +3,36 @@ package com.markableinterfaces.learning;
 import java.io.*;
 
 public class Deserialization {
-	public static void printdata(Employee employee) {
-		System.out.println("name = " + employee.name);
-		System.out.println("age = " + employee.age);
-		System.out.println("a = " + employee.a);
-		System.out.println("b = " + employee.b);
-	}
 
-	public static void main(String[] args) {
-		Employee employee = new Employee("ab", 20, 2, 1000);
-		String filename = "D:\\file1.txt";
-		// Serialization
+	public static void main(String[] args) throws IOException,FileNotFoundException {
+		FileInputStream fileInputStream = null;
+		ObjectInputStream objectInputStream = null;
 		try {
-			// Saving of object in a file
-			FileOutputStream file = new FileOutputStream(filename);
-			ObjectOutputStream out = new ObjectOutputStream(file);
-			// Method for serialization of object
-			out.writeObject(employee);
-			out.close();
-			file.close();
-			System.out.println("Object has been serialized\n" + "Data before Deserialization.");
-			printdata(employee);
-			// value of static variable changed
-			//employee.b = 2000;
-			employee.age=77;
-		} catch (IOException ex) {
-			System.out.println("IOException is caught");
-		}
-		employee = null;
-		// Deserialization
-		try {
+			String filename = "D:\\sessionfiles\\file1.txt";
+			Employee employee = new Employee();
+
 			// Reading the object from a file
-			FileInputStream file = new FileInputStream(filename);
-			ObjectInputStream in = new ObjectInputStream(file);
+			fileInputStream = new FileInputStream(filename);
+			objectInputStream = new ObjectInputStream(fileInputStream);
+
 			// Method for deserialization of object
-			employee = (Employee) in.readObject();
-			in.close();
-			file.close();
+			employee = (Employee) objectInputStream.readObject();
+
 			System.out.println("Object has been deserialized\n" + "Data after Deserialization.");
-			printdata(employee);
+			System.out.println("getTransientVariable : " + employee.getTransientVariable());
+			System.out.println("getStaticVariable : " + Employee.getStaticVariable());
+			System.out.println("Age : " + employee.getAge());
+			System.out.println("Name : " + employee.getName());
+
 		} catch (IOException ex) {
 			System.out.println("IOException is caught");
 		} catch (ClassNotFoundException ex) {
 			System.out.println("ClassNotFoundException" + " is caught");
+		} finally {
+			objectInputStream.close();
+			fileInputStream.close();
 		}
+
 	}
+
 }
