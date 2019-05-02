@@ -37,6 +37,7 @@ public class LinkedListClone {
 		 * Shallow copy will not get affected when there is a change in the Original
 		 * LinkedList
 		 */
-		System.out.println("Shallow copy LinkedList after adding new values :" + llClone);
+		System.out.println(
+				"Shallow copy LinkedList after adding new values to llOriginal does not effect llClone : " + llClone);
 	}
 }

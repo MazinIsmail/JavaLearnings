@@ -1,5 +1,6 @@
 package com.collections.linkedList;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -7,6 +8,34 @@ import java.util.LinkedList;
  */
 public class LinkedListToArray {
 	public static void main(String args[]) {
+		LinkedList<String> listArr = new LinkedList<String>();
+
+		// Adding elements to the LinkedList
+		listArr.add("Harry");
+		listArr.add("Ajeet");
+		listArr.add("Tom");
+		listArr.add("Steve");
+		listArr.add("John");
+		listArr.add("Tom");
+
+		// Displaying LinkedList elements
+		System.out.println("LinkedList elements: " + listArr);
+
+		/**
+		 * Creates an Array variable of type String with length(equals to the size of
+		 * the LinkedList)
+		 */
+		System.out.println("Size of LinkedList : " + listArr.size());
+		String[] arrVar = listArr.toArray(new String[listArr.size()]);
+		System.out.println("Length of Array : " + arrVar.length);
+		for (int i = 0; i < arrVar.length; i++) {
+			System.out.println(arrVar[i]);
+		}
+
+		/**
+		 * LinkedList can be converted to an ArrayList by passing LinkedList object as
+		 * an argument to ArrayList
+		 */
 		LinkedList<String> list = new LinkedList<String>();
 
 		// Adding elements to the LinkedList
@@ -21,14 +50,10 @@ public class LinkedListToArray {
 		System.out.println("LinkedList elements: " + list);
 
 		/**
-		 * Creates an Array variable of type String with length(equals to the size of
-		 * the LinkedList)
+		 * Passed LinkedList object 'list' as an argument to ArrayList
 		 */
-		System.out.println("Size of LinkedList : " + list.size());
-		String[] arrVar = list.toArray(new String[list.size()]);
-		System.out.println("Length of Array : " + arrVar.length);
-		for (int i = 0; i < arrVar.length; i++) {
-			System.out.println(arrVar[i]);
-		}
+		ArrayList<String> alObject = new ArrayList<String>(list);
+		System.out.println("After converting LinkedList to ArrayList : " + alObject);
+
 	}
 }

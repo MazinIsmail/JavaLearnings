@@ -1,18 +1,33 @@
 package com.markableinterfaces.learning;
 
-import java.io.Serializable;
+class Student implements Cloneable {
+	private int id;
+	private String name;
 
-public class Student  implements Serializable {
-	/**
-	 * TODO: Comment
-	 */
-	private static final long serialVersionUID = 1L;
-	public int a;
-	public String b;
+	Employee employee = new Employee();
 
-	// Default constructor
-	public Student(int a, String b) {
-		this.a = a;
-		this.b = b;
-}
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", employee=" + employee + "]";
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 }
