@@ -1,7 +1,13 @@
 package com.markableinterfaces.learning;
 
 /**
- * A Java program to demonstrate shallow copy using clone()
+ * 
+ * The default version of clone() method creates the shallow copy of an object.
+ * The shallow copy of an object will have exact copy of all the fields of original object.
+ * If original object has any references to other objects as fields, 
+ * then only references of those objects are copied into clone object, copy of those objects are not created. 
+ * That means any changes made to those objects through clone object will be reflected in original object or vice-versa.
+ *
  */
 
 public class CloneableShallowCopy {

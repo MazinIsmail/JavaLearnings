@@ -11,8 +11,9 @@ public class Employee implements Serializable, Cloneable {
 
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		Employee employee = (Employee) super.clone();
-		return employee;
+		//Employee employee = (Employee) super.clone();
+		//return employee;
+		return super.clone();
 	}
 
 	public Employee() {
