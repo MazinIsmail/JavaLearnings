@@ -10,10 +10,13 @@ public class ChildClassesReference {
 		System.out.println("GeeksforGeeks");
 	}
 }
-/*
- * public class Derived extends ChildClassasReference { void myMethod() {
- * System.out.println("GFG"); }
- * 
- * public static void main(String[] args) { Derived object = new
- * ChildClassasReference(); object.myMethod(); } }
- */
+
+public class Derived extends ChildClassasReference {
+	void myMethod() {
+		System.out.println("GFG");
+	}
+
+	public static void main(String[] args) {
+		Derived object = new ChildClassasReference();
+		object.myMethod(); }
+}

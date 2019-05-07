@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class Employee implements Serializable, Cloneable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6378696130311453802L;
 	private transient int transientVariable;
 	private static int staticVariable;
 	private String name;
@@ -11,8 +15,6 @@ public class Employee implements Serializable, Cloneable {
 
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		//Employee employee = (Employee) super.clone();
-		//return employee;
 		return super.clone();
 	}
 

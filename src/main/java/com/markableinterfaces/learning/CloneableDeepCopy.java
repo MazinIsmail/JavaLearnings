@@ -19,17 +19,12 @@ public class CloneableDeepCopy {
 		employee.setAge(30);
 		employee.setName("Laya");
 		departmentorginal.setEmployee(employee);
-		/*
-		 * departmentorginal.employee.setName("Arun");
-		 * departmentorginal.employee.setAge(25);
-		 */
-
 		Department departmentcloned = (Department) departmentorginal.clone();
 		System.out.println("departmentorginal : " + departmentorginal.toString());
 		System.out.println("departmentcloned  : " + departmentcloned.toString());
 		departmentcloned.setId(2002);
 
-		departmentcloned.employee.setName("Jisla");
+		departmentcloned.getEmployee().setName("jisla");
 
 		System.out.println("After changing Cloned value");
 		System.out.println("departmentorginal : " + departmentorginal.toString());
