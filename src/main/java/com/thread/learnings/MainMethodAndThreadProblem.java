@@ -17,12 +17,9 @@ public class MainMethodAndThreadProblem {
 //	Main method represent main thread
 //	every java program has at least one thread - main thread 
 	public static void main(String[] args) {
-//THREADS ALWAYS EXECUTE JOBS IN A SEQUENCE 
-		
- 
 
 		//job1
-		System.out.println("*********application stasted**********");
+		System.out.println("*********application started**********");
 		
 		//job 2
 		MyTask task = new MyTask();
@@ -36,6 +33,7 @@ public class MainMethodAndThreadProblem {
 		for (int doc = 0; doc <=10; doc++) {
 			System.out.println("job 1:Printing Document #" + doc + " :Printer1");
 		}
+		System.out.println("*********application end**********");
 	
 	}
 
