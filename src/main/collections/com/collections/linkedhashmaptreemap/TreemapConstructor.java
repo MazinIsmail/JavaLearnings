@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
-/*TreeMap
+/**TreeMap
  * TreeMap is Red-Black tree based NavigableMap implementation
  * It is sorted according to the natural ordering of its keys.
  * HashMap is an unordered collection while TreeMap is sorted in the ascending order of its keys.

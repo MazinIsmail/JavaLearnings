@@ -1,6 +1,8 @@
 package com.collections.hashmap;
 
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map;
 
 /*HASHMAP
  * It stores the data in (Key, Value) pairs.
@@ -32,7 +34,9 @@ public class HashmapMain {
 			Integer a = map.get("vishal");
 			System.out.println("value for key \"vishal\" is:- " + a);
 		}
-
+		
+		Map<String, Integer> map1 = Collections.synchronizedMap(map);
+		
 		map.clear();
 
 		// Parameterized : same mapping as other Map.
