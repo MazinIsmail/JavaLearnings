@@ -12,14 +12,13 @@ import java.io.*;
  * Static data members and transient data members are not saved via Serialization process.So, if you don’t want to save value of a non-static data member then make it transient.
  * Constructor of object is never called when an object is deserialized.
  * Associated objects must be implementing Serializable interface.
- * TODO: Realtime example??? Game
- */
+  */
 
 class Serialization {
 	public static void main(String[] args) throws IOException {
 
 		Employee employee = new Employee(10, 1000, "Hello", 20);
-		String filename = "D:\\sessionfiles\\file1.txt";
+		String filename = "D:\\file1.txt";
 		FileOutputStream fileOutputStream = null;
 		ObjectOutputStream objectOutputStream = null;
 		// Serialization
@@ -37,6 +36,7 @@ class Serialization {
 			System.out.println("Age : " + employee.getAge());
 			System.out.println("Name : " + employee.getName());
 			Employee.setStaticVariable(2000);
+			
 			// value of static variable changed
 			// employee.setStaticVariable(2000);
 

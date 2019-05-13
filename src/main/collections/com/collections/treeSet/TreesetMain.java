@@ -17,7 +17,6 @@ import java.util.TreeSet;
  * TreeSet does not allow to insert Heterogeneous objects. It will throw classCastException at Runtime 
  * 
  */
-
 public class TreesetMain {
 
 	public static void main(String[] args) {
@@ -25,7 +24,7 @@ public class TreesetMain {
 		TreeSet<Integer> al = new TreeSet<Integer>();
 		al.add(554);
 		al.add(9);
-		al.add(1);
+		al.add(8);
 		al.add(15);
 		// Traversing elements using 
 		Iterator<Integer> itr = al.iterator();

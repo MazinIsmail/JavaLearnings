@@ -3,8 +3,7 @@ package com.markableinterfaces.learning;
 class Student implements Cloneable {
 	private int id;
 	private String name;
-
-	Employee employee = new Employee();
+	private Employee employee = new Employee();
 
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
@@ -30,4 +29,13 @@ class Student implements Cloneable {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+	
 }
