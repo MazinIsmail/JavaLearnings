@@ -1,10 +1,10 @@
 package com.customexception.learning;
 /*
- This code will demonstrate the Exception handling using the keywords try,catch and finally.
- Exception: An event which disrupts the normal flow of the program
- Exception Handling: A mechanism to handle runtime errors
- This is an example for Unchecked exception.
- Unchecked Exception: Classes which inherit Runtime Exception.
+ *This code will demonstrate the Exception handling using the keywords try,catch and finally.
+ *Exception: An event which disrupts the normal flow of the program
+ *Exception Handling: A mechanism to handle runtime errors
+ *This is an example for Unchecked exception.
+ *Unchecked Exception: Classes which inherit Runtime Exception.
  */
 public class UncheckedException {
 	public static void ArithException() {
