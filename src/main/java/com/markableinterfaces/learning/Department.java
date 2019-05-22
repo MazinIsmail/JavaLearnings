@@ -1,10 +1,10 @@
 package com.markableinterfaces.learning;
 
-class Department  implements Cloneable {
+public class Department  implements Cloneable {
 	private String name;
 	private int id;
 
-	Employee employee = new Employee();
+	private Employee employee = new Employee();
 
 	public Object clone() throws CloneNotSupportedException {
 		// Assign the shallow copy to new refernce variable department
@@ -23,6 +23,8 @@ class Department  implements Cloneable {
 		this.name = name;
 	}
 
+	
+
 	public int getId() {
 		return id;
 	}
@@ -37,5 +39,8 @@ class Department  implements Cloneable {
 	}
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
+	}
+	public Employee getEmployee() {
+		return employee;
 	}
 }
