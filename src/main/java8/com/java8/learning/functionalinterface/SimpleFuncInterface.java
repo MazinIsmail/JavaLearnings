@@ -11,11 +11,11 @@ public interface SimpleFuncInterface {
 	public boolean equals(Object o);
 
 	// Can have any number of default methods
-	default public void doSomeWork() {
+	default void doSomeWork() {
 		System.out.println("Doing some work in interface impl...");
 	}
 
-	default public void doSomeOtherWork() {
+	default void doSomeOtherWork() {
 		System.out.println("Doing some other work in interface impl...");
 	}
 }
