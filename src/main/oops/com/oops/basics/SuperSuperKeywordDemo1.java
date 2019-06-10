@@ -13,14 +13,16 @@ class Grandparent {
 }
 
 class Parent extends Grandparent {
+	@Override
 	public void Print() {
 		System.out.println("Parent's Print()");
 	}
 }
 
 class Child extends Parent {
+	@Override
 	public void Print() {
-	super.super.Print(); // Trying to access Grandparent's Print() Compiler Error occurs
+		/*super.super.Print();*/ // Trying to access Grandparent's Print() Compiler Error occurs
 		System.out.println("Child's Print()");
 	}
 }

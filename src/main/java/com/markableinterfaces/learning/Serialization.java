@@ -18,13 +18,13 @@ class Serialization {
 	public static void main(String[] args) throws IOException {
 
 		Employee employee = new Employee(10, 1000, "Hello", 20);
-		String filename = "D:\\file1.txt";
+		/* String filename = "D:\\file1.txt"; */
 		FileOutputStream fileOutputStream = null;
 		ObjectOutputStream objectOutputStream = null;
 		// Serialization
 		try {
 			// Saving of object in a file
-			fileOutputStream = new FileOutputStream(filename);
+			fileOutputStream = new FileOutputStream("src/main/resources/Serialization.txt");
 			objectOutputStream = new ObjectOutputStream(fileOutputStream);
 
 			// Method for serialization of object
