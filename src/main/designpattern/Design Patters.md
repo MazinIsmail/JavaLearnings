@@ -1,5 +1,5 @@
-# JavaLearnings
-		########### Design patterns###########
+# JavaLearning
+Design patterns
 					 
 • Design patterns are well-proved solution for solving the specific problem/task.
 • programming language independent strategies for solving the common object-oriented design problems. 
