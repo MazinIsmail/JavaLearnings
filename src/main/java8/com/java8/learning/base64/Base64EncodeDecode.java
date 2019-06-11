@@ -12,9 +12,10 @@ public class Base64EncodeDecode {
 	public static void main(String args[]) {
 
 		try {
-			final String sampleString = "Hello World";
+			final String sampleString = "Hello World\\@@@lkhgjhgujhfgfhgfmjnhbgvcfdtyuhnjkloiu\nhgfdrcxdsertgbhcxsrtghjknhf++_\n";
 			System.out.println("Original String: " + sampleString);
-			final String filePath = "C:\\Users\\MA20011300\\Documents\\RequestItem.hbm3.xml";
+			// final String filePath =
+			// "C:\\Users\\MA20011300\\Documents\\RequestItem.hbm3.xml";
 
 			// Encode using basic encoder
 			String base64encodedString = Base64.getEncoder().encodeToString(sampleString.getBytes("utf-8"));
@@ -32,14 +33,15 @@ public class Base64EncodeDecode {
 			// Encode using Mime encoder
 			String base64MimeEncodedString = Base64.getMimeEncoder().encodeToString(sampleString.getBytes("utf-8"));
 			System.out.println("Base64 Encoded String (MIME): " + base64MimeEncodedString);
-			byte[] base64MimeDecodedString = Base64.getUrlDecoder().decode(base64MimeEncodedString);
-			System.out.println("Base64 Decoded String (URL): " + new String(base64MimeDecodedString, "utf-8"));
+			byte[] base64MimeDecodedString = Base64.getMimeDecoder().decode(base64MimeEncodedString);
+			System.out.println("Base64 Decoded String (MIME): " + new String(base64MimeDecodedString, "utf-8"));
 
-			byte[] fileContent = readFileToByteArrayNew(filePath);
-			String fileEncodedString = Base64.getEncoder().encodeToString(fileContent);
-			System.out.println("Base64 Encoded File (Basic): " + fileEncodedString);
-			byte[] fileDecodedString = Base64.getDecoder().decode(fileEncodedString);
-			System.out.println("Base64 Decoded File (Basic): " + new String(fileDecodedString, "utf-8"));
+			// byte[] fileContent = readFileToByteArrayNew(filePath);
+			// String fileEncodedString = Base64.getEncoder().encodeToString(fileContent);
+			// System.out.println("Base64 Encoded File (Basic): " + fileEncodedString);
+			// byte[] fileDecodedString = Base64.getDecoder().decode(fileEncodedString);
+			// System.out.println("Base64 Decoded File (Basic): " + new
+			// String(fileDecodedString, "utf-8"));
 		} catch (UnsupportedEncodingException e) {
 			System.out.println("Error :" + e.getMessage());
 		} catch (Exception e) {
@@ -71,7 +73,7 @@ public class Base64EncodeDecode {
 					e.printStackTrace();
 				}
 			}
-	
+
 		}
 		return bytesArray;
 	}
