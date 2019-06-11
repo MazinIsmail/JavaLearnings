@@ -1,7 +1,7 @@
 package com.java8.learning.interfacelearning;
 
-public class InterfaceLearningTest implements InterfaceLearning{
-	
+public class InterfaceLearningTest implements InterfaceLearning {
+
 	public static void main(String[] args) {
 		InterfaceLearning interfaceLearning = new InterfaceLearning() {
 			@Override
@@ -19,7 +19,7 @@ public class InterfaceLearningTest implements InterfaceLearning{
 
 	@Override
 	public double calculate(int a) {
-		// TODO Auto-generated method stub
+		System.out.println("Implemented abstract method");
 		return 0;
 	}
 }

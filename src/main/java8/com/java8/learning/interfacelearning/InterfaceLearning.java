@@ -7,7 +7,11 @@ public interface InterfaceLearning {
 	default double sqrt(int a) {
 		return Math.sqrt(positive(a));
 	}
-	/* Similar to default method except that we can't override them in the implementation classes.*/
+
+	/*
+	 * Similar to default method except that we can't override them in the
+	 * implementation classes.
+	 */
 	static int positive(int a) {
 		return a > 0 ? a : 0;
 	}
