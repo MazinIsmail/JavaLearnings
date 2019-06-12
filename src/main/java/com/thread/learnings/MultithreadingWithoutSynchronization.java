@@ -31,7 +31,9 @@ class MyThreadFirst extends Thread {
 
 public class MultithreadingWithoutSynchronization {
 	public static void main(String args[]) throws Exception {
+		
 		Counter counter = new Counter();// only one object
+		
 		MyThreadFirst t1 = new MyThreadFirst(counter);
 		MyThreadFirst t2 = new MyThreadFirst(counter);
 		MyThreadFirst t3 = new MyThreadFirst(counter);
