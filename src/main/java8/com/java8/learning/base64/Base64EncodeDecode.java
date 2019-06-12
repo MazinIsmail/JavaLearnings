@@ -19,6 +19,7 @@ public class Base64EncodeDecode {
 			// "C:\\Users\\MA20011300\\Documents\\RequestItem.hbm3.xml";
 
 			// Encode using basic encoder
+			// Uses A-Z,a-z,0-9,+and/ characters after Encoding
 			String base64encodedString = Base64.getEncoder().encodeToString(sampleString.getBytes("utf-8"));
 			System.out.println("Base64 Encoded String (Basic): " + base64encodedString);
 			// Decode
@@ -26,12 +27,15 @@ public class Base64EncodeDecode {
 			System.out.println("Base64 Decoded String (Basic): " + new String(base64decodedBytes, "utf-8"));
 
 			// Encode using URL encoder
+			// Uses A-Z,a-z,0-9,-and_ characters after Encoding
 			String base64UrlencodedString = Base64.getUrlEncoder().encodeToString(sampleString.getBytes("utf-8"));
 			System.out.println("Base64 Encoded String (URL): " + base64UrlencodedString);
 			byte[] base64UrldecodedBytes = Base64.getUrlDecoder().decode(base64UrlencodedString);
 			System.out.println("Base64 Decoded String (URL): " + new String(base64UrldecodedBytes, "utf-8"));
 
 			// Encode using Mime encoder
+			// If the encoded value contains more than 76 characters, it splits and writes
+			// the encoded value in next line
 			String base64MimeEncodedString = Base64.getMimeEncoder().encodeToString(mimeString.getBytes("utf-8"));
 			System.out.println("Base64 Encoded String (MIME): " + base64MimeEncodedString);
 			byte[] base64MimeDecodedString = Base64.getMimeDecoder().decode(base64MimeEncodedString);
