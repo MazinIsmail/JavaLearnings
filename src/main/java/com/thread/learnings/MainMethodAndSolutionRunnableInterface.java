@@ -23,21 +23,21 @@ class ThreadTasks extends Dummy implements Runnable {
 }
 
 public class MainMethodAndSolutionRunnableInterface {
-//	Main method represent main thread
-//	every java program has at least one thread - main thread 
+	//  Main method represent main thread
+	//	every java program has at least one thread - main thread 
 	public static void main(String[] args) {
 
 		// job1
 		System.out.println("*********application stasted**********");
 
 		// job 2
-		//Polymorphic  statement  the reference variable of the interface 
-//		is pointing to the object which implements it
+		// Polymorphic statement the reference variable of the interface
+		//is pointing to the object which implements it
 		Runnable r = new ThreadTasks();
 		Thread task = new Thread(r);
 		task.start();
 
-//		Now Main and ThreadTask are executing both parallelly and concurrently   !!	
+		//Now Main and ThreadTask are executing both parallelly and concurrently   !!	
 		// job 3
 		// Some code printing documents
 		for (int doc = 0; doc <= 10; doc++) {
