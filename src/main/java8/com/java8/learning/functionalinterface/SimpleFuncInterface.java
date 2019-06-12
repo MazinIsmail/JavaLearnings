@@ -7,10 +7,9 @@ public interface SimpleFuncInterface {
 
 	// Can also declare the abstract methods from the java.lang.Object
 	public String toString();
-
 	public boolean equals(Object o);
 
-	// Can have any number of default methods
+	// Can have any number of default and static methods
 	default void doSomeWork() {
 		System.out.println("Doing some work in interface impl...");
 	}
