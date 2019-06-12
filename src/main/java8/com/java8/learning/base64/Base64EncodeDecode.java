@@ -12,7 +12,8 @@ public class Base64EncodeDecode {
 	public static void main(String args[]) {
 
 		try {
-			final String sampleString = "Hello World\\@@@lkhgjhgujhfgfhgfmjnhbgvcfdtyuhnjkloiu\nhgfdrcxdsertgbhcxsrtghjknhf++_\n";
+			final String sampleString = "subjects?abcd";
+			final String mimeString = "qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwebvbvvbvrtyuiopasdfghjklzxcvbnmqwertyuiop";
 			System.out.println("Original String: " + sampleString);
 			// final String filePath =
 			// "C:\\Users\\MA20011300\\Documents\\RequestItem.hbm3.xml";
@@ -31,7 +32,7 @@ public class Base64EncodeDecode {
 			System.out.println("Base64 Decoded String (URL): " + new String(base64UrldecodedBytes, "utf-8"));
 
 			// Encode using Mime encoder
-			String base64MimeEncodedString = Base64.getMimeEncoder().encodeToString(sampleString.getBytes("utf-8"));
+			String base64MimeEncodedString = Base64.getMimeEncoder().encodeToString(mimeString.getBytes("utf-8"));
 			System.out.println("Base64 Encoded String (MIME): " + base64MimeEncodedString);
 			byte[] base64MimeDecodedString = Base64.getMimeDecoder().decode(base64MimeEncodedString);
 			System.out.println("Base64 Decoded String (MIME): " + new String(base64MimeDecodedString, "utf-8"));
