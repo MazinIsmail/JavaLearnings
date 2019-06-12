@@ -26,7 +26,7 @@ import java.util.Set;
  */
 public class DateAPILearning {
 	public static void main(String[] args) {
-
+		checkingChronoEnum();
 		// LocalDate is an Immutable class and Thread-Safe. Default format is
 		// yyyy-MM-dd. It shows only Date
 		// now() method to get Current Date alone
@@ -43,7 +43,7 @@ public class DateAPILearning {
 		 * java.time.LocalDate.of(LocalDate.java:249) at
 		 * com.java8.learning.dateapi.DateAPILearning.main(DateAPILearning.java:32)
 		 */
-		 //LocalDate febDay = LocalDate.of(2014, Month.FEBRUARY, 30);
+		// LocalDate febDay = LocalDate.of(2014, Month.FEBRUARY, 30);
 		// System.out.println("Independance day : " + febDay);
 
 		// LocalDate of specific Zone
@@ -216,5 +216,30 @@ public class DateAPILearning {
 		ZoneId zoneId = ZoneId.of("Europe/Paris");
 		ZonedDateTime zdt = ZonedDateTime.of(ldt, zoneId); // 2018-07-01T08:00+02:00[Europe/Paris]
 		System.out.println("zdt: " + zdt);
+	}
+
+	/**
+	 * ChronoUnit - to replace integer values used in old API to represent day,
+	 * month etc
+	 */
+	public static void checkingChronoEnum() {
+		LocalDate date = LocalDate.now();
+		System.out.println("current date is :" + date);
+
+		// adding 2 years to the current date
+		LocalDate year = date.plus(2, ChronoUnit.YEARS);
+		System.out.println("next to next year is " + year);
+
+		// adding 1 month to the current data
+		LocalDate nextMonth = date.plus(1, ChronoUnit.MONTHS);
+		System.out.println("the next month is " + nextMonth);
+
+		// adding 1 week to the current date
+		LocalDate nextWeek = date.plus(1, ChronoUnit.WEEKS);
+		System.out.println("next week is " + nextWeek);
+
+		// adding 2 decades to the current date
+		LocalDate Decade = date.plus(2, ChronoUnit.DECADES);
+		System.out.println("20 years after today " + Decade);
 	}
 }
