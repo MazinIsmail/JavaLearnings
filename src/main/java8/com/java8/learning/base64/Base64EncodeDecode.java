@@ -3,6 +3,15 @@ package com.java8.learning.base64;
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 
+/**
+ * Base64 is not encryption -- it's an encoding. It's a way of representing
+ * binary data using only printable (text) characters. While encoding the user
+ * name and password with the Base64 algorithm typically makes them unreadable
+ * by the naked eye, they are as easily decoded as they are encoded. Security is
+ * not the intent of the encoding step. Rather, the intent of the encoding is to
+ * encode non-HTTP-compatible characters that may be in the user name or
+ * password into those that are HTTP-compatible.
+ */
 public class Base64EncodeDecode {
 
 	public static void main(String args[]) {
