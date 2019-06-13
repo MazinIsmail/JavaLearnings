@@ -8,7 +8,11 @@ package com.thread.learnings;
  * resource of the method.
  * 
  * Synchronized block is used to lock an object for any shared resource. Scope
- * of synchronized block is smaller than the method.
+ * of synchronized block is smaller than the method. How can we make sure main()
+ * is the last thread to finish in Java Program?
+ * 
+ * We can use Thread join() method to make sure all the threads created by the
+ * program is dead before finishing the main function.
  * 
  */
 
