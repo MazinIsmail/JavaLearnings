@@ -2,14 +2,14 @@ package com.thread.learnings;
 
 /**
  * The synchronization is mainly used to 1) To prevent thread interference. 2)
- * To prevent consistency problem.
- * 
+ * To prevent consistency problem. If you make any static method as
+ * synchronized, the lock will be on the class not on object.a
  */
 
 class SynchdCounter {
-	int count;
+	static int count;
 
-	synchronized void increment() {// method not synchronized
+	static synchronized void increment() {// method not synchronized
 		count++;
 	}
 }
@@ -31,14 +31,18 @@ class MySynchedThread extends Thread {
 
 public class MultithreadingWithSynchronizedKeyword {
 	public static void main(String args[]) throws Exception {
-		SynchdCounter counter = new SynchdCounter();// only one object
-		MySynchedThread t1 = new MySynchedThread(counter);
-		MySynchedThread t2 = new MySynchedThread(counter);
-		MySynchedThread t3 = new MySynchedThread(counter);
-		MySynchedThread t4 = new MySynchedThread(counter);
-		MySynchedThread t5 = new MySynchedThread(counter);
-		MySynchedThread t6 = new MySynchedThread(counter);
-		MySynchedThread t7 = new MySynchedThread(counter);
+		SynchdCounter counterFirst = new SynchdCounter();// only one object
+
+		MySynchedThread t1 = new MySynchedThread(counterFirst);
+		MySynchedThread t2 = new MySynchedThread(counterFirst);
+		MySynchedThread t3 = new MySynchedThread(counterFirst);
+
+		SynchdCounter counterSecond = new SynchdCounter();
+
+		MySynchedThread t4 = new MySynchedThread(counterSecond);
+		MySynchedThread t5 = new MySynchedThread(counterSecond);
+		MySynchedThread t6 = new MySynchedThread(counterSecond);
+		MySynchedThread t7 = new MySynchedThread(counterSecond);
 		t1.start();
 		t2.start();
 		t3.start();
@@ -46,9 +50,7 @@ public class MultithreadingWithSynchronizedKeyword {
 		t5.start();
 		t6.start();
 		t7.start();
-		
-		System.out.println(counter.count);
-		
+
 		t1.join();
 		t2.join();
 		t3.join();
@@ -57,6 +59,7 @@ public class MultithreadingWithSynchronizedKeyword {
 		t6.join();
 		t7.join();
 
-		System.out.println(counter.count);
+		System.out.println(counterFirst.count);
+		System.out.println(counterSecond.count);
 	}
 }
