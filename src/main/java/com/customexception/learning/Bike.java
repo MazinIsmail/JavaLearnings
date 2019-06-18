@@ -1,8 +1,8 @@
 package com.customexception.learning;
 
 import java.io.IOException;
-
-public class Vehicle { 
+//When base class and child class both throws a checked exception
+ class Vehicle { 
 	   void brand() throws IOException
 	   {
 	       System.out.println("Yamaha");

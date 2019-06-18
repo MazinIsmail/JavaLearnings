@@ -1,11 +1,11 @@
 package com.customexception.learning;
 
-import java.io.IOException;
-
+import java.io.*;
+//If base class doesn’t throw any exception but child class throws an checked exception
 class SuperClass { 
 	  
     // SuperClass doesn't declare any exception 
-    void method() 
+    void method()  
     { 
         System.out.println("SuperClass"); 
     } 
@@ -27,7 +27,7 @@ class SubClass extends SuperClass {
     // Driver code 
     public static void main(String args[]) 
     { 
-        SuperClass s = new SubClass(); 
+    	SuperClass s = new SubClass(); 
         s.method(); 
     } 
 } 

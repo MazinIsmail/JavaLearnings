@@ -1,8 +1,8 @@
 package com.customexception.learning;
 
 import java.io.IOException;
-
-public class Animal {
+//When child class method is throwing border checked exception compared to the same method of base class
+ class Animal {
 	void color() throws IOException
 	{
 		  System.out.println("Black");
@@ -14,7 +14,7 @@ class Dog extends Animal{
 		  System.out.println("White");
 	  }  
 	  public static void main(String args[]){  
-		   Animal obj = new Dog();  
+		  Animal obj = new Dog();  
 		   try{
 		   obj.color();
 		   }catch(Exception e){
