@@ -2,82 +2,54 @@ package com.thread.learnings;
 
 public class DeadLockDemo {
 
-	static class SharedResources {
-		String resource1 = null;
-		String resource2 = null;
+	public static void main(String[] args) throws InterruptedException {
+		final String resource1 = "ratan jaiswal";
+		final String resource2 = "vimal jaiswal";
+		// t1 tries to lock resource1 then resource2
+		Thread t1 = new Thread() {
+			public void run() {
+				synchronized (resource1) {
+					System.out.println("Thread 1: locked resource 1");
+					boolean isLocked = Thread.holdsLock(resource1);
+					System.out.println("Check lock for resource 1 in thread 1 :: " +isLocked);
+					try {
+						Thread.sleep(100);
+					} catch (Exception e) {
+					}
 
-		public SharedResources() {
-
-		}
-
-		public SharedResources(String resource1, String resource2) {
-			super();
-			this.resource1 = resource1;
-			this.resource2 = resource2;
-		}
-
-	}
-
-	static class MyThread1 implements Runnable {
-
-		SharedResources sharedResources;
-
-		public MyThread1(SharedResources sharedResources) {
-			super();
-			this.sharedResources = sharedResources;
-		}
-
-		@Override
-		public void run() {
-			synchronized (sharedResources.resource1) {
-				System.out.println("Lock on resource1 by " + Thread.currentThread().getName());
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException ex) {
+					synchronized (resource2) {
+						System.out.println("Thread 1: locked resource 2");
+					}
 				}
-				System.out.println("Waiting to acquire lock on resource2 by " + Thread.currentThread().getName());
-				synchronized (sharedResources.resource2) {
-					System.out.println("Acquired lock on resource2");
-				}
-
 			}
-		}
-	}
+		};
 
-	static class MyThread2 implements Runnable {
+		// t2 tries to lock resource2 then resource1
+		Thread t2 = new Thread() {
+			public void run() {
+				synchronized (resource2) {
+					System.out.println("Thread 2: locked resource 2");
 
-		SharedResources sharedResources;
+					try {
+						Thread.sleep(100);
+					} catch (Exception e) {
+					}
+					boolean isLocked = Thread.holdsLock(resource2);
+					System.out.println("Check lock for resource 2 in thread 2 :: " + isLocked);
 
-		public MyThread2(SharedResources sharedResources) {
-			super();
-			this.sharedResources = sharedResources;
-		}
-
-		@Override
-		public void run() {
-			synchronized (sharedResources.resource2) {
-				System.out.println("Lock on resource2 by " + Thread.currentThread().getName());
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException ex) {
+					synchronized (resource1) {
+						System.out.println("Thread 2: locked resource 1");
+					}
 				}
-				System.out.println("Waiting to acquire lock on resource1 by " + Thread.currentThread().getName());
-				synchronized (sharedResources.resource1) {
-					System.out.println("Acquired lock on resource1");
-				}
-
 			}
-		}
-	}
+		};
 
-	public static void main(String args[]) {
-		SharedResources sharedResources = new SharedResources("R1", "R2");
+		t1.start();
+		t2.start();
 
-		Thread thread1 = new Thread(new MyThread1(sharedResources));
-		Thread thread2 = new Thread(new MyThread2(sharedResources));
+		t1.join();
+		t2.join();
 
-		thread1.start();
-		thread2.start();
-
+		System.out.println("no dead lock");
 	}
 }

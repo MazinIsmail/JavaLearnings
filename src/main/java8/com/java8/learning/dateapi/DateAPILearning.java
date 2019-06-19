@@ -17,16 +17,140 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Set;
 
+/**
+ * Java language provides direct support for Language based objects. Java 8
+ * contained new API based on Immutable value classes which are Thread safe. The
+ * base package is java.time Local : Simplified date-time API with no complexity
+ * of timezone handling. Zoned : Specialized date-time API to deal with various
+ * timezones.
+ */
 public class DateAPILearning {
 	public static void main(String[] args) {
+		checkingChronoEnum();
+		// LocalDate is an Immutable class and Thread-Safe. Default format is
+		// yyyy-MM-dd. It shows only Date
+		// now() method to get Current Date alone
+		LocalDate today = LocalDate.now();
+		System.out.println("Current Date : " + today);
+
+		// It allows to provide input arguments for Year, Month and Date
+		LocalDate independenceDay = LocalDate.of(2014, Month.AUGUST, 15);
+		System.out.println("Independance day : " + independenceDay);
+
+		/**
+		 * Exception in thread "main" java.time.DateTimeException: Invalid date
+		 * 'FEBRUARY 30' at java.time.LocalDate.create(LocalDate.java:431) at
+		 * java.time.LocalDate.of(LocalDate.java:249) at
+		 * com.java8.learning.dateapi.DateAPILearning.main(DateAPILearning.java:32)
+		 */
+		// LocalDate febDay = LocalDate.of(2014, Month.FEBRUARY, 30);
+		// System.out.println("Independance day : " + febDay);
+
+		// LocalDate of specific Zone
+		LocalDate specificZoneDate = LocalDate.now(ZoneId.of("Asia/Kolkata"));
+		System.out.println("Specific Zone Date : " + specificZoneDate);
+
+		// LocalTime is also an immutable class and Thread-safe. It shows only the
+		// time(no date). It's default format is hh:mm:ss.zzz
+		LocalTime currentTime = LocalTime.now();
+		System.out.println("Current Local Time : " + currentTime);
+
+		// Creating LocalTime by providing input arguments
+		// arguments provided is hh, mm, ss, ms
+		LocalTime specificTime = LocalTime.of(12, 20, 25, 40);
+		System.out.println("Specific Time of Day=" + specificTime);
+
+		/**
+		 * Exception in thread "main" java.time.DateTimeException: Invalid value for
+		 * HourOfDay (valid values 0 - 23): 25 at
+		 * java.time.temporal.ValueRange.checkValidValue(ValueRange.java:311) at
+		 * java.time.temporal.ChronoField.checkValidValue(ChronoField.java:703) at
+		 * java.time.LocalTime.of(LocalTime.java:296) at
+		 * com.java8.learning.dateapi.DateAPILearning.main(DateAPILearning.java:56)
+		 */
+		/**
+		 * Exception in thread "main" java.time.DateTimeException: Invalid value for
+		 * MinuteOfHour (valid values 0 - 59): 61 at
+		 * java.time.temporal.ValueRange.checkValidValue(ValueRange.java:311) at
+		 * java.time.temporal.ChronoField.checkValidValue(ChronoField.java:703) at
+		 * java.time.LocalTime.of(LocalTime.java:300) at
+		 * com.java8.learning.dateapi.DateAPILearning.main(DateAPILearning.java:65)
+		 */
+		LocalTime invalidTime = LocalTime.of(23, 25);
+		System.out.println("Invalid time : " + invalidTime);
+
+		// LocalTime of specific Zone
+		LocalTime specificZoneTime = LocalTime.now(ZoneId.of("Asia/Kolkata"));
+		System.out.println("Specific Zone Time : " + specificZoneTime);
+
+		// LocalDateTime is an immutable date-time object that represents date-time
+		// It's default format is yyyy-MM-dd-HH-mm-ss.zzz
+		// Current DateTime
+		LocalDateTime currentDateTime = LocalDateTime.now();
+		System.out.println("Current DateTime : " + currentDateTime);
+
+		// Current DateTime using LocalDate and LocalTime
+		currentDateTime = LocalDateTime.of(LocalDate.now(), LocalTime.now());
+		System.out.println("Current DateTime using LocalDate and LocalTime : " + currentDateTime);
+
+		// Creating LocalDateTime by providing input arguments
+		LocalDateTime localDateTimeSpecific = LocalDateTime.of(2014, Month.JANUARY, 1, 10, 10, 30);
+		System.out.println("LocalDateTime Specific Date Time : " + localDateTimeSpecific);
+
+		// Try creating date by providing invalid inputs for Date/Time
+		/**
+		 * Exception in thread "main" java.time.DateTimeException: Invalid date
+		 * 'FEBRUARY 30' at java.time.LocalDate.create(LocalDate.java:431) at
+		 * java.time.LocalDate.of(LocalDate.java:249) at
+		 * java.time.LocalDateTime.of(LocalDateTime.java:261) at
+		 * com.java8.learning.dateapi.DateAPILearning.main(DateAPILearning.java:91)
+		 */
+		/**
+		 * Exception in thread "main" java.time.DateTimeException: Invalid value for
+		 * HourOfDay (valid values 0 - 23): 26 at
+		 * java.time.temporal.ValueRange.checkValidValue(ValueRange.java:311) at
+		 * java.time.temporal.ChronoField.checkValidValue(ChronoField.java:703) at
+		 * java.time.LocalTime.of(LocalTime.java:317) at
+		 * java.time.LocalDateTime.of(LocalDateTime.java:262) at
+		 * com.java8.learning.dateapi.DateAPILearning.main(DateAPILearning.java:99)
+		 */
+		// LocalDateTime feb29_2014 = LocalDateTime.of(2014, Month.FEBRUARY, 25, 26, 1,
+		// 1);
+		// System.out.println("Invalid DateTime Format : " + feb29_2014);
+
+		// LocalDateTime Specific Zone
+		/**
+		 * Exception in thread "main" java.time.zone.ZoneRulesException: Unknown
+		 * time-zone ID: Asia/Mumbai at
+		 * java.time.zone.ZoneRulesProvider.getProvider(ZoneRulesProvider.java:272) at
+		 * java.time.zone.ZoneRulesProvider.getRules(ZoneRulesProvider.java:227) at
+		 * java.time.ZoneRegion.ofId(ZoneRegion.java:120) at
+		 * java.time.ZoneId.of(ZoneId.java:411) at java.time.ZoneId.of(ZoneId.java:359)
+		 * at com.java8.learning.dateapi.DateAPILearning.main(DateAPILearning.java:120)
+		 */
+		// LocalDateTime specificZoneDateTime =
+		// LocalDateTime.now(ZoneId.of("Asia/Chennai"));
+		// System.out.println("Specific Zone Date Time : " + specificZoneDateTime);
+
+		LocalDate tomorrow = today.plus(1, ChronoUnit.DAYS);
+		System.out.println("Tomorrow : " + tomorrow);
+		LocalDate yesterday = tomorrow.minusDays(2);
+		System.out.println("Yesterday : " + yesterday);
+
+		DayOfWeek dayOfWeek = independenceDay.getDayOfWeek();
+		System.out.println(dayOfWeek); // FRIDAY
 
 		// Clock provides access to the current date and time.
 		Clock clock = Clock.systemDefaultZone();
+		System.out.println("Clock : " + clock);
 		long millis = clock.millis();
+		System.out.println("millis : " + millis);
 
 		// Instants can be used to create legacy java.util.Date objects.
 		Instant instant = clock.instant();
+		System.out.println("Instant : " + instant);
 		Date legacyDate = Date.from(instant);
+		System.out.println("Legacy Date : " + legacyDate);
 
 		// Timezones are represented by a ZoneId.
 		System.out.println(ZoneId.getAvailableZoneIds());
@@ -55,13 +179,6 @@ public class DateAPILearning {
 				.withLocale(Locale.GERMAN);
 		LocalTime leetTime = LocalTime.parse("13:37", germanFormatter);
 		System.out.println(leetTime); // 13:37
-
-		LocalDate today = LocalDate.now();
-		LocalDate tomorrow = today.plus(1, ChronoUnit.DAYS);
-		LocalDate yesterday = tomorrow.minusDays(2);
-		LocalDate independenceDay = LocalDate.of(2014, Month.JULY, 4);
-		DayOfWeek dayOfWeek = independenceDay.getDayOfWeek();
-		System.out.println(dayOfWeek); // FRIDAY
 
 		LocalDateTime sylvester = LocalDateTime.of(2014, Month.DECEMBER, 31, 23, 59, 59);
 		DayOfWeek dayOfWeek1 = sylvester.getDayOfWeek();
@@ -99,5 +216,30 @@ public class DateAPILearning {
 		ZoneId zoneId = ZoneId.of("Europe/Paris");
 		ZonedDateTime zdt = ZonedDateTime.of(ldt, zoneId); // 2018-07-01T08:00+02:00[Europe/Paris]
 		System.out.println("zdt: " + zdt);
+	}
+
+	/**
+	 * ChronoUnit - to replace integer values used in old API to represent day,
+	 * month etc
+	 */
+	public static void checkingChronoEnum() {
+		LocalDate date = LocalDate.now();
+		System.out.println("current date is :" + date);
+
+		// adding 2 years to the current date
+		LocalDate year = date.plus(2, ChronoUnit.YEARS);
+		System.out.println("next to next year is " + year);
+
+		// adding 1 month to the current data
+		LocalDate nextMonth = date.plus(1, ChronoUnit.MONTHS);
+		System.out.println("the next month is " + nextMonth);
+
+		// adding 1 week to the current date
+		LocalDate nextWeek = date.plus(1, ChronoUnit.WEEKS);
+		System.out.println("next week is " + nextWeek);
+
+		// adding 2 decades to the current date
+		LocalDate Decade = date.plus(2, ChronoUnit.DECADES);
+		System.out.println("20 years after today " + Decade);
 	}
 }

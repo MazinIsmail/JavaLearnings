@@ -32,12 +32,18 @@ public class ArrayListClone {
 		alOriginal.add("Pomo");
 		alOriginal.add("Watermelon");
 
-		System.out.println("Original ArrayList after adding new values :" + alOriginal);
+		System.out.println("Original ArrayList after adding new values in Original:" + alOriginal);
 
 		/**
 		 * Shallow copy will not get affected when there is a change in the Original
 		 * ArrayList
 		 */
-		System.out.println("Shallow copy ArrayList after adding new values :" + alClone);
+		System.out.println("Shallow copy ArrayList after adding new values in Original:" + alClone);
+		
+		alClone.add("Berry");
+		System.out.println("After adding values in Clone :");
+		System.out.println("Original ArrayList after adding new values in Clone:" + alOriginal);
+		System.out.println("Shallow copy ArrayList after adding new values in Clone:" + alClone);
+		
 	}
 }
