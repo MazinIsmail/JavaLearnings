@@ -11,12 +11,13 @@ public class ChildClassesReference {
 	}
 }
 
-public class Derived extends ChildClassasReference {
+class Derived extends ChildClassesReference {
 	void myMethod() {
 		System.out.println("GFG");
 	}
 
 	public static void main(String[] args) {
-		Derived object = new ChildClassasReference();
-		object.myMethod(); }
+		ChildClassesReference object = new ChildClassesReference();
+		object.myMethod();
+	}
 }
