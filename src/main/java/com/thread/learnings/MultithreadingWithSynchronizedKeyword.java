@@ -49,6 +49,8 @@ public class MultithreadingWithSynchronizedKeyword {
 		t6.start();
 		t7.start();
 
+		System.out.println(counter.count);
+		
 		t1.join();
 		t2.join();
 		t3.join();

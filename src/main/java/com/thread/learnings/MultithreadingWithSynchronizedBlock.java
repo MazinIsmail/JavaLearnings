@@ -21,11 +21,10 @@ class NewCounter {
 
 	void increment() {
 		System.out.println("Thread " + Thread.currentThread().getName() + "thrying to access synchronized block");
-
 		synchronized (this) {
 			count++;
+			System.out.println(count);		
 		}
-
 	}
 }
 
