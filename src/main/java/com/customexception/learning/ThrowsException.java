@@ -1,7 +1,7 @@
 package com.customexception.learning;
 
 //throws is a keyword in Java which is used in the signature of method to indicate that this method might throw one of the listed type exceptions. 
-class ThrowsExample {
+class ThrowsException {
 	void method1() throws ArithmeticException {
 		throw new ArithmeticException("Calculation error");
 	}
@@ -19,7 +19,7 @@ class ThrowsExample {
 	}
 
 	public static void main(String args[]) {
-		ThrowsExample obj = new ThrowsExample();
+		ThrowsException obj = new ThrowsException();
 		obj.method3();
 		System.out.println("End Of Program");
 	}

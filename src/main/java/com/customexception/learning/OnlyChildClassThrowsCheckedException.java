@@ -12,7 +12,7 @@ class SuperClass {
 } 
   
 // SuperClass inherited by the SubClass 
-class SubClass extends SuperClass { 
+class OnlyChildClassThrowsCheckedException extends SuperClass { 
   
     // method() declaring Checked Exception IOException 
     void method()  
@@ -27,7 +27,7 @@ class SubClass extends SuperClass {
     // Driver code 
     public static void main(String args[]) 
     { 
-    	SuperClass s = new SubClass(); 
+    	SuperClass s = new OnlyChildClassThrowsCheckedException(); 
         s.method(); 
     } 
 } 

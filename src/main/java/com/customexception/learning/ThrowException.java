@@ -2,7 +2,7 @@ package com.customexception.learning;
 
 //The throw keyword in Java is used to explicitly throw an exception from a method or any block of code.
 
-class ThrowExcep 
+class ThrowException 
 {
 static void validate(int age){  
     if(age<18)  

@@ -1,6 +1,6 @@
 package com.customexception.learning;
 
-public class Nest {
+public class NestedTryException {
 		   public static void main(String args[]){
 			 //Parent try block
 		     try{

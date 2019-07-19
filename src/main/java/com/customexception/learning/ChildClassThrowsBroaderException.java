@@ -8,13 +8,13 @@ import java.io.IOException;
 		  System.out.println("Black");
 	}  
 }
-class Dog extends Animal{
+class ChildClassThrowsBroaderException extends Animal{
 	  void color()
 	  {
 		  System.out.println("White");
 	  }  
 	  public static void main(String args[]){  
-		  Animal obj = new Dog();  
+		  Animal obj = new ChildClassThrowsBroaderException();  
 		   try{
 		   obj.color();
 		   }catch(Exception e){
