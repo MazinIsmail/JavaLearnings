@@ -1,6 +1,8 @@
 package com.customexception.learning;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  * This program demonstrates Checked Exceptions Checked Exceptions: These are
@@ -22,12 +24,12 @@ public class CheckedException {
 	}
 
 	public static void main(String[] args) {
-			try {
-				excepMethod();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		try {
+			excepMethod();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 }

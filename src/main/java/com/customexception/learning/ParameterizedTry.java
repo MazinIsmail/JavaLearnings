@@ -5,7 +5,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-//Java code illustrating try-with-resource 
+/**
+ * Java code illustrating try-with-resource
+ *
+ */
 
 public class ParameterizedTry {
 	public static void main(String args[]) throws IOException {
@@ -16,12 +19,11 @@ public class ParameterizedTry {
 		BufferedReader br = new BufferedReader(new FileReader(file));
 
 		// Original try-with-resources statement from JDK 7 or 8
-		//TODO; Finally is not required in this case
 		try (BufferedReader reader = br) {
 			String st = reader.readLine();
 			System.out.println(st);
 		}
-		
+
 	}
 
 }

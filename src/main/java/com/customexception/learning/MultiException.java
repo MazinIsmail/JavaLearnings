@@ -2,7 +2,9 @@ package com.customexception.learning;
 
 import java.util.Scanner;
 
-//A Java program to demonstrate multicatch feature 
+/**
+ * A Java program to demonstrate multicatch feature
+ */
 
 public class MultiException {
 	public static void main(String args[]) {

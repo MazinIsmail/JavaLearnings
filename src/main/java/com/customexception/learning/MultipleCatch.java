@@ -1,12 +1,10 @@
 package com.customexception.learning;
 
-/*
- A try block can be followed by one or more catch blocks. 
- Each catch block must contain a different exception handler.
+/**
+ * A try block can be followed by one or more catch blocks. Each catch block
+ * must contain a different exception handler.
+ * 
  */
-//TODO; multiple exceptions in one catch
-//TODO; parameterized try
-//TODO; In catch block higher hierarchy should come first
 public class MultipleCatch {
 	public static void Multiple() {
 		try {
@@ -14,11 +12,12 @@ public class MultipleCatch {
 			a[5] = 30 / 0;
 		} catch (ArithmeticException e) {
 			System.out.println("Arithmetic Exception occurs");
-		} /* catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("ArrayIndexOutOfBounds Exception occurs");
-			} catch (Exception e) {
-			System.out.println("Parent Exception occurs");
-			}*/
+		}
+		/*
+		 * catch (ArrayIndexOutOfBoundsException e) {
+		 * System.out.println("ArrayIndexOutOfBounds Exception occurs"); } catch
+		 * (Exception e) { System.out.println("Parent Exception occurs"); }
+		 */
 		System.out.println("rest of the code");
 	}
 
