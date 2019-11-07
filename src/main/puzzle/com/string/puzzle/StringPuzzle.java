@@ -38,37 +38,6 @@ public class StringPuzzle {
 		 */
 	}
 
-	public static void reverseString(String original, String reverse, int length) {
-		for (int i = length - 1; i >= 0; i--)
-			reverse = reverse + original.charAt(i);
-		System.out.println("Reverse of entered string is: " + reverse);
-	}
-
-	public static StringBuffer reverseWordByWord(String str) {
-		int strLeng = str.length() - 1;
-		StringBuffer reverse = new StringBuffer(), temp = new StringBuffer();
-
-		for (int i = 0; i <= strLeng; i++) {
-			temp = temp.append(str.charAt(i));
-
-			if ((str.charAt(i) == ' ') || (i == strLeng)) {
-				reverse = reverse.append(temp.reverse());
-				reverse.append(" ");
-				temp = new StringBuffer("");
-			}
-
-		}
-		return reverse;
-	}
-
-	public static StringBuffer sortString(String str) {
-		char[] chars = str.toCharArray();
-		Arrays.sort(chars);
-		StringBuffer sorted = new StringBuffer();
-		sorted.append(chars);
-		return sorted;
-	}
-
 	public static String sortTree(String str) {
 		TreeSet<String> treeset = new TreeSet<String>();
 		String[] strings = str.split("");
@@ -80,8 +49,6 @@ public class StringPuzzle {
 
 	public static void converttonumber(String str) {
 		final HashMap<Character, Integer> map = new HashMap<Character, Integer>();
-		// or map = new HashMap<Character, Integer> if you are using something before
-		// Java 7.
 		map.put('a', 1);
 		map.put('b', 2);
 		map.put('c', 3);
@@ -198,11 +165,11 @@ public class StringPuzzle {
 		}
 		return reverse;
 	}
-	
+
 	private static String reverseWordChar(String str) {
 		int length = str.length();
 		char[] charArray = str.toCharArray();
-		char[] reverseCharArray= new char[length];
+		char[] reverseCharArray = new char[length];
 		int j = 0;
 		for (int i = length - 1; i >= 0; i--) {
 			reverseCharArray[j] = charArray[i];

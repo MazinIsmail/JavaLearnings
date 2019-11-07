@@ -6,7 +6,6 @@ import java.io.IOException;
  * When child class method is throwing border checked exception compared to the
  * same method of base class
  *
- *
  */
 class ParentException {
 	void color() throws IOException {
