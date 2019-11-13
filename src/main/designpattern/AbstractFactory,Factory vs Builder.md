@@ -2,8 +2,7 @@ AbstractFactory,Factory vs Builder
 
 There are three major issues with Factory and Abstract Factory design patterns when the Object contains a lot of attributes.
 
-1) Too Many arguments to pass from client program to the Factory class that can be error prone because most of the time,
-the type of arguments are same and from client side its hard to maintain the order of the argument.
+1) Too Many arguments to pass from client program to the Factory class that can be error prone because most of the time, the type of arguments are same and from client side its hard to maintain the order of the argument.
 
 2) Some of the parameters might be optional but in Factory pattern, we are forced to send all the parameters and optional parameters need to send as NULL.
 
