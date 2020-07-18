@@ -11,25 +11,10 @@ public class ChildClassesReference {
 	}
 }
 
-
 class Derived extends ChildClassesReference {
 
-/*public class Derived extends ChildClassasReference {
->>>>>>> branch 'master' of https://github.com/MazinIsmail/JavaLearnings.git
-	void myMethod() {
-		System.out.println("GFG");
-	}
-
 	public static void main(String[] args) {
-<<<<<<< HEAD
 		ChildClassesReference object = new ChildClassesReference();
 		object.myMethod();
 	}
 }
-=======
-		Derived object = new ChildClassasReference();
-		object.myMethod();
-	}
-}*/
-}
-

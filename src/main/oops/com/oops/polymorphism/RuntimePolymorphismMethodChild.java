@@ -5,6 +5,7 @@
  * We are calling the run method by the reference variable of Parent class.
  * Since it refers to the subclass object and subclass method overrides the Parent class method,
  * the subclass method is invoked at runtime.
+ * 
  * Method invocation is determined by the JVM not compiler, it is known as runtime polymorphism
  */
 package com.oops.polymorphism;

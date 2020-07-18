@@ -22,8 +22,8 @@ class Parent extends Grandparent {
 class Child extends Parent {
 	@Override
 	public void Print() {
-	super.Print(); // Trying to access Grandparent's Print() Compiler Error occurs
-		/*super.super.Print();*/ // Trying to access Grandparent's Print() Compiler Error occurs
+		super.Print(); // Trying to access Grandparent's Print() Compiler Error occurs
+		/* super.super.Print(); */ // Trying to access Grandparent's Print() Compiler Error occurs
 
 		System.out.println("Child's Print()");
 	}

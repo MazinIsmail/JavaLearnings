@@ -1,4 +1,4 @@
-package com.string.puzzle;
+package com.puzzle.algorithm;
 
 import java.util.Arrays;
 

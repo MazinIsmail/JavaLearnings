@@ -1,9 +1,9 @@
-/**
- * Example of Method Overloading with TypePromotion if matching found:
-If there are matching type arguments in the method, type promotion is not performed.
- */
 package com.oops.polymorphism;
 
+/**
+ * Example of Method Overloading with TypePromotion if matching found: If there
+ * are matching type arguments in the method, type promotion is not performed.
+ */
 public class CompiletimeTypePromotionMatch {
 
 	void sum(int a, int b) {

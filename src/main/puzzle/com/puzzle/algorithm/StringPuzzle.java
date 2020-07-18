@@ -1,4 +1,4 @@
-package com.string.puzzle;
+package com.puzzle.algorithm;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -15,10 +15,7 @@ public class StringPuzzle {
 	}
 
 	public static void main(String args[]) {
-		String revertCheck = reverseWordChar("Apple");
-		System.out.println(revertCheck);
-//		strReversal("This is a String");
-		strWordReversal("This is a String");
+		largestnext();
 		/*
 		 * String original, reverse = ""; Scanner in = new Scanner(System.in);
 		 * System.out.println("Enter a string to reverse"); original = in.nextLine();
@@ -95,7 +92,7 @@ public class StringPuzzle {
 		int n = Integer.parseInt(str);
 
 		String n1 = n + "";
-		char c[] = n1.toCharArray();
+		char[] c = n1.toCharArray();
 		char[] c1 = c;
 		for (int i = c.length - 1; i >= 1; i--) {
 			if (c[i - 1] > c[i]) {
@@ -119,7 +116,7 @@ public class StringPuzzle {
 
 	}
 
-	private static int check(char a[], int j) {
+	private static int check(char a[], char j) {
 		int k;
 		for (k = a.length - 1; k >= 0; k--) {
 			if (a[k] > j)
