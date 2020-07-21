@@ -1,10 +1,13 @@
 package com.pattern.factory;
 
-/* Creational pattern as this pattern provides one of the best ways to create an object.
- * In Factory pattern, we create object without exposing the creation logic to the client and
- * refer to newly created object using a common interface.
- * Factory design pattern is used when we have a super class with multiple subclasses 
- * and based on input, we need to return one of the sub-class.*/
+/**
+ * Creational pattern as this pattern provides one of the best ways to create an
+ * object. In Factory pattern, we create object without exposing the creation
+ * logic to the client and refer to newly created object using a common
+ * interface. Factory design pattern is used when we have a super class with
+ * multiple subclasses and based on input, we need to return one of the
+ * sub-class.
+ */
 public class FactoryPatternDemo {
 
 	public static void main(String[] args) {
