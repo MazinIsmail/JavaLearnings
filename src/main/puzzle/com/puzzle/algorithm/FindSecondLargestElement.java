@@ -13,6 +13,10 @@ package com.puzzle.algorithm;
  * 
  * Explanation: The largest element of the array is 10 and the second largest
  * element is 5
+ * 
+ * Time Complexity: O(n). Only one traversal of the array is needed.
+ * 
+ * Auxiliary Space: O(1). As no extra space is required.
  */
 public class FindSecondLargestElement {
 

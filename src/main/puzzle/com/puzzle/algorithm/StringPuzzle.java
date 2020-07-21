@@ -15,7 +15,6 @@ public class StringPuzzle {
 	}
 
 	public static void main(String args[]) {
-		largestnext();
 		/*
 		 * String original, reverse = ""; Scanner in = new Scanner(System.in);
 		 * System.out.println("Enter a string to reverse"); original = in.nextLine();
@@ -83,46 +82,6 @@ public class StringPuzzle {
 			}
 		}
 		System.out.println(sytbuff);
-	}
-
-	public static void largestnext() {
-		Scanner sca = new Scanner(System.in);
-		System.out.println("Enter the number: ");
-		String str = sca.nextLine();
-		int n = Integer.parseInt(str);
-
-		String n1 = n + "";
-		char[] c = n1.toCharArray();
-		char[] c1 = c;
-		for (int i = c.length - 1; i >= 1; i--) {
-			if (c[i - 1] > c[i]) {
-				continue;
-			} else {
-				int index = check(c, c[i - 1]);
-				char temp = c[i - 1];
-				c[i - 1] = c[index];
-				c[index] = temp;
-				Arrays.sort(c, i, c.length);
-				break;
-			}
-
-		}
-
-		StringBuffer sttt = new StringBuffer();
-		sttt.append(c);
-		System.out.println(sttt);
-		Arrays.sort(c1);
-		System.out.println(c1);
-
-	}
-
-	private static int check(char a[], char j) {
-		int k;
-		for (k = a.length - 1; k >= 0; k--) {
-			if (a[k] > j)
-				break;
-		}
-		return k;
 	}
 
 	/**
