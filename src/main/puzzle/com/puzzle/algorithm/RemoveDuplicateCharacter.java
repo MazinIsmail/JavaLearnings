@@ -2,9 +2,9 @@ package com.puzzle.algorithm;
 
 import java.util.LinkedHashSet;
 
-/*
+/**
  * Time Complexity: O(n)
- * */
+ */
 
 public class RemoveDuplicateCharacter {
 

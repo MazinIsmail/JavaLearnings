@@ -20,7 +20,6 @@ package com.pattern.state;
  * 
  * Always try to make state objects singletons.
  * 
- * 
  * Advantages of State Design Pattern:-
  * 
  * With State pattern, the benefits of implementing polymorphic behavior are

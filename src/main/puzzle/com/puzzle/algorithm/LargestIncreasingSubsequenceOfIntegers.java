@@ -39,7 +39,7 @@ public class LargestIncreasingSubsequenceOfIntegers {
 		int anchorRight = 0;
 		for (int i = 0; i < nums.length; i++) {
 
-			/*
+			/**
 			 * If you remove the = comparison it will give you the result of The longest
 			 * continuous non-decreasing subsequence.
 			 */

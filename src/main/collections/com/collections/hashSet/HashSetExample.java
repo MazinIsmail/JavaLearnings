@@ -2,12 +2,12 @@ package com.collections.hashSet;
 
 import java.util.HashSet;
 
-/*
+/**
  * HASHSET
- * No duplicate values allowed.
- * Insertion order not maintained.
- * Default capacity : 16.
- * Default load factor : 0.75
+ * 
+ * No duplicate values allowed. Insertion order not maintained.
+ * 
+ * Default capacity : 16. Default load factor : 0.75
  */
 public class HashSetExample {
 

@@ -4,20 +4,17 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-/*HASHMAP
- * It stores the data in (Key, Value) pairs.
- * HashMap uses a technique called Hashing. 
- * Hashing is a technique of converting a large String to small String that represents the same String.
- * A shorter value helps in indexing and faster searches.
- * HashMap doesn’t allow duplicate keys but allows duplicate values.
- * It maintains no order.
- * Initial capacity 16 and load factor 0.75.
- * Internally HashMap contains an array of Node and a node is represented as a class which contains 4 fields :
- * --- int hash
- * --- K key
- * --- V value
- * --- Node next
- * */
+/**
+ * HASHMAP It stores the data in (Key, Value) pairs. HashMap uses a technique
+ * called Hashing. Hashing is a technique of converting a large String to small
+ * String that represents the same String. A shorter value helps in indexing and
+ * faster searches. HashMap doesn’t allow duplicate keys but allows duplicate
+ * values. It maintains no order. Initial capacity 16 and load factor 0.75.
+ * 
+ * Internally HashMap contains an array of Node and a node is represented as a
+ * class which contains 4 fields : --- int hash --- K key --- V value --- Node
+ * next
+ */
 
 public class HashmapMain {
 
@@ -34,9 +31,9 @@ public class HashmapMain {
 			Integer a = map.get("vishal");
 			System.out.println("value for key \"vishal\" is:- " + a);
 		}
-		
+
 		Map<String, Integer> map1 = Collections.synchronizedMap(map);
-		
+
 		map.clear();
 
 		// Parameterized : same mapping as other Map.

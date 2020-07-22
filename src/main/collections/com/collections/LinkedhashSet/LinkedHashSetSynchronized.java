@@ -1,7 +1,6 @@
 package com.collections.LinkedhashSet;
 
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -10,7 +9,7 @@ public class LinkedHashSetSynchronized {
 	public static void main(String[] args) {
 
 		LinkedHashSet<String> hset = new LinkedHashSet<String>();
-		
+
 		hset.add("Thanos");
 		hset.add("DoctorStrange");
 		hset.add("IronMan");

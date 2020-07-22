@@ -27,13 +27,13 @@ public class FindSecondLargestElement {
 	}
 
 	public static void print2largest(int arr[], int arrSize) {
-		int i, firstLargest, secondLargest;
+		int firstLargest, secondLargest;
 		if (arrSize < 2) {
 			System.out.print("Invalid Input: There should be atleast two elements.");
 			return;
 		}
 		firstLargest = secondLargest = Integer.MIN_VALUE;
-		for (i = 0; i < arrSize; i++) {
+		for (int i = 0; i < arrSize; i++) {
 			if (arr[i] > firstLargest) {
 				secondLargest = firstLargest;
 				firstLargest = arr[i];

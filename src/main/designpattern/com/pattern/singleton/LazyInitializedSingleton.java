@@ -1,6 +1,8 @@
 package com.pattern.singleton;
 
-/*Not Thread Safe*/
+/**
+ * Not Thread Safe
+ */
 public class LazyInitializedSingleton {
 	private static LazyInitializedSingleton instance;
 

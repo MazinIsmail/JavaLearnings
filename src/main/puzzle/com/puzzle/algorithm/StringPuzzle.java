@@ -1,8 +1,6 @@
 package com.puzzle.algorithm;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Scanner;
 import java.util.TreeSet;
 
 public class StringPuzzle {
