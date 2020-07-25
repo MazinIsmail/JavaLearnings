@@ -14,7 +14,7 @@ public class ScheduledExecutorServiceLearnings {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 
 		// For Scheduling Task
-		ScheduledExecutorService executorService5 = Executors.newScheduledThreadPool(10);
+		ScheduledExecutorService executorService = Executors.newScheduledThreadPool(10);
 
 		/**
 		 * Creates and executes a one-shot action that becomes enabled after the given
@@ -34,7 +34,7 @@ public class ScheduledExecutorServiceLearnings {
 		 * method will return null upon completion
 		 * 
 		 */
-		ScheduledFuture<?> scheduledFuture1 = executorService5.schedule(new RunnableSample(), 10, TimeUnit.SECONDS);
+		ScheduledFuture<?> scheduledFuture1 = executorService.schedule(new RunnableSample(), 10, TimeUnit.SECONDS);
 		scheduledFuture1.get();
 
 		/**
@@ -64,7 +64,7 @@ public class ScheduledExecutorServiceLearnings {
 		 */
 		// First time it will wait for 20 seconds and then trigger the task. And then it
 		// will trigger the task every 10 seconds
-		ScheduledFuture<?> scheduledFuture2 = executorService5.scheduleAtFixedRate(new RunnableSample(), 20, 10,
+		ScheduledFuture<?> scheduledFuture2 = executorService.scheduleAtFixedRate(new RunnableSample(), 20, 10,
 				TimeUnit.SECONDS);
 		scheduledFuture2.get();
 
@@ -92,9 +92,11 @@ public class ScheduledExecutorServiceLearnings {
 		// First time it will wait for 20 seconds and then trigger the task. It will
 		// wait for the task to complete and only then it will wait for 10 seconds and
 		// then trigger the next task.
-		ScheduledFuture<?> scheduledFuture3 = executorService5.scheduleWithFixedDelay(new RunnableSample(), 20, 10,
+		ScheduledFuture<?> scheduledFuture3 = executorService.scheduleWithFixedDelay(new RunnableSample(), 20, 10,
 				TimeUnit.SECONDS);
 		scheduledFuture2.get();
+
+		executorService.shutdown();
 
 	}
 }

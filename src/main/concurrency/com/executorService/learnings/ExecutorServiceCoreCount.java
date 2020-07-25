@@ -13,5 +13,6 @@ public class ExecutorServiceCoreCount {
 		for (int i = 0; i < 5; i++) {
 			executorService.execute(new RunnableSample());
 		}
+		executorService.shutdown();
 	}
 }

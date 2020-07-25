@@ -20,6 +20,8 @@ public class ExecutorServiceConstructor {
 		} catch (RejectedExecutionException e) {
 			e.printStackTrace();
 		}
+		
+		executorService.shutdown();
 
 	}
 
