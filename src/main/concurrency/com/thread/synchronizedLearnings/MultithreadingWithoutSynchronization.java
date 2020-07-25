@@ -52,6 +52,7 @@ public class MultithreadingWithoutSynchronization {
 		t6.start();
 		t7.start();
 
+		// 'join' waits for this thread to die.
 		t1.join();
 		t2.join();
 		t3.join();
@@ -60,7 +61,7 @@ public class MultithreadingWithoutSynchronization {
 		t6.join();
 		t7.join();
 
-		//Expected value is 700000
+		// Expected value is 700000
 		System.out.println(counter.count);
 	}
 }
