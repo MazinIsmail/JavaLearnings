@@ -23,7 +23,7 @@ public class HashmapMethodReplace {
 		}
 
 		System.out.println("after replce multiple of elements:");
-		// Replace with mentioning key,value and new value
+		// Replace with mentioning key, value and new value
 		hm.replace(101, "Vijay", "Ravi");
 		for (Map.Entry m : hm.entrySet()) {
 			System.out.println(m.getKey() + " " + m.getValue());

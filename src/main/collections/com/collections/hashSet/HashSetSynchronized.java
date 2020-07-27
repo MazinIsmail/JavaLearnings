@@ -21,7 +21,7 @@ public class HashSetSynchronized {
 
 		// Synchronizing the Hashset using Collections class : Thread safe
 		Set<String> sysSet = Collections.synchronizedSet(hset);
-		System.out.println("Synchronized set got created..." + sysSet);
+		System.out.println("Synchronized set got created... " + sysSet);
 	}
 
 }

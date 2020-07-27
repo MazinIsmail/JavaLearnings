@@ -6,9 +6,8 @@ import java.util.ListIterator;
 
 /**
  * ListIterator is an Interface which is used to Traverse List in both Forward
- * and Backward direction
- */
-/**
+ * and Backward direction.
+ * 
  * It is used to perform CRUD(Create, Read, Update, Delete) operation while
  * traversing through the List
  */

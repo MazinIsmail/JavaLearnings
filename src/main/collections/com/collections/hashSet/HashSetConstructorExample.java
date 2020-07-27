@@ -10,12 +10,11 @@ public class HashSetConstructorExample {
 		// Default
 		HashSet<String> hset = new HashSet<String>();
 
-		ArrayList<String> Arr = new ArrayList<String>();
-		Arr.add("Uno");
+		ArrayList<String> arrayList = new ArrayList<String>();
+		arrayList.add("Uno");
 
 		// Parameterized : converting other collections
-		//TODO: Duplicate removal
-		HashSet<String> hset2 = new HashSet<String>(Arr);
+		HashSet<String> hset2 = new HashSet<String>(arrayList);
 		System.out.println(hset2);
 
 		// Set mentioning the initial capacity
