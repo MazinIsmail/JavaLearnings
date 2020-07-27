@@ -8,7 +8,7 @@ import java.util.Map;
  */
 public class FibonacciNthNumber {
 	public static void main(String[] args) {
-		int nthPosition = 5;
+		int nthPosition = 20;
 		Map<Integer, Integer> lookupTable = new HashMap<>();
 		int nthValue = fibonacciNthNumber(nthPosition, lookupTable);
 		System.out.println("n'th Fibonacci number is " + nthValue);

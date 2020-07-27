@@ -17,7 +17,7 @@ public class PrintLetterWordwiseOfSentence {
 				 * to loop for the longest word, so smaller words will get effected.
 				 */
 				if (i < wordChar.length) {
-					System.out.println("The first character of each word: " + wordChar[i]);
+					System.out.println("The " + i + "th character of each word: " + wordChar[i]);
 				}
 
 				// Need to know the longestWord so as to iterate the outer loop.
@@ -25,6 +25,7 @@ public class PrintLetterWordwiseOfSentence {
 					longestWord = wordChar.length;
 				}
 			}
+			System.out.println();
 
 		}
 	}

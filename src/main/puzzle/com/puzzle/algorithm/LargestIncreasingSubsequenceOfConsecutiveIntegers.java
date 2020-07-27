@@ -33,14 +33,17 @@ public class LargestIncreasingSubsequenceOfConsecutiveIntegers {
 		// iterate through array and find
 		// end index of LIS and its Size
 		for (int i = 1; i < n; i++) {
-			if (hash.get(A[i] - 1) == null) {
-				hash.put(A[i], 1);
+			int currentValue = A[i];
+			Integer hashPreviousValueCount = hash.get(currentValue - 1);
+			if (hashPreviousValueCount == null) {
+				hash.put(currentValue, 1);
 			} else {
-				hash.put(A[i], hash.get(A[i] - 1) + 1);
+				hash.put(currentValue, hashPreviousValueCount + 1);
 			}
-			if (LIS_size < hash.get(A[i])) {
-				LIS_size = hash.get(A[i]);
-				LIS_index = A[i];
+			Integer hashCurrentValueCount = hash.get(currentValue);
+			if (LIS_size < hashCurrentValueCount) {
+				LIS_size = hashCurrentValueCount;
+				LIS_index = currentValue;
 			}
 		}
 

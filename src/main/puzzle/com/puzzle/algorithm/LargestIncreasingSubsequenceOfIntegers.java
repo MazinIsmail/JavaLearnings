@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class LargestIncreasingSubsequenceOfIntegers {
 
 	public static void main(String[] args) {
-		int input[] = { 2, 5, 3, 7, 4, 8, 5, 13, 6, 7, 8, 9 };
+		int input[] = { 2, 5, 3, 7, 4, 8, 5, 13, 6, 7, 8, 9, 9, 9, 8, 9, 9, 1, 2, 3, 4, 5, 6, 7, 8 };
 		int input2[] = { 2, 2, 2, 2 };
 		findLengthOfLCIS(input);
 	}
@@ -37,6 +37,7 @@ public class LargestIncreasingSubsequenceOfIntegers {
 		ArrayList<Integer> resultFinal = new ArrayList<>();
 		int result = 0;
 		int anchorRight = 0;
+		int count = 0;
 		for (int i = 0; i < nums.length; i++) {
 
 			/**
@@ -45,7 +46,10 @@ public class LargestIncreasingSubsequenceOfIntegers {
 			 */
 			if (i > 0 && nums[i - 1] >= nums[i]) {
 				anchorRight = i;
-				System.out.println(resultTemp);
+				if (resultTemp.size() > 1) {
+					System.out.println(resultTemp);
+					count++;
+				}
 				if (resultFinal.size() <= resultTemp.size()) {
 					resultFinal.clear();
 					resultFinal.addAll(resultTemp);
@@ -55,16 +59,22 @@ public class LargestIncreasingSubsequenceOfIntegers {
 			// result = Math.max(result, i - anchorRight + 1);
 			resultTemp.add(nums[i]);
 		}
-		System.out.println(resultTemp);
+		if (resultTemp.size() > 1) {
+			System.out.println(resultTemp);
+			count++;
+		}
 		if (resultFinal.size() <= resultTemp.size()) {
 			resultFinal.clear();
 			resultFinal.addAll(resultTemp);
 		}
-		System.out.println("Result:- ");
+		System.out.println("Longest continuous increasing subsequence:- ");
 		System.out.println(resultFinal);
 
-		System.out.println("Result Size:- ");
+		System.out.println("Longest continuous increasing subsequence size:- ");
 		System.out.println(resultFinal.size());
+
+		System.out.println("Count of continuous increasing subsequences:- ");
+		System.out.println(count);
 
 		return resultFinal.size();
 	}
