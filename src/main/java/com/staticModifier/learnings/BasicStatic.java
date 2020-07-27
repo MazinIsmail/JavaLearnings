@@ -17,9 +17,9 @@ public class BasicStatic {
 		System.out.println("Constructor");
 	}
 
-	// static method
+	// normal method
 	public void method1() {
-		System.out.println("method1");
+		System.out.println("normal method");
 	}
 
 	public static void main(String args[]) {

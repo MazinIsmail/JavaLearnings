@@ -1,5 +1,5 @@
 /**
- * Example of Java Runtime Polymorphism
+ * Example of Java Runtime Polymorphism 
  * In this example, we are creating two classes RuntimePolymorphismMethodParent and RuntimePolymorphismMethodChild.
  * RuntimePolymorphismMethodChild class extends RuntimePolymorphismMethodParent class and overrides its run() method. 
  * We are calling the run method by the reference variable of Parent class.

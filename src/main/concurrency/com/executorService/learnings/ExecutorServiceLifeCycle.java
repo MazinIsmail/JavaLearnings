@@ -20,14 +20,14 @@ public class ExecutorServiceLifeCycle {
 		executorService.shutdown();
 
 		// Returns true if this executor has been shut down.
-		executorService.isShutdown();
+		boolean checkShoutdown = executorService.isShutdown();
 
 		/**
 		 * Returns true if all tasks have completed following shut down.Note that
-		 * isTerminated is never true unlesseither shutdown or shutdownNow was called
+		 * isTerminated is never true unless either shutdown or shutdownNow was called
 		 * first.
 		 */
-		executorService.isTerminated();
+		boolean checkTerminated = executorService.isTerminated();
 
 		/**
 		 * Blocks until all tasks have completed execution after a shutdown request, or
@@ -47,7 +47,7 @@ public class ExecutorServiceLifeCycle {
 		 * via Thread.interrupt(), so any task that fails to respond to interrupts may
 		 * never terminate.
 		 * 
-		 * Returns:list of tasks that never commenced execution
+		 * Returns: list of tasks that never commenced execution
 		 */
 		List<Runnable> runnableList = executorService.shutdownNow();
 	}

@@ -1,5 +1,4 @@
 package com.pattern.adapterpatterns;
-//Java implementation of Adapter pattern 
 
 interface Bird {
 	// birds implement Bird interface that allows

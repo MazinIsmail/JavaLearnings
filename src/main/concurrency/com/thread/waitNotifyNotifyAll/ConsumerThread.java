@@ -25,6 +25,10 @@ public class ConsumerThread implements Runnable {
 			while (taskQueue.isEmpty()) {
 				System.out.println("Queue is empty " + Thread.currentThread().getName() + " is waiting , size: "
 						+ taskQueue.size());
+				/*
+				 * Causes the current thread to wait until another thread invokes the notify()
+				 * method or the notifyAll() method for this object.
+				 */
 				taskQueue.wait();
 			}
 			Thread.sleep(1000);

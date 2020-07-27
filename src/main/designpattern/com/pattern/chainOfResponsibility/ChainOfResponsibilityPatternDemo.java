@@ -55,13 +55,11 @@ public class ChainOfResponsibilityPatternDemo {
 
 	// configure Chain of Responsibility
 	private static NumberChain getChainOfNumberChain() {
-
 		NumberChain c1 = new NegativeProcessor();
 		NumberChain c2 = new ZeroProcessor();
 		NumberChain c3 = new PositiveProcessor();
 		c1.setNext(c2);
 		c2.setNext(c3);
-
 		return c1;
 	}
 

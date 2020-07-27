@@ -1,11 +1,16 @@
 package com.finalModifier.learnings;
 
-/****
- * A final variable final int THRESHOLD = 5; 
- * A blank final variable final * int THRESHOLD;
+/**
+ * A final variable final int THRESHOLD = 5;
+ * 
+ * A blank final variable final
+ * 
+ * int THRESHOLD;
+ * 
  * A final static variable PI static final double PI = * 3.141592653589793;
+ * 
  * A blank final static variable static final double PI;
- ****/
+ */
 
 public class FinalVariable {
 	// a final variable
@@ -47,15 +52,15 @@ public class FinalVariable {
 	// constructor, you must initialize MINIMUM
 	// in them also
 	public FinalVariable() {
-		
+
 		// again assign value into same variable, compile time error occured
-		/*MINIMUM = -1;*/
+		/* MINIMUM = -1; */
 		System.out.println(MINIMUM);
 	}
 
 	public FinalVariable(int a) {
 		// again assign value into same variable, compile time error occured
-		/*MINIMUM = a;*/
+		/* MINIMUM = a; */
 		System.out.println(MINIMUM);
 	}
 

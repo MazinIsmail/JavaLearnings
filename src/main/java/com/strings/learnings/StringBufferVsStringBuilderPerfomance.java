@@ -1,4 +1,5 @@
 package com.strings.learnings;
+
 public class StringBufferVsStringBuilderPerfomance {
 
 	public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class StringBufferVsStringBuilderPerfomance {
 			for (int i = N; i-- > 0;) {
 				sb.append("");
 			}
-			System.out.println("Time taken by StringBuffer is : " + (System.currentTimeMillis() - t));
+			System.out.println("Time taken by StringBuffer is: " + (System.currentTimeMillis() - t));
 		}
 		/**
 		 * StringBuilder is tested
@@ -27,7 +28,7 @@ public class StringBufferVsStringBuilderPerfomance {
 			for (int i = N; i > 0; i--) {
 				sb.append("");
 			}
-			System.out.println("Time taken by StringBuilder is :" + (System.currentTimeMillis() - t));
+			System.out.println("Time taken by StringBuilder is: " + (System.currentTimeMillis() - t));
 		}
 	}
 

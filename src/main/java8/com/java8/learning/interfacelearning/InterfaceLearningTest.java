@@ -8,11 +8,10 @@ public class InterfaceLearningTest implements InterfaceLearning {
 		InterfaceLearning.positive(12);
 
 		InterfaceLearning interfaceLearning = new InterfaceLearningTest();
-		
+
 		System.out.println(interfaceLearning.calculate(100)); // 100.0
 		System.out.println(interfaceLearning.sqrt(-23)); // 0.0
 		System.out.println(InterfaceLearning.positive(-4)); // 0.0
-		
 
 		// Formula formula2 = (a) -> sqrt( a * 100);
 	}
@@ -22,7 +21,5 @@ public class InterfaceLearningTest implements InterfaceLearning {
 		System.out.println("Implemented abstract method");
 		return 0;
 	}
-	
-	//TODO default
-	
+
 }

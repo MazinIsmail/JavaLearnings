@@ -22,8 +22,8 @@ public class StaticBlockVsNormalDemo {
 		System.out.println("In static block 2");
 	}
 
-	/*
-	 * Can we have multiple static blocks in our code ?Yes, we can have more than
+	/**
+	 * Can we have multiple static blocks in our code? Yes, we can have more than
 	 * one static block in our code. It will be executed in the same order it is
 	 * written. Static block will be called only one while loading and it cannot
 	 * have any return type, or any keywords (this or super). Mostly the static

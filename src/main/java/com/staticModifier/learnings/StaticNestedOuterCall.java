@@ -24,7 +24,7 @@ public class StaticNestedOuterCall {
 		vip.display();
 
 		/*
-		 * Below line will throw error as the non-static class require instantiaion of
+		 * Below line will throw error as the non-static class require instantiation of
 		 * the outer class NestedClassDemo.InnerClass2 normal = new
 		 * NestedClassDemo.InnerClass2();
 		 */

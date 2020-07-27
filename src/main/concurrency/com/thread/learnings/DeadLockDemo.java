@@ -11,7 +11,7 @@ public class DeadLockDemo {
 				synchronized (resource1) {
 					System.out.println("Thread 1: locked resource 1");
 					boolean isLocked = Thread.holdsLock(resource1);
-					System.out.println("Check lock for resource 1 in thread 1 :: " +isLocked);
+					System.out.println("Check lock for resource 1 in thread 1 :: " + isLocked);
 					try {
 						Thread.sleep(100);
 					} catch (Exception e) {

@@ -1,9 +1,8 @@
 package com.finalModifier.learnings;
 
 /***
- * 
  * immutable means that the object’s actual value can’t be changed, but you can
- * change its reference to another one. it is applicable for an object but not
+ * change its reference to another one. It is applicable for an object but not
  * for variables. Immutable suggests that we can’t change the state of the
  * object once created.
  */

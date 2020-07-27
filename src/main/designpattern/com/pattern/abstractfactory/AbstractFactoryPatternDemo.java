@@ -1,7 +1,10 @@
 package com.pattern.abstractfactory;
 
-/* Creational pattern and almost similar to Factory Pattern except the fact that it’s more like factory of factories.
- * Abstract Factory pattern is robust and avoid conditional logic of Factory pattern.*/
+/**
+ * Creational pattern and almost similar to Factory Pattern except the fact that
+ * it’s more like factory of factories. Abstract Factory pattern is robust and
+ * avoid conditional logic of Factory pattern.
+ */
 public class AbstractFactoryPatternDemo {
 
 	public static void main(String[] args) {

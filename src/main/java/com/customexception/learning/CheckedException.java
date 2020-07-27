@@ -18,7 +18,6 @@ public class CheckedException {
 		for (int counter = 0; counter < 3; counter++) {
 			System.out.println("Inside for loop");
 			System.out.println(fileInput.readLine());
-
 			fileInput.close();
 		}
 	}
@@ -27,7 +26,6 @@ public class CheckedException {
 		try {
 			excepMethod();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

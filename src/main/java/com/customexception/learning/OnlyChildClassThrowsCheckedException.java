@@ -1,9 +1,11 @@
 package com.customexception.learning;
 
 /**
- * If base class doesn’t throw any exception but child class throws an checked
- * exception
- *
+ * If the superclass method does not declare an exception, subclass overridden
+ * method cannot declare the checked exception but it can declare unchecked
+ * exception.
+ * 
+ * Check this example "OnlyChildClassThrowsUncheckedException.java"
  */
 class SuperClass {
 

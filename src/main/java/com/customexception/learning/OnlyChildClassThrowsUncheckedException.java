@@ -2,7 +2,7 @@ package com.customexception.learning;
 
 /**
  * If base class doesn’t throw any exception, child class can only throws an
- * unchecked exception and not checked exception
+ * unchecked exception and not checked exception.
  *
  */
 class UnCheckedParent {

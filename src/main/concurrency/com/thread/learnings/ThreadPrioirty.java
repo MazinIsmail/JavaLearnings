@@ -18,7 +18,6 @@ package com.thread.learnings;
  * public static int MAX_PRIORITY: This is maximum priority of a thread. Value
  * for this is 10.
  *
- *
  * What happens if there is more than one runnable thread with the same
  * (highest) priority? One of the highest priority threads gets picked. It is
  * completely up to the thread scheduler how to arbitrate between threads of the
@@ -59,7 +58,7 @@ class ThreadPrioirty extends Thread {
 		System.out.println("Main thread priority : " + Thread.currentThread().getPriority());
 
 		/**
-		 * To demonstrat ethat a child thread // gets same priority as parent
+		 * To demonstrate that a child thread gets same priority as parent
 		 */
 
 		// main thread priority is 6 now

@@ -3,7 +3,7 @@ package com.customexception.learning;
 import java.util.Scanner;
 
 /**
- * A Java program to demonstrate multicatch feature
+ * A Java program to demonstrate multi-catch feature
  */
 
 public class MultiException {

@@ -13,7 +13,7 @@ public class NestedClassDemo {
 		public void display() {
 			System.out.println("Inside nested class 1");
 		}
-		// not accees from non static inner class-->main method
+		// not access from non static inner class-->main method
 	}
 
 	public static void main(String args[]) {
@@ -22,7 +22,7 @@ public class NestedClassDemo {
 		vip.display();
 
 		/*
-		 * Below line will throw error as the non-static class require instantiaion of
+		 * Below line will throw error as the non-static class require instantiation of
 		 * the outer class NestedClassDemo.InnerClass2 normal = new
 		 * NestedClassDemo.InnerClass2();
 		 */

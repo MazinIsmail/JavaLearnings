@@ -101,7 +101,7 @@ public class ExecutorServiceCallableFuture {
 			 * termination, an exception, or cancellation -- in all of these cases, this
 			 * method will return true.
 			 */
-			future.isDone();
+			boolean completeCheck = future.isDone();
 
 			System.out.println("Result of future of " + future.hashCode() + " = " + returnValue);
 			executorService.shutdown();
