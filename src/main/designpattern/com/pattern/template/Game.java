@@ -1,7 +1,7 @@
 package com.pattern.template;
 
 /**
- * AbstractClass contains the templateMethod() which should be made final so
+ * Abstract Class contains the templateMethod() which should be made final so
  * that it cannot be overridden. This template method makes use of other
  * operations available in order to run the algorithm but is decoupled for the
  * actual implementation of these methods. All operations used by this template
