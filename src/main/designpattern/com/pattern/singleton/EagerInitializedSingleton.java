@@ -7,6 +7,14 @@ package com.pattern.singleton;
  * 
  * In eager initialization, the instance of Singleton Class is created at the
  * time of class loading.
+ * 
+ * Disadvantage:-
+ * 
+ * They violate the single responsibility principle: by virtue of the fact that
+ * they control their own creation and lifecycle.
+ * 
+ * They inherently cause code to be tightly coupled. This makes faking them out
+ * under test rather difficult in many cases.
  */
 
 public class EagerInitializedSingleton {

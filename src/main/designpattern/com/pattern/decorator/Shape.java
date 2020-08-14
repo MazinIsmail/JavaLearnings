@@ -1,4 +1,4 @@
-package com.pattern.factory;
+package com.pattern.decorator;
 
 /**
  * Super class can be an interface, abstract class or a normal java class.
