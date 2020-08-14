@@ -7,13 +7,13 @@ public class BalancedParentheses {
 	public static void main(String[] args) {
 		String expr = "([{}])";
 		if (isParanthesisBalanced(expr))
-			System.out.println("Balanced ");
+			System.out.println("Balanced");
 		else
-			System.out.println("Not Balanced ");
+			System.out.println("Not Balanced");
 	}
 
-	// function to check if parenthesis are balanced
 	static boolean isParanthesisBalanced(String expr) {
+
 		// Using ArrayDeque is faster than using Stack class
 		Deque<Character> stack = new ArrayDeque<Character>();
 		for (int i = 0; i < expr.length(); i++) {
