@@ -4,8 +4,9 @@ package com.thread.learnings;
  * The sleep() method of Thread class is used to sleep a thread for the
  * specified amount of time.
  * 
- * After starting a thread, it can never be started again. If you does so, an IllegalThreadStateException is thrown.
- * In such case, thread will run once but for second time, it will throw exception.
+ * After starting a thread, it can never be started again. If you does so, an
+ * IllegalThreadStateException is thrown. In such case, thread will run once but
+ * for second time, it will throw exception.
  */
 public class ThreadSleep extends Thread {
 

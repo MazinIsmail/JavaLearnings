@@ -36,7 +36,7 @@ class ThreadJoin {
 			System.out.println("Current Thread: " + Thread.currentThread().getName());
 			// Waits for this thread to die.
 			t1.join();
-		} catch (Exception ex) {
+		} catch (InterruptedException ex) {
 			System.out.println("Exception has " + "been caught" + ex);
 		}
 		t2.start();
@@ -45,9 +45,27 @@ class ThreadJoin {
 			System.out.println("Current Thread: " + Thread.currentThread().getName());
 			// Waits for this thread to die.
 			t2.join();
-		} catch (Exception ex) {
+		} catch (InterruptedException ex) {
 			System.out.println("Exception has been" + " caught" + ex);
 		}
 		t3.start();
+
+		try {
+			/**
+			 * public final void join(long millis) throws InterruptedException
+			 * 
+			 * Waits at most millis milliseconds for this thread to die. A timeout of 0
+			 * means to wait forever. This implementation uses a loop of this.wait calls
+			 * conditioned on this.isAlive. As a thread terminates the this.notifyAll method
+			 * is invoked. It is recommended that applications not use wait, notify, or
+			 * notifyAll on Thread instances.
+			 * 
+			 * Parameters:millis - the time to wait in milliseconds
+			 * 
+			 */
+			t3.join(2000);
+		} catch (InterruptedException e) {
+			System.out.println("Exception has been" + " caught" + e);
+		}
 	}
 }

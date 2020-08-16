@@ -4,9 +4,7 @@ package com.thread.learnings;
  * Below program demonstrate a use case why we need thread When we need a
  * functionality which is long running and we need other functionality works
  * with out any delay : go for thread.
- */
-
-/*
+ *
  * Dummy class to demo multiple inheritance
  */
 class Dummy {
