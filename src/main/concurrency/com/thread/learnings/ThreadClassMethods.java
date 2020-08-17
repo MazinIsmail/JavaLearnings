@@ -213,13 +213,6 @@ public class ThreadClassMethods {
 		boolean isDaemon = currentlyExecutingThread.isDaemon();
 		System.out.println("\nThread isDaemon: " + isDaemon);
 
-		/**
-		 * Waits for this thread to die. An invocation of this method behaves in exactly
-		 * the same way as the invocation. Check class 'ThreadJoin' in this package.
-		 */
-		currentlyExecutingThread.join();
-		System.out.println("\nThread isDaemon: " + isDaemon);
-
 		ThreadRunnableSample threadRunnableSample = new ThreadRunnableSample();
 		/**
 		 * When an object implementing interface Runnable is used to create a thread,
@@ -229,6 +222,76 @@ public class ThreadClassMethods {
 		 */
 		threadRunnableSample.run();
 		System.out.println("\nThread isDaemon: " + isDaemon);
+
+		/**
+		 * A hint to the scheduler that the current thread is willing to yield its
+		 * current use of a processor. The scheduler is free to ignore this hint.
+		 */
+		Thread.yield();
+
+		/**
+		 * Returns a string representation of this thread, including the thread's name,
+		 * priority, and thread group.
+		 */
+		String threadString = currentlyExecutingThread.toString();
+		System.out.println("\nThread String: " + threadString);
+
+		ThreadSample threadSample1 = new ThreadSample();
+		/**
+		 * Causes this thread to begin execution; the Java Virtual Machine calls the run
+		 * method of this thread. The result is that two threads are running
+		 * concurrently: the current thread (which returns from the call to the start
+		 * method) and the other thread (which executes its run method).
+		 * 
+		 * It is never legal to start a thread more than once.In particular, a thread
+		 * may not be restarted once it has completed execution.
+		 */
+		threadSample1.start();
+
+		try {
+			/**
+			 * Causes the currently executing thread to sleep (temporarily cease execution)
+			 * for the specified number of milliseconds, subject to the precision and
+			 * accuracy of system timers and schedulers. The thread does not lose ownership
+			 * of any monitors.
+			 * 
+			 * Parameters: millis - the length of time to sleep in milliseconds
+			 */
+			Thread.sleep(2000);
+
+			/**
+			 * public static void sleep(long millis, int nanos)
+			 * 
+			 * Causes the currently executing thread to sleep (temporarily cease execution)
+			 * for the specified number of milliseconds plus the specified number of
+			 * nanoseconds, subject to the precision and accuracy of system timers and
+			 * schedulers. The thread does not lose ownership of any monitors.
+			 * 
+			 * Parameters:
+			 * 
+			 * millis - the length of time to sleep in milliseconds
+			 * 
+			 * nanos - 0-999999 additional nanoseconds to sleep
+			 */
+			Thread.sleep(2000, 90000);
+		} catch (InterruptedException e1) {
+			System.out.println(e1);
+		}
+
+		System.out.println();
+		Thread threadRunnableRuntimeException = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				throw new RuntimeException();
+			}
+		});
+		threadRunnableRuntimeException.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+			public void uncaughtException(Thread t, Throwable e) {
+				System.out.println(t + " throws exception: " + e);
+			}
+		});
+		threadRunnableRuntimeException.start();
+		threadRunnableRuntimeException.join();
 
 	}
 

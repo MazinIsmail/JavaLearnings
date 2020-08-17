@@ -1,12 +1,5 @@
 package com.thread.learnings;
 
-/**
- * How can we achieve thread safety in Java?
- * 
- * There are several ways to achieve thread safety in java – synchronization,
- * atomic concurrent classes, implementing concurrent Lock interface, using
- * volatile keyword, using immutable classes and Thread safe classes.
- */
 class ThreadJoining extends Thread {
 	@Override
 	public void run() {
