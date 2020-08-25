@@ -73,7 +73,6 @@ public class ExecutorServiceCallableFuture {
 		}
 
 		// Now you have 100 futures and 100 placeholder.
-
 		System.out.println("Mazin Ismail");
 
 		for (Future<Integer> future : futureList) {
