@@ -199,4 +199,7 @@ public class VolatileLearnings {
 /**
  * The synchronized and volatile constructs, as well as the Thread.start() and
  * Thread.join() methods, can form happens-before relationships.
+ * 
+ * The methods of all classes in java.util.concurrent and its subpackages extend
+ * these guarantees to higher-level synchronization.
  */
