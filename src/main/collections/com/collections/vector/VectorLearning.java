@@ -1,4 +1,4 @@
-package com.vector.learning;
+package com.collections.vector;
 
 import java.util.Enumeration;
 import java.util.Vector;
