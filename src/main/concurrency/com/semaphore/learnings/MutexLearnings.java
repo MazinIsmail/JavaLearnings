@@ -6,11 +6,7 @@ import java.util.concurrent.Semaphore;
  * In a multithreaded application, two or more threads may need to access a
  * shared resource at the same time, resulting in unexpected behavior. Examples
  * of such shared resources are data-structures, input-output devices, files,
- * and network connections.
- * 
- * This scenario is called a race condition. And, the part of the program which
- * accesses the shared resource is known as the critical section. So, to avoid a
- * race condition, we need to synchronize access to the critical section.
+ * and network connections. This scenario is called a race condition.
  * 
  * A mutex (or mutual exclusion) is the simplest type of synchronizer – it
  * ensures that only one thread can execute the critical section of a computer
