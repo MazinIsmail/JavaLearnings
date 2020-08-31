@@ -45,7 +45,6 @@ import java.util.List;
  * provided in the Object class. When the generic class contains the methods
  * that don't depend on the type parameter.
  * 
- * 
  * Lower Bounded Wildcards: The purpose of lower bounded wildcards is to
  * restrict the unknown type to be a specific type or a supertype of that type.
  * It is used by declaring wildcard character ("?") followed by the super
