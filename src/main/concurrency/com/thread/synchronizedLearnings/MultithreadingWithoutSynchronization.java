@@ -7,7 +7,6 @@ package com.thread.synchronizedLearnings;
  * This demonstrate the count value becomes inconsistent due to thread
  * interference.
  */
-
 class Counter {
 	int count;
 

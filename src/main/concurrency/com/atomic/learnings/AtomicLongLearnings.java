@@ -3,7 +3,7 @@ package com.atomic.learnings;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Similar to AtomicInteger
+ * Similar to 'AtomicInteger.java'
  */
 public class AtomicLongLearnings {
 	public static void main(String[] args) {

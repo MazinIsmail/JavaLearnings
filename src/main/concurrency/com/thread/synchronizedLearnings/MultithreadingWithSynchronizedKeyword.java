@@ -9,7 +9,7 @@ package com.thread.synchronizedLearnings;
 class SCounter {
 	int count;
 
-	synchronized void increment() {// method not synchronized
+	synchronized void increment() {
 		count++;
 	}
 }

@@ -39,7 +39,7 @@ package com.atomic.learnings;
  * The main difference between blocking and non-blocking algorithms lies in the
  * second step of their behaviour as described in the above two sections. In
  * other words, the difference lies in what the blocking and non-blocking
- * algorithms do when the requested action cannot be performed:
+ * algorithms do when the requested action cannot be performed.
  * 
  * Blocking algorithms block the thread until the requested action can be
  * performed. Non-blocking algorithms notify the thread requesting the action

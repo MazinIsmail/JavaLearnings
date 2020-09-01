@@ -20,24 +20,24 @@ import java.util.concurrent.DelayQueue;
 public class DelayQueueLearnings {
 	public static void main(String[] args) {
 
-		BlockingQueue<DelaySample> DQ = new DelayQueue<DelaySample>();
-		DQ.add(new DelaySample("A", 1));
-		DQ.add(new DelaySample("B", 2));
-		DQ.add(new DelaySample("C", 3));
-		DQ.add(new DelaySample("D", 4));
-		System.out.println("DelayQueue: " + DQ);
+		BlockingQueue<DelaySample> delayQueue = new DelayQueue<DelaySample>();
+		delayQueue.add(new DelaySample("A", 1));
+		delayQueue.add(new DelaySample("B", 2));
+		delayQueue.add(new DelaySample("C", 3));
+		delayQueue.add(new DelaySample("D", 4));
+		System.out.println("DelayQueue: " + delayQueue);
 		// create object of DelayQueue
 		// using DelayQueue(Collection c) constructor
-		BlockingQueue<DelaySample> DQ2 = new DelayQueue<DelaySample>(DQ);
+		BlockingQueue<DelaySample> DQ2 = new DelayQueue<DelaySample>(delayQueue);
 		System.out.println("DelayQueue: " + DQ2);
 
 		System.out.println();
-		BlockingQueue<DelaySample> DQ3 = new DelayQueue<DelaySample>(DQ);
+		BlockingQueue<DelaySample> DQ3 = new DelayQueue<DelaySample>(delayQueue);
 		System.out.println("Head of DelayQueue: " + DQ3.peek());
 		System.out.println("Size of DelayQueue: " + DQ3.size());
 		System.out.println("Head of DelayQueue: " + DQ3.poll());
 		System.out.println("Size of DelayQueue: " + DQ3.size());
-		DQ.clear();
+		delayQueue.clear();
 		System.out.println("Size of DelayQueue" + " after clear: " + DQ3.size());
 	}
 }

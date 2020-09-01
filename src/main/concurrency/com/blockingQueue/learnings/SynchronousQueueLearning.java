@@ -15,15 +15,14 @@ import java.util.concurrent.SynchronousQueue;
  */
 public class SynchronousQueueLearning {
 	public static void main(String[] args) {
-		/*
+		/**
 		 * creates a SynchronousQueue with nonfair access policy. That means if multiple
 		 * threads are waiting, they will be granted access in unspecified order.
 		 */
 		BlockingQueue<String> syncQueue = new SynchronousQueue<String>();
-		/*
+		/**
 		 * creates a SynchronousQueue with a fairness access policy (fair = true): the
 		 * waiting threads will be granted access in FIFO (First-In First-Out) order.
-		 * 
 		 */
 		syncQueue = new SynchronousQueue<>(true);
 	}

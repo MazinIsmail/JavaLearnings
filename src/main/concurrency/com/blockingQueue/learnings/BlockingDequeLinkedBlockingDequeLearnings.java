@@ -5,7 +5,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * A deque is short for "Double Ended Queue". Thus, a deque is a queue which you
- * can insert and take elements from, from both ends.
+ * can insert and take elements from both ends.
  * 
  * A BlockingDeque could be used if threads are both producing and consuming
  * elements of the same queue. It could also just be used if the producing
