@@ -6,7 +6,7 @@ public class StaticBlockDemo {
 	static int a = 10;
 	static int b;
 
-	/*
+	/**
 	 * static block static block is executed only once: the first time you make an
 	 * object of that class or the first time you access a static member of that
 	 * class

@@ -23,7 +23,7 @@ public class LinkedHashSetConstructorExample {
 		System.out.println(linset3);
 
 		// Default capacity : 16 and Load Factor : 0.75
-		LinkedHashSet<String> linset4 = new LinkedHashSet<>(32, 8);
+		LinkedHashSet<String> linset4 = new LinkedHashSet<>(32, .8f);
 		linset3.add("one");
 		System.out.println(linset4);
 

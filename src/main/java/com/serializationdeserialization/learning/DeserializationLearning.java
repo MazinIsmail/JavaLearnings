@@ -5,7 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
-/* Deserialization is the process of reconstructing the object from the serialized state. */
+/**
+ * Deserialization is the process of reconstructing the object from the
+ * serialized state.
+ */
 
 public class DeserializationLearning {
 	public static void main(String[] args) {

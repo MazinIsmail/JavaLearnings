@@ -3,11 +3,11 @@ package com.staticModifier.learnings;
 public class StaticBlockVsNormalDemo {
 
 	{
-		System.out.println("In random block");
+		System.out.println("In local block");
 	}
 
 	{
-		System.out.println("In random block2");
+		System.out.println("In local block2");
 	}
 
 	static {
@@ -15,7 +15,7 @@ public class StaticBlockVsNormalDemo {
 	}
 
 	void method1() {
-		System.out.println("Method1!!!!!!!");
+		System.out.println("method1");
 	}
 
 	static {

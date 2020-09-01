@@ -3,8 +3,8 @@ package com.serializationdeserialization.learning;
 import java.io.Serializable;
 
 /**
- * Java transient keyword is used in serialization. If you define any data
- * member as transient, it will not be serialized.
+ * If you define any data member as transient, it will not be serialized.
+ * Similar case with static member.
  */
 
 public class Student implements Serializable {

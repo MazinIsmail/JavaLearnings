@@ -1,17 +1,5 @@
 package com.finalModifier.learnings;
 
-/**
- * A final variable final int THRESHOLD = 5;
- * 
- * A blank final variable final
- * 
- * int THRESHOLD;
- * 
- * A final static variable PI static final double PI = * 3.141592653589793;
- * 
- * A blank final static variable static final double PI;
- */
-
 public class FinalVariable {
 	// a final variable
 	// direct initialize
@@ -67,9 +55,9 @@ public class FinalVariable {
 	public static void main(String args[]) {
 
 		// FinalVariable a=new FinalVariable();
-		FinalVariable B = new FinalVariable(10);
-		FinalVariable c = new FinalVariable(20);
+		FinalVariable finalVariable = new FinalVariable(10);
+		finalVariable = new FinalVariable(20);
 
-		// System.out.println(a.CAPACITY);
+		System.out.println(finalVariable.CAPACITY);
 	}
 }

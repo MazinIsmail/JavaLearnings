@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 public class Employee implements Serializable, Cloneable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -6378696130311453802L;
 	private transient int transientVariable;
 	private static int staticVariable;

@@ -3,12 +3,13 @@ package com.collections.vector;
 import java.util.Enumeration;
 import java.util.Vector;
 
-/* Vector is synchronized.
- * Vector proves to be very useful if you don't know the size of the array in advance or 
- * you just need one that can change sizes over the lifetime of a program.*/
+/**
+ * Vector is synchronized. Vector proves to be very useful if you don't know the
+ * size of the array in advance or you just need one that can change sizes over
+ * the lifetime of a program.
+ */
 
 public class VectorLearning {
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void main(String args[]) {
 		// initial size is 3, increment is 2
 		Vector v = new Vector(3, 2);

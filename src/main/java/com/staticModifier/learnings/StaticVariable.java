@@ -8,9 +8,10 @@ public class StaticVariable {
 	int i = 2;
 
 	public static void main(String args[]) {
-		// demo = 1000;
-		System.out.println(demo);// calling demo without creating any object of class Test
+		// calling demo without creating any object of class Test
+		System.out.println(demo);
 		StaticVariable obj = new StaticVariable();
-		System.out.println(obj.i);// using object creation
+		// using object creation
+		System.out.println(obj.i);
 	}
 }

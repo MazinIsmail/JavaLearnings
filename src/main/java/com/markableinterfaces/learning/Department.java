@@ -11,8 +11,7 @@ public class Department implements Cloneable {
 		Department department = (Department) super.clone();
 		department.employee = (Employee) employee.clone();
 		// Create a new object for the field employee and assign it to shallow copy
-		// obtained,
-		// to make it a deep copy
+		// obtained, to make it a deep copy
 		return department;
 	}
 

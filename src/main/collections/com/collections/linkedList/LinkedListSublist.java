@@ -75,7 +75,7 @@ public class LinkedListSublist {
 		// Displaying LinkedList elements
 		System.out.println("LinkedList elements: " + list);
 
-		Iterator it = list.descendingIterator();
+		Iterator<String> it = list.descendingIterator();
 
 		// Displaying list in reverse order
 		System.out.println("Elements in Reverse Order:");

@@ -16,9 +16,11 @@ package com.javamemorymanagement.learning;
  * 
  * Metaspace
  * 
- * Code Cache
+ * Code Cache (special heap that holds the compiled code)
  * 
+ * Heap
  * 
+ * Stack
  */
 public class JavaMemoryManagement {
 

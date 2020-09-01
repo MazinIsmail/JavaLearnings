@@ -1,6 +1,6 @@
 package com.staticModifier.learnings;
 
-public abstract class AbstractTest {
+public abstract class AbstractStatic {
 
 	public static void disp() {
 		System.out.println("disp of static method");
@@ -14,8 +14,7 @@ public abstract class AbstractTest {
 	// public static abstract void disp2();
 
 	public static void main(String[] args) {
-//		AbstractTest abstractTest = new AbstractTest();
-		AbstractTest.disp();
+		AbstractStatic.disp();
 
 	}
 }

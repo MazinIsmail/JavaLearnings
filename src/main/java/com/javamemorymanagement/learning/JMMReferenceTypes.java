@@ -1,5 +1,7 @@
 package com.javamemorymanagement.learning;
 
+import java.lang.ref.PhantomReference;
+import java.lang.ref.Reference;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 import java.util.WeakHashMap;
@@ -56,7 +58,13 @@ import java.util.WeakHashMap;
  * Used to schedule post-mortem cleanup actions, since we know for sure that
  * objects are no longer alive. Used only with a reference queue, since the
  * .get() method of such references will always return null. These types of
- * references are considered preferable to finalizers.
+ * references are considered preferable to finalizers. Remember that the
+ * object.finalize() method is not guaranteed to be called at the end of the
+ * life of an object, so if you need to close files or free resources, you can
+ * rely on Phantom.
+ * 
+ * Soft references try to keep the reference. Weak references don’t try to keep
+ * the reference. Phantom references don’t free the reference until cleared.
  */
 public class JMMReferenceTypes {
 	public static void main(String[] args) {
@@ -64,5 +72,7 @@ public class JMMReferenceTypes {
 		WeakHashMap<String, String> weakHashMap = new WeakHashMap<String, String>();
 
 		SoftReference<StringBuilder> softReference = new SoftReference<>(new StringBuilder());
+
+		// Reference<HeavyList> phantomRef = new PhantomReference<>(curr, queue);
 	}
 }

@@ -2,9 +2,8 @@ package com.staticModifier.learnings;
 
 public class BasicStatic {
 
-	// object creation
 	{
-		System.out.println("In some random block");
+		System.out.println("In local block");
 	}
 
 	// before main method

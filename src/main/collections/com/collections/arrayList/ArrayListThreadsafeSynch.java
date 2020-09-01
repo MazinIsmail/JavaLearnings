@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * ArrayList is not Thread-Safe It should not be used in multi-thread
- * environment By default, it is not Synchronized. It is need to make it as
+ * ArrayList is not Thread-Safe, it should not be used in multi-thread
+ * environment by default, it is not Synchronized. It is need to make it as
  * Synchronized explicitly by using Collections.synchronizedList() method and
  * Iterator should be present inside synchronized(listObject) method
  */

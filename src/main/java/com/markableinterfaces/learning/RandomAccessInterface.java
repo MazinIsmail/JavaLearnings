@@ -1,10 +1,14 @@
-package com.oops.basics;
+package com.markableinterfaces.learning;
 
 import java.util.ArrayList;
 
 /**
- * All Known Implementing Classes:ArrayList, AttributeList,
+ * Marker interface used by 'List' implementations to indicate that they support
+ * fast (generally constant time) random access.
+ * 
+ * All Known Implementing Classes: ArrayList, AttributeList,
  * CopyOnWriteArrayList, RoleList, RoleUnresolvedList, Stack, Vector
+ * 
  * RandomAccess Interface has no methods or fields and is also called a Marker
  * Interface. These are used to indicate something to the compiler, in other
  * words implementing these interfaces is meant to imply some special treatment

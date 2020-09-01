@@ -10,7 +10,7 @@ class Parent {
 		System.out.println("Parent: Welcome to Parent Class");
 	}
 
-	/*
+	/**
 	 * When the Child class also has defined the same static method like Parent
 	 * class, then the method in the Child class hides the method in the Parent
 	 * class

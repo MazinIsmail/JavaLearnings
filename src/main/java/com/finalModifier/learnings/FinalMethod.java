@@ -8,7 +8,8 @@ public class FinalMethod {
 
 class B extends FinalMethod {
 	// COMPILE-ERROR! Can't override.
-	/*void m1() {
-		System.out.println("Illegal!");
-	}*/
+
+	/**
+	 * void m1() { System.out.println("Illegal!"); }
+	 */
 }

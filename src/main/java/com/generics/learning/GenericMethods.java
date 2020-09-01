@@ -17,7 +17,7 @@ package com.generics.learning;
  * placeholders for the types of the arguments passed to the generic method,
  * which are known as actual type arguments.
  * 
- * Note that type parameters can represent only reference types, not primitive
+ * Note that type parameters can represent only reference types, "not primitive"
  * types (like int, double and char).
  */
 public class GenericMethods {

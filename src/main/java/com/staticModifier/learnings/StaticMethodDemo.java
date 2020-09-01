@@ -2,7 +2,7 @@ package com.staticModifier.learnings;
 
 public class StaticMethodDemo {
 
-	/*
+	/**
 	 * A static method can access static variables directly and it cannot access
 	 * non-static variables.
 	 * 

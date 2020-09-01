@@ -1,5 +1,8 @@
 package com.oops.polymorphism;
 
+/**
+ * Compile-time polymorphism is achieved through method overloading.
+ */
 public class CompiletimeMethodOverloading {
 
 	void sum(int a, int b) {

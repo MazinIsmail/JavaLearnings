@@ -6,7 +6,7 @@ package com.finalModifier.learnings;
  * methods e.g).
  *
  * By declaring a reference variable as final, we won’t get any immutability
- * nature, Even though reference variable is final. We can perform any type of
+ * nature, even though reference variable is final. We can perform any type of
  * change in the corresponding Object. But we can't perform reassignment for
  * that variable.
  *

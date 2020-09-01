@@ -24,7 +24,7 @@ import java.util.Map;
  * 
  * To know whether the collection is structurally modified or not, fail-fast
  * iterators use an internal flag called modCount which is updated each time a
- * collection is modified.Fail-fast iterators checks the modCount flag whenever
+ * collection is modified. Fail-fast iterators checks the modCount flag whenever
  * it gets the next value (i.e. using next() method), and if it finds that the
  * modCount has been modified after this iterator has been created, it throws
  * ConcurrentModificationException.

@@ -32,7 +32,7 @@ public class StringsReferenced {
 		}
 
 		/**
-		 * we can force the JVM to add it to the string pool by adding the .intern()
+		 * We can force the JVM to add it to the string pool by adding the .intern()
 		 * method at the end of computed string:
 		 * 
 		 * A pool of strings, initially empty, is maintained privately by the class
@@ -45,7 +45,6 @@ public class StringsReferenced {
 		 * 
 		 * It follows that for any two strings s and t, s.intern() == t.intern() is true
 		 * if and only if s.equals(t) is true.
-		 * 
 		 */
 
 		String localPrefixAgainIntern = new Integer(297).toString().intern(); // 1

@@ -1,9 +1,11 @@
 package com.collections.arrayList;
 
-//Collections is a class which is present in util package
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * Collections is a class which is present in util package
+ */
 public class ArrayListLearnings {
 
 	public static void main(String args[]) {

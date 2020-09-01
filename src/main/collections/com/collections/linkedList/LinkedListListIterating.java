@@ -27,7 +27,7 @@ public class LinkedListListIterating {
 		// Displaying LinkedList elements
 		System.out.println("LinkedList elements: " + list);
 
-		ListIterator listIterateObj = list.listIterator();
+		ListIterator<String> listIterateObj = list.listIterator();
 
 		// Forward Traverse
 		/**
@@ -62,7 +62,7 @@ public class LinkedListListIterating {
 		listObjString.add("John");
 		System.out.println(listObjString);
 
-		Iterator it = listObjString.iterator();
+		Iterator<String> it = listObjString.iterator();
 		while (it.hasNext()) {
 			System.out.println(it.next());
 		}

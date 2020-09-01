@@ -2,12 +2,6 @@ package com.markableinterfaces.learning;
 
 import java.io.*;
 
-/**
- * 
- * 
- * 
- */
-
 class Serialization {
 	public static void main(String[] args) throws IOException {
 

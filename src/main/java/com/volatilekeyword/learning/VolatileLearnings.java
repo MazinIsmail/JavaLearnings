@@ -1,7 +1,6 @@
 package com.volatilekeyword.learning;
 
 /**
- * 
  * You cannot use 'Volatile' as a variable or method name.
  * 
  * The Java volatile keyword is used to mark a Java variable as "being stored in
@@ -59,17 +58,13 @@ package com.volatilekeyword.learning;
  * to the counter variable.
  * 
  * If, however, both T1 and T2 were incrementing the counter variable, then
- * declaring the counter variable volatile would not have been enough. More on
- * that later.
- * 
- * 
- * 
+ * declaring the counter variable volatile would not have been enough.
  */
 public class VolatileLearnings {
 	/**
-	 * The number variable piggybacks on the memory visibility enforced by the ready
-	 * variable. Put simply, even though it's not a volatile variable, it is
-	 * exhibiting a volatile behavior.
+	 * The 'number' variable in the below class piggybacks on the memory visibility
+	 * enforced by the ready variable. Put simply, even though it's not a volatile
+	 * variable, it is exhibiting a volatile behavior.
 	 */
 	public class TaskRunner {
 		private int number; // not volatile
@@ -116,7 +111,7 @@ public class VolatileLearnings {
 	private static volatile boolean hasValue = false;
 
 	/**
-	 * Instruction Reordering Challenges
+	 * Instruction Reordering Challenges:-
 	 * 
 	 * The Java VM and the CPU are allowed to reorder instructions in the program
 	 * for performance reasons, as long as the semantic meaning of the instructions

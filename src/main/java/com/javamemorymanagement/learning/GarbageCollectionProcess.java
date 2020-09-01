@@ -1,7 +1,6 @@
 package com.javamemorymanagement.learning;
 
 /**
- * 
  * Garbage Collection Process
  * 
  * All objects that are in red (garbage-eligible.jpg) are eligible to be

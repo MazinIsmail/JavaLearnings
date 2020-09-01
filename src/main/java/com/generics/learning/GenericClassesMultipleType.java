@@ -1,8 +1,8 @@
 package com.generics.learning;
 
 public class GenericClassesMultipleType<T, U> {
-	T obj1; // An object of type T
-	U obj2; // An object of type U
+	private T obj1; // An object of type T
+	private U obj2; // An object of type U
 
 	GenericClassesMultipleType(T obj1, U obj2) {
 		this.obj1 = obj1;

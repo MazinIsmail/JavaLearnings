@@ -22,8 +22,6 @@ package com.solid.openclosedprinciple;
  * classes can support our extensions. But inheritance may lead to subclasses
  * which depend on base class implementation. To avoid this, use of interfaces
  * is recommended. This additional abstraction leads to loose coupling.
- * 
- * 
  */
 public class OpenClosedPrinciple {
 
