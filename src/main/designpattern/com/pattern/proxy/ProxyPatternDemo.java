@@ -1,6 +1,8 @@
 package com.pattern.proxy;
 
-/*Structural pattern.*/
+/**
+ * Structural pattern.
+ */
 public class ProxyPatternDemo {
 	public static void main(String[] args) {
 		Image image = new ProxyImage("test_10mb.jpg");

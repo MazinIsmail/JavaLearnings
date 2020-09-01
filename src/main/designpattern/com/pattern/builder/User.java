@@ -1,11 +1,11 @@
 package com.pattern.builder;
 
-/* 
- * Object does not have any setter method, so it’s state can not be changed once it has been built.
- * This provides the desired immutability.
+/**
+ * Object does not have any setter method, so it’s state can not be changed once
+ * it has been built. This provides the desired immutability.
  * 
  * private constructor so that accounts can only be created via the builder.
- * */
+ */
 public class User {
 
 	// All final attributes

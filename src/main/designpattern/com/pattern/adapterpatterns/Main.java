@@ -9,7 +9,6 @@ package com.pattern.adapterpatterns;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Sparrow sparrow = new Sparrow();
 		ToyDuck toyDuck = new PlasticToyDuck();
 

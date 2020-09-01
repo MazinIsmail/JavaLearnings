@@ -21,11 +21,12 @@ package com.pattern.command;
  * A command is an object whose role is to store all the information required
  * for executing an action, including the method to call, the method arguments,
  * and the object (known as the receiver) that implements the method. In this
- * example 'Order', 'SellStock' and 'BuyStock' are the Command. And the
- * component that performs the operations is the receiver, in our case 'Stock'.
- * A receiver is an object that performs a set of cohesive actions. It's the
- * component that performs the actual action when the command's execute() method
- * is called.
+ * example 'Order', 'SellStock' and 'BuyStock' are the Command.
+ * 
+ * And the component that performs the operations is the receiver, in our case
+ * 'Stock'. A receiver is an object that performs a set of cohesive actions.
+ * It's the component that performs the actual action when the command's
+ * execute() method is called.
  * 
  * An invoker is an object that knows how to execute a given command but doesn't
  * know how the command has been implemented. It only knows the command's
@@ -46,6 +47,8 @@ package com.pattern.command;
  * stack and execute it's undo() method. Command is useful for wizards, progress
  * bars, GUI buttons and menu actions, and other transactional behaviour.
  */
+
+// The Client
 public class CommandPatternDemo {
 	public static void main(String[] args) {
 

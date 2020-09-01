@@ -1,7 +1,6 @@
 package com.pattern.template;
 
 /**
- * 
  * Behavioral design pattern.
  * 
  * Template method design pattern is to define an algorithm as a skeleton of
