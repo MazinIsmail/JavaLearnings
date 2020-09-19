@@ -17,6 +17,6 @@ package com.solid.dependencyinversionprinciple;
  * It allows a programmer to remove hardcoded dependencies so that the
  * application becomes loosely coupled and extendable.
  */
-public class InterfaceSegregationPrinciple {
+public class DependencyInversionPrinciple {
 
 }

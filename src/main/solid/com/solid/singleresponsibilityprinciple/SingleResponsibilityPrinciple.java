@@ -1,6 +1,9 @@
 package com.solid.singleresponsibilityprinciple;
 
 /**
+ * 
+ * Single Responsibility Principle
+ * 
  * One class should have only one and only responsibility.
  * 
  * According to the single responsibility principle, there should be only one
