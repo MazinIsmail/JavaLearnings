@@ -1,10 +1,11 @@
 package com.pattern.state;
 
 /**
- * The state pattern is a behavioral design pattern. The state pattern is also
- * known as objects for states. A state allows an object to alter its behavior
- * when its internal state changes. There shall be a separate concrete class per
- * possible state of an object.
+ * The state pattern is a behavioral design pattern.
+ * 
+ * The state pattern is also known as objects for states. A state allows an
+ * object to alter its behavior when its internal state changes. There shall be
+ * a separate concrete class per possible state of an object.
  * 
  * When to use state pattern? In any application, when we are dealing with an
  * object which can be in different states during it’s life-cycle and how it

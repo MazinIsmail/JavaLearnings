@@ -13,39 +13,26 @@ public class BalancedParentheses {
 	}
 
 	static boolean isParanthesisBalanced(String expr) {
-
 		// Using ArrayDeque is faster than using Stack class
-		Deque<Character> stack = new ArrayDeque<Character>();
+		Deque<Character> arrayDeque = new ArrayDeque<Character>();
 		for (int i = 0; i < expr.length(); i++) {
-			char x = expr.charAt(i);
-			if (x == '(' || x == '[' || x == '{') {
-				// Push the element in the stack
-				stack.push(x);
-				continue;
-			}
-			// If current character is not opening
-			// bracket, then it must be closing. So stack
-			// cannot be empty at this point.
-			if (stack.isEmpty())
-				return false;
-			switch (x) {
-			case ')':
-				stack.pop();
-				if (x == '{' || x == '[')
+			char c = expr.charAt(i);
+			if (c == '[' || c == '(' || c == '{') {
+				arrayDeque.push(c);
+			} else if (c == ']') {
+				if (arrayDeque.isEmpty() || arrayDeque.pop() != '[') {
 					return false;
-				break;
-			case '}':
-				stack.pop();
-				if (x == '(' || x == '[')
+				}
+			} else if (c == ')') {
+				if (arrayDeque.isEmpty() || arrayDeque.pop() != '(') {
 					return false;
-				break;
-			case ']':
-				stack.pop();
-				if (x == '(' || x == '{')
+				}
+			} else if (c == '}') {
+				if (arrayDeque.isEmpty() || arrayDeque.pop() != '{') {
 					return false;
-				break;
+				}
 			}
 		}
-		return (stack.isEmpty());
+		return (arrayDeque.isEmpty());
 	}
 }

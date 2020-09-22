@@ -62,6 +62,14 @@ public class LongestPalindromicString {
 			begin--;
 			end++;
 		}
+
+		/**
+		 * Parameters:
+		 * 
+		 * beginIndex the beginning index, inclusive.
+		 * 
+		 * endIndex the ending index, exclusive.
+		 */
 		return s.substring(begin + 1, end);
 	}
 }

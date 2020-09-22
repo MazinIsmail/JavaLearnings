@@ -3,6 +3,10 @@ package com.collections.LinkedhashSet;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 
+/**
+ * The only difference between HashSet and LinkedHashSet is that: LinkedHashSet
+ * maintains the insertion order.
+ */
 public class LinkedHashSetConstructorExample {
 
 	public static void main(String[] args) {

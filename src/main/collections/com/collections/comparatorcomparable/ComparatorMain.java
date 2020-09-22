@@ -63,7 +63,7 @@ public class ComparatorMain {
 		list.add(new Movies("Empire Strikes Back", 8.8, 1980));
 		list.add(new Movies("Return of the Jedi", 8.4, 1983));
 
-		// Sort by rating : 
+		// Sort by rating :
 		// (1) Create an object of ratingCompare
 		// (2) Call Collections.sort
 		// (3) Print Sorted list

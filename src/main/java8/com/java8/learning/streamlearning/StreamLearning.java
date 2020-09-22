@@ -4,6 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The Stream API allows "streaming" of collections for dynamic processing.
+ * Streams allow concurrent and parallel computation on data (using internal
+ * iterations), to support database-like operations such as grouping and
+ * filtering the data (similar to GROUP BY and WHERE clause in SQL). This allows
+ * the developers to focus on "what data is needed" instead of "how data is
+ * needed" since streaming hides the details of the implementation and provides
+ * the result. This is done by providing predicates as inputs to functions
+ * operating at runtime upon the streams of collections.
+ */
 public class StreamLearning {
 	public static void main(String[] args) {
 		List<String> stringCollection = new ArrayList<>();

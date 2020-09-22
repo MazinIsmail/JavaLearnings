@@ -1,9 +1,10 @@
 package com.pattern.strategy;
 
 /**
- * Strategy is a behavioral pattern in Gang of Four Design pattern list. Defines
- * a set of encapsulated algorithms that can be swapped to carry out a specific
- * behaviour.
+ * Strategy is a behavioral pattern.
+ * 
+ * Defines a set of encapsulated algorithms that can be swapped to carry out a
+ * specific behaviour.
  * 
  * Where Would I Use This Pattern?
  * 

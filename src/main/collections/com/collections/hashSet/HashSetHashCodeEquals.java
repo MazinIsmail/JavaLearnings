@@ -36,7 +36,7 @@ public class HashSetHashCodeEquals {
 		});
 		System.out.println();
 		// Sort first by Name and then sorts by Age.
-		Comparator<UserSample> userSampleListByNameThenByAge = userSampleListByName.thenComparing(userSampleListByName);
+		Comparator<UserSample> userSampleListByNameThenByAge = userSampleListByName.thenComparing(userSampleListByAge);
 		Collections.sort(userSampleList, userSampleListByNameThenByAge);
 		System.out.println("Sorted userSampleList by Name and then by Age");
 		userSampleList.forEach(element -> {
