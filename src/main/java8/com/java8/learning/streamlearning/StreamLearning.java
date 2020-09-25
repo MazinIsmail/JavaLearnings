@@ -1,8 +1,11 @@
 package com.java8.learning.streamlearning;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * The Stream API allows "streaming" of collections for dynamic processing.
@@ -13,6 +16,21 @@ import java.util.Optional;
  * needed" since streaming hides the details of the implementation and provides
  * the result. This is done by providing predicates as inputs to functions
  * operating at runtime upon the streams of collections.
+ * 
+ * Java Stream API is for processing streams of objects - not bytes.
+ * 
+ * Stream Processing:-
+ * 
+ * You can attach listeners to a Stream. These listeners are called when the
+ * Stream iterates the elements internally. The listeners are called once for
+ * each element in the stream. That way each listener gets to process each
+ * element in the stream. This is referred to as stream processing.
+ * 
+ * The listeners of a stream form a chain. The first listener in the chain can
+ * process the element in the stream, and then return a new element for the next
+ * listener in the chain to process. A listener can either return the same
+ * element or a new, depending on what the purpose of that listener (processor)
+ * is.
  */
 public class StreamLearning {
 	public static void main(String[] args) {
@@ -25,6 +43,32 @@ public class StreamLearning {
 		stringCollection.add("ccc");
 		stringCollection.add("bbb2");
 		stringCollection.add("ddd1");
+
+		// Obtain a Stream. Calls the stream() method to obtain a Stream instance.
+		Stream<String> stream = stringCollection.stream();
+
+		/**
+		 * Terminal and Non-Terminal Operations:-
+		 * 
+		 * The Stream interface has a selection of terminal and non-terminal operations.
+		 * A non-terminal stream operation is an operation that adds a listener to the
+		 * stream without doing anything else. A terminal stream operation is an
+		 * operation that starts the internal iteration of the elements, calls all the
+		 * listeners, and returns a result.
+		 * 
+		 * The call to the map() method of the Stream interface is a non-terminal
+		 * operation. It merely sets a lambda expression on the stream which converts
+		 * each element to lowercase.
+		 * 
+		 * The call to the count() method is a terminal operation. This call starts the
+		 * iteration internally, which will result in each element being converted to
+		 * lowercase and then counted.
+		 */
+		long count = stream.map((value) -> {
+			return value.toLowerCase();
+		}).count();
+
+		
 
 		// Filter accepts a predicate to filter all elements of the stream.
 		stringCollection.stream().filter((s) -> s.startsWith("a")).forEach(System.out::println);
