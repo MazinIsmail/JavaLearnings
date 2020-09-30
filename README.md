@@ -11,7 +11,6 @@ Single Responsibility Principle - Open Closed Principle - Liskov Substitution Pr
     AtomicBoolean - AtomicIntegerArray - AtomicInteger - AtomicLongArray - AtomicLong - AtomicReferenceArray - AtomicReference - AtomicStampedReference - Non-Blocking And Blocking Algorithm
     <li>BlockingQueue</li>
     BlockingDeque - ArrayBlockingQueue - LinkedBlockingDeque - DelayQueue - PriorityBlockingQueue - SynchronousQueue
-    <li>Cereal</li>
-    <li>Fruit</li>
+    <li>Test</li>
 </ul>
 
