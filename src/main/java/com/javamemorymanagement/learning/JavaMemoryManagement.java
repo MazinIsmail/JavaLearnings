@@ -21,6 +21,9 @@ package com.javamemorymanagement.learning;
  * Heap
  * 
  * Stack
+ * 
+ * 
+ * jconsole command to check the details for JVM memory.
  */
 public class JavaMemoryManagement {
 

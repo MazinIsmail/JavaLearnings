@@ -15,6 +15,14 @@ public class StringsReferenced {
 		} else {
 			System.out.println("Strings are different");
 		}
+		
+		String localPrefixNew = new String("297"); // 1
+		String prefixNew = new String("297"); // 2
+		if (prefixNew == localPrefixNew) {
+			System.out.println("Strings are equal");
+		} else {
+			System.out.println("Strings are different");
+		}
 
 		/**
 		 * It turns out that after comparing the two references of the String type,

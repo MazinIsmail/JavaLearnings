@@ -23,8 +23,23 @@ public class FinalizeMethod {
 		finalizeMethod.finalize();
 		String s = new String("RR");
 		s = null;
-		System.gc();
+
 		System.out.println("Main Completes");
+
+		/**
+		 * The java.lang.Runtime.gc() method runs the garbage collector. Calling this
+		 * method suggests that the Java virtual machine expend effort toward recycling
+		 * unused objects in order to make the memory they currently occupy available
+		 * for quick reuse.
+		 * 
+		 * The method System.gc() is the conventional and convenient means of invoking
+		 * this method.
+		 * 
+		 * This is instance method, while System.gc() is static method.
+		 */
+		Runtime.getRuntime().gc();
+
+		System.gc();
 	}
 
 	/**
