@@ -19,6 +19,10 @@ import java.util.stream.Stream;
  * 
  * Java Stream API is for processing streams of objects - not bytes.
  * 
+ * The Java Stream API provides a functional approach to processing collections
+ * of objects. The Java Stream API was added in Java 8 along with several other
+ * functional programming features.
+ * 
  * Stream Processing:-
  * 
  * You can attach listeners to a Stream. These listeners are called when the
@@ -67,8 +71,6 @@ public class StreamLearning {
 		long count = stream.map((value) -> {
 			return value.toLowerCase();
 		}).count();
-
-		
 
 		// Filter accepts a predicate to filter all elements of the stream.
 		stringCollection.stream().filter((s) -> s.startsWith("a")).forEach(System.out::println);
