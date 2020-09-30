@@ -163,6 +163,109 @@ public class StreamTerminalOperations {
 		stringList.add("one");
 		stream = stringList.stream();
 		Optional<String> anyElement = stream.findAny();
-		System.out.println(anyElement.get());
+		System.out.println("findAny: " + anyElement.get());
+
+		/**
+		 * findFirst()
+		 * 
+		 * The Java Stream findFirst() method finds the first element in the Stream, if
+		 * any elements are present in the Stream. The findFirst() method returns an
+		 * Optional from which you can obtain the element, if present.
+		 */
+		stringList = new ArrayList<String>();
+		stringList.add("one");
+		stringList.add("two");
+		stringList.add("three");
+		stringList.add("one");
+		stream = stringList.stream();
+		Optional<String> result = stream.findFirst();
+		System.out.println("findFirst: " + result.get());
+
+		/**
+		 * forEach()
+		 * 
+		 * The Java Stream forEach() method is a terminal operation which starts the
+		 * internal iteration of the elements in the Stream, and applies a Consumer
+		 * (java.util.function.Consumer) to each element in the Stream. The forEach()
+		 * method returns void.
+		 */
+		System.out.println("forEach: ");
+		stream = stringList.stream();
+		stream.forEach(element -> {
+			System.out.println(element);
+		});
+
+		/**
+		 * min()
+		 * 
+		 * The Java Stream min() method is a terminal operation that returns the
+		 * smallest element in the Stream. Which element is the smallest is determined
+		 * by the Comparator implementation you pass to the min() method.
+		 * 
+		 * min() method returns an Optional which may or may not contain a result. If
+		 * the Stream is empty, the Optional get() method will throw a
+		 * NoSuchElementException.
+		 */
+		stringList = new ArrayList<String>();
+		stringList.add("abc");
+		stringList.add("def");
+		stream = stringList.stream();
+		Optional<String> min = stream.min((val1, val2) -> {
+			return val1.compareTo(val2);
+		});
+		String minString = min.get();
+		System.out.println("min: " + minString);
+
+		/**
+		 * max()
+		 * 
+		 * The Java Stream max() method is a terminal operation that returns the largest
+		 * element in the Stream. Which element is the largest is determined by the
+		 * Comparator implementation you pass to the max() method.
+		 * 
+		 * max() method returns an Optional which may or may not contain a result. If
+		 * the Stream is empty, the Optional get() method will throw a
+		 * NoSuchElementException.
+		 */
+		stream = stringList.stream();
+		Optional<String> max = stream.max((val1, val2) -> {
+			return val1.compareTo(val2);
+		});
+		String maxString = max.get();
+		System.out.println("max: " + maxString);
+
+		/**
+		 * reduce()
+		 * 
+		 * The Java Stream reduce() method is a terminal operation that can reduce all
+		 * elements in the stream to a single element.
+		 * 
+		 * This Optional contains the value (if any) returned by the lambda expression
+		 * passed to the reduce() method. You obtain the value by calling the Optional
+		 * get() method.
+		 */
+		stringList = new ArrayList<String>();
+		stringList.add("One flew over the cuckoo's nest");
+		stringList.add("To kill a muckingbird");
+		stringList.add("Gone with the wind");
+		stream = stringList.stream();
+		Optional<String> reduced = stream.reduce((value, combinedValue) -> {
+			return combinedValue + " + " + value;
+		});
+		System.out.println("reduce:" + reduced.get());
+
+		/**
+		 * toArray()
+		 * 
+		 * The Java Stream toArray() method is a terminal operation that starts the
+		 * internal iteration of the elements in the stream, and returns an array of
+		 * Object containing all the elements.
+		 */
+		stringList = new ArrayList<String>();
+		stringList.add("One flew over the cuckoo's nest");
+		stringList.add("To kill a muckingbird");
+		stringList.add("Gone with the wind");
+		stream = stringList.stream();
+		Object[] objects = stream.toArray();
 	}
 }

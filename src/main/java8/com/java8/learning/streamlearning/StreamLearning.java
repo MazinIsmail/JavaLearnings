@@ -72,6 +72,36 @@ public class StreamLearning {
 			return value.toLowerCase();
 		}).count();
 
+		/**
+		 * Concatenate Streams
+		 * 
+		 * The Java Stream interface contains a static method called concat() which can
+		 * concatenate two streams into one. The result is a new Stream which contains
+		 * all of the elements from the first stream, followed by all of the elements
+		 * from the second stream.
+		 */
+		List<String> stringList = new ArrayList<String>();
+		stringList.add("One flew over the cuckoo's nest");
+		stringList.add("To kill a muckingbird");
+		stringList.add("Gone with the wind");
+		Stream<String> stream1 = stringList.stream();
+		List<String> stringList2 = new ArrayList<>();
+		stringList2.add("Lord of the Rings");
+		stringList2.add("Planet of the Rats");
+		stringList2.add("Phantom Menace");
+		Stream<String> stream2 = stringList2.stream();
+		Stream<String> concatStream = Stream.concat(stream1, stream2);
+		List<String> stringsAsUppercaseList = concatStream.collect(Collectors.toList());
+		System.out.println(stringsAsUppercaseList);
+
+		/**
+		 * Create Stream From Array
+		 * 
+		 * The Java Stream interface contains a static method called of() which can be
+		 * used to create a Stream from one or more objects.
+		 */
+		Stream<String> streamOf = Stream.of("one", "two", "three");
+
 		// Filter accepts a predicate to filter all elements of the stream.
 		stringCollection.stream().filter((s) -> s.startsWith("a")).forEach(System.out::println);
 
