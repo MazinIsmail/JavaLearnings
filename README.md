@@ -8,9 +8,10 @@ Single Responsibility Principle - Open Closed Principle - Liskov Substitution Pr
 ## [Concurrency](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com)
 
 * [Atomic:](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/atomic/learnings)
-    AtomicBoolean - AtomicIntegerArray - AtomicInteger - AtomicLongArray - AtomicLong - AtomicReferenceArray - AtomicReference - AtomicStampedReference - Non-Blocking And Blocking Algorithm
-    <li>BlockingQueue</li>
-    BlockingDeque - ArrayBlockingQueue - LinkedBlockingDeque - DelayQueue - PriorityBlockingQueue - SynchronousQueue
+AtomicBoolean - AtomicIntegerArray - AtomicInteger - AtomicLongArray - AtomicLong - AtomicReferenceArray - AtomicReference - AtomicStampedReference - Non-Blocking And Blocking Algorithm
+
+* BlockingQueue
+BlockingDeque - ArrayBlockingQueue - LinkedBlockingDeque - DelayQueue - PriorityBlockingQueue - SynchronousQueue
     <li>Test</li>
 
 
