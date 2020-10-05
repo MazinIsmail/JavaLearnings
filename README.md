@@ -36,7 +36,7 @@ ReadWriteLock - ReentrantLock - StampedLock
 Mutex Theory - Semaphore
 
 * [Thread](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/thread)<br/>
-** Race Condition Theory - Starvation Theory - DeadLock Sample - Join - Priority<br/>
+	* Race Condition Theory - Starvation Theory - DeadLock Sample - Join - Priority<br/>
 ** [synchronized](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/thread/synchronizedLearnings)<br/>
 ** [ThreadLocal](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/thread/threadlocal)<br/>
 ** wait - notify - notifyAll<br/>
