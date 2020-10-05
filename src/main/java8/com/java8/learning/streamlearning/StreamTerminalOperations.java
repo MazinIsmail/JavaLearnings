@@ -267,5 +267,15 @@ public class StreamTerminalOperations {
 		stringList.add("Gone with the wind");
 		stream = stringList.stream();
 		Object[] objects = stream.toArray();
+
+		/**
+		 * skip()
+		 * 
+		 * Returns a stream consisting of the remaining elements of this stream after
+		 * discarding the first n elements of the stream.If this stream contains fewer
+		 * than n elements then an empty stream will be returned.
+		 */
+		stream = stringList.stream();
+		Stream<String> temp = stream.skip(10);
 	}
 }

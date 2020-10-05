@@ -17,6 +17,9 @@ import java.util.stream.Stream;
  * the result. This is done by providing predicates as inputs to functions
  * operating at runtime upon the streams of collections.
  * 
+ * A Streams does not change the original data structure, they only provide the
+ * result as the pipelined methods.
+ * 
  * Java Stream API is for processing streams of objects - not bytes.
  * 
  * The Java Stream API provides a functional approach to processing collections
