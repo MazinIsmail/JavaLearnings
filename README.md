@@ -1,12 +1,8 @@
 # JavaLearnings
 Basic and Advance concepts of **Java** including Java 8 features. Please find my learnings and the link to it.
 
-<details>
-<summary>
 ## [SOLID](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/solid/com/solid)
-</summary>
 Single Responsibility Principle - Open Closed Principle - Liskov Substitution Principle - Interface Segregation Principle - Dependency Inversion Principle.
-</details>
 
 ## [Concurrency](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com)
 
