@@ -21,7 +21,7 @@ public class LambdaVariableCapture {
 
 	}
 
-	public void localVariableCapture() {
+	public static void localVariableCapture() {
 		/**
 		 * Local Variable Capture
 		 * 
@@ -68,7 +68,7 @@ public class LambdaVariableCapture {
 	 * The fundamental difference between a field and a local variable is that the
 	 * local variable is copied when JVM creates a lambda instance. On the other
 	 * hand, fields can be changed freely, because the changes to them are
-	 * propagated to the outside class instance as well
+	 * propagated to the outside class instance as well.
 	 */
 
 	/**

@@ -36,11 +36,11 @@ public class LambdaMethodReferences {
 	 */
 	public static void staticMethodReferences() {
 		/**
-		 * Since the parameters of the Finder.find() and MyClass.doFind() methods match,
-		 * it is possible to create a lambda expression that implements Finder.find()
-		 * and references the NotFinder.doFind() method.
+		 * Since the parameters of the FinderSample.find() and NotFinderSample.doFind()
+		 * methods match, it is possible to create a lambda expression that implements
+		 * Finder.find() and references the NotFinder.doFind() method.
 		 */
-		FinderSample finderSample = NotFinder::doFind;
+		FinderSample finderSample = NotFinderSample::doFind;
 		System.out.println("staticMethodReferences: " + finderSample.find("123123", "3"));
 	}
 
@@ -84,7 +84,7 @@ public class LambdaMethodReferences {
 		ConverterSample converterSample = stringConverterSample::convertToInt;
 	}
 
-	/*
+	/**
 	 * Constructor References
 	 * 
 	 * You do that by writing the class name followed by ::new
