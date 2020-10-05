@@ -14,6 +14,6 @@ AtomicBoolean - AtomicIntegerArray - AtomicInteger - AtomicLongArray - AtomicLon
 BlockingDeque - ArrayBlockingQueue - LinkedBlockingDeque - DelayQueue - PriorityBlockingQueue - SynchronousQueue
     
 * [Concurrent Map](https://github.com/MazinIsmail/JavaLearnings/tree/master/src/main/concurrency/com/concurrentMap/learnings)<br />
-ConcurrentMap - ConcurrentHashMap
+ConcurrentMap - ConcurrentHashMap<br />
 ConcurrentNavigableMap - ConcurrentSkipListMap
 
