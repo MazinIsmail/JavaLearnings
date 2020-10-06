@@ -1,4 +1,4 @@
-package com.thread.synchronizedLearnings;
+package com.thread.learnings;
 
 /**
  * Monitor
