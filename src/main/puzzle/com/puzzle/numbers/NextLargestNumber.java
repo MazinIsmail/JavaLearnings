@@ -1,4 +1,4 @@
-package com.puzzles.numbers;
+package com.puzzle.numbers;
 
 import java.util.Arrays;
 
@@ -80,7 +80,7 @@ public class NextLargestNumber {
 
 			System.out.println("Input number is:        " + 13520);
 			System.out.println("Next largest number is: " + findNextLargest(13520));
-			
+
 			System.out.println("Input number is:        " + 135420);
 			System.out.println("Next largest number is: " + findNextLargest(135420));
 		} catch (RuntimeException ex) {

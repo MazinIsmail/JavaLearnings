@@ -1,4 +1,4 @@
-package com.puzzles.string;
+package com.puzzle.string;
 
 class CountCharacterOccurence {
 	public static void main(String[] args) {

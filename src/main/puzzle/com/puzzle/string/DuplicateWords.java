@@ -1,4 +1,4 @@
-package com.puzzles.string;
+package com.puzzle.string;
 
 import java.util.HashMap;
 import java.util.Map;

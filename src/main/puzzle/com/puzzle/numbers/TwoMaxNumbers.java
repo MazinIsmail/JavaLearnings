@@ -1,4 +1,4 @@
-package com.puzzles.simple;
+package com.puzzle.numbers;
 
 public class TwoMaxNumbers {
 
