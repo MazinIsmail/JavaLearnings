@@ -14,6 +14,8 @@ import jdk.internal.loader.Resource;
  * Nashorn, a much improved javascript engine is introduced, to replace the
  * existing Rhino. Nashorn provides 2 to 10 times better performance, as it
  * directly compiles the code in memory and passes the bytecode to JVM.
+ * 
+ * Example: QyeryBuilder in JavaScript can be evaluated in Java using this.
  */
 public class NashornLearning {
 
@@ -22,7 +24,7 @@ public class NashornLearning {
 		// Java.
 		ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
 		String file = "src/test/resources/fileTest.txt";
-		engine.eval(new FileReader("res/nashorn1.js"));
+		engine.eval(new FileReader("src/main/resources/nashorn1.js"));
 
 		Invocable invocable = (Invocable) engine;
 		Object result = invocable.invokeFunction("fun1", "Peter Parker");

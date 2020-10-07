@@ -6,7 +6,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src/main/puzzles"/>
+	<classpathentry kind="src" path="src/main/resources"/>
 	<classpathentry kind="src" path="src/main/solid"/>
 	<classpathentry kind="src" path="src/main/concurrency"/>
 	<classpathentry kind="src" path="src/main/certification"/>
