@@ -10,8 +10,10 @@ import java.util.TreeMap;
  * sorted according to the natural ordering of its keys. HashMap is an unordered
  * collection while TreeMap is sorted in the ascending order of its keys.
  * TreeMap is unsynchronized collection class.
+ * 
+ * Tree allows only homogeneous.
  */
-public class TreemapConstructor {
+public class TreeMapConstructor {
 
 	public static void main(String[] args) {
 		/* This is how to declare TreeMap */
