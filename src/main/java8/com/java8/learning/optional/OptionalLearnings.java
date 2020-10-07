@@ -17,7 +17,7 @@ import java.util.Optional;
 public class OptionalLearnings {
 	public static void main(String[] args) {
 		Integer value1 = null;
-		Integer value2 = new Integer(10);
+		Integer value2 = 10;
 
 		// Optional.ofNullable - allows passed parameter to be null.
 		Optional<Integer> a = Optional.ofNullable(value1);
@@ -35,7 +35,7 @@ public class OptionalLearnings {
 		System.out.println("Second parameter is present: " + b.isPresent());
 		// Optional.orElse - returns the value if present otherwise returns
 		// the default value passed.
-		Integer value1 = a.orElse(new Integer(0));
+		Integer value1 = a.orElse(10);
 		// Optional.get - gets the value, value should be present
 		Integer value2 = b.get();
 		return value1 + value2;
