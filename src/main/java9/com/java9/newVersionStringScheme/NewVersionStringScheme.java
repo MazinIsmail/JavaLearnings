@@ -1,6 +1,7 @@
 package com.java9.newVersionStringScheme;
 
 /**
+ * Version-String Scheme
  * 
  * Java version-string is a format that contains version specific information.
  * This version-string consists of major, minor, security and patch update
