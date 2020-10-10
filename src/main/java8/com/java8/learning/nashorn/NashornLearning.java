@@ -8,8 +8,6 @@ import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
-import jdk.internal.loader.Resource;
-
 /**
  * Nashorn, a much improved javascript engine is introduced, to replace the
  * existing Rhino. Nashorn provides 2 to 10 times better performance, as it
