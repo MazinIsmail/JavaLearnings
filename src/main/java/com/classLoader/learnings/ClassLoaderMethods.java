@@ -31,8 +31,5 @@ import java.util.Collections;
 public class ClassLoaderMethods {
 	public static void main(String[] args) throws ClassNotFoundException {
 
-		System.out.println("Classloader of this class:" + Collections.class.getClassLoader());
-
-		System.out.println("Classloader of ArrayList:" + ArrayList.class.getClassLoader());
 	}
 }
