@@ -21,7 +21,8 @@ package com.pattern.factorymethod;
  * creation details to subclasses that are supplied by the client.
  * 
  * Factory Methods are routinely specified by an architectural framework, and
- * then implemented by the user of the framework.
+ * then implemented by the user of the framework. Resource Pool uses factory
+ * method.
  * 
  */
 public class FactoryMethodLearnings {
