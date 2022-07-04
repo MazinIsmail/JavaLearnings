@@ -1,5 +1,21 @@
 package com.finalModifier.learnings;
 
+/**
+ * Once we declare a variable with the final keyword, we can’t change its value
+ * again. If we attempt to change the value of the final variable, then we will
+ * get a compilation error.
+ * 
+ * Generally, we can consider a final variable as a constant, as the final
+ * variable acts like a constant whose values cannot be changed.
+ * 
+ * We can’t just declare a variable as final without initializing it. If we
+ * declare the final variable without initialization, then it is a blank final
+ * variable.
+ * 
+ * But it is mandatory to initialize a final variable either during declaration
+ * or after declaration. If we leave it uninitialized, then we will get a
+ * compilation error.
+ */
 public class FinalVariable {
 	// a final variable
 	// direct initialize

@@ -1,7 +1,7 @@
 package com.oops.basics;
 
 /**
- * In Java, we can access grandparent’s members only through the parent class.
+ * In Java, we can access grandparentï¿½s members only through the parent class.
  *
  */
 class Grandparent1 {

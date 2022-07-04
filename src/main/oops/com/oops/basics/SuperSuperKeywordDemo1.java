@@ -1,8 +1,8 @@
 package com.oops.basics;
 
 /**
- * In Java, a class cannot directly access the grandparent’s members, compiler
- * error occurs in Java. We can access grandparent’s members only through the
+ * In Java, a class cannot directly access the grandparentï¿½s members, compiler
+ * error occurs in Java. We can access grandparentï¿½s members only through the
  * parent class.
  * 
  */
@@ -22,7 +22,7 @@ class Parent extends Grandparent {
 class Child extends Parent {
 	@Override
 	public void print() {
-		super.print();
+		// super.print();
 		// Trying to access Grandparent's Print() Compiler Error occurs
 		// super.super.Print();
 		System.out.println("Child's Print()");
