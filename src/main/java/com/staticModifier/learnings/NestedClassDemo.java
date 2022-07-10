@@ -2,18 +2,18 @@ package com.staticModifier.learnings;
 
 public class NestedClassDemo {
 
-	class InnerClass2 {
-		public void show() {
-			System.out.println("Inside nested class 2");
-		}
-
-	}
-
 	static class InnerClass1 {
 		public void display() {
 			System.out.println("Inside nested class 1");
 		}
 		// not access from non static inner class-->main method
+	}
+
+	class InnerClass2 {
+		public void show() {
+			System.out.println("Inside nested class 2");
+		}
+
 	}
 
 	public static void main(String args[]) {

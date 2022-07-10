@@ -1,6 +1,6 @@
 package com.staticModifier.learnings;
 
-public class BasicStatic {
+public class BasicStaticBlock {
 
 	{
 		System.out.println("In local block");
@@ -12,7 +12,7 @@ public class BasicStatic {
 	}
 
 	// constructor
-	public BasicStatic() {
+	public BasicStaticBlock() {
 		System.out.println("Constructor");
 	}
 
@@ -23,7 +23,7 @@ public class BasicStatic {
 
 	public static void main(String args[]) {
 		System.out.println("In main");
-		BasicStatic basicStatic = new BasicStatic();
+		BasicStaticBlock basicStatic = new BasicStaticBlock();
 		basicStatic.method1();
 	}
 

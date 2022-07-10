@@ -1,1 +1,16 @@
-Hi
+StaticVariable
+StaticMethodDemo
+OverloadStaticExample
+
+StaticBlockDemo
+BasicStaticBlock
+StaticBlockVsNormalDemo
+
+AbstractStatic
+
+InnerClassStatic
+
+NestedClassDemo
+StaticNestedOuterCall (Same as NestedClassDemo but by using separate class instead of main method)
+
+OverrideStaticMethodChild

@@ -9,7 +9,7 @@ public class StaticMethodDemo {
 	 * super and this keyword cannot be used in a static method. A static method can
 	 * be directly called by using the class name <<ClassName>>.<<MethodName>>
 	 * rather than object. This is the main reason we have declared our main()
-	 * method as static
+	 * method as static.
 	 */
 	static String studentName;
 	static int age;

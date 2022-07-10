@@ -9,7 +9,7 @@ public class StaticBlockDemo {
 	/**
 	 * static block static block is executed only once: the first time you make an
 	 * object of that class or the first time you access a static member of that
-	 * class
+	 * class.
 	 */
 	static {
 		System.out.println("Static block initialized.");

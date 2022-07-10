@@ -1,14 +1,14 @@
 package com.staticModifier.learnings;
 
-public class OverloadExample {
+public class OverloadStaticExample {
 
 	/**
-	 * Can we Overload static methods in Java ? Yes, you can overload a static
-	 * method in Java.
+	 * Can we Overload static methods in Java? Yes, you can overload a static method
+	 * in Java.
 	 *
 	 * We cannot overload two methods which differs in static keyword but has the
-	 * same method signature. When we try to do so we will be getting ”Cannot make a
-	 * static reference to the non-static method“ error.
+	 * same method signature. When we try to do so we will be getting "Cannot make a
+	 * static reference to the non-static methodï¿½ error."
 	 */
 
 	public static void disp() {
@@ -21,9 +21,9 @@ public class OverloadExample {
 
 	public static void main(String args[]) {
 		// Calling disp() method which has no parameter
-		OverloadExample.disp();
+		OverloadStaticExample.disp();
 
 		// Calling disp() method which has one parameter
-		OverloadExample.disp("JavaInterviewPoint");
+		OverloadStaticExample.disp("JavaInterviewPoint");
 	}
 }

@@ -10,14 +10,14 @@ class Parent {
 		System.out.println("Parent: Welcome to Parent Class");
 	}
 
-	/**
-	 * When the Child class also has defined the same static method like Parent
-	 * class, then the method in the Child class hides the method in the Parent
-	 * class
-	 */
 }
 
-public class OverrideConceptChild extends Parent {
+/**
+ * When the Child class also has defined the same static method like Parent
+ * class, then the method in the Child class hides the method in the Parent
+ * class
+ */
+public class OverrideStaticMethodChild extends Parent {
 	public static void display() {
 		System.out.println("Welcome to Child class");
 	}
@@ -28,16 +28,20 @@ public class OverrideConceptChild extends Parent {
 
 	public static void main(String args[]) {
 		// Assign Child class object to Parent reference
-		Parent parent = new OverrideConceptChild();
-		parent.display();
+		Parent parent = new OverrideStaticMethodChild();
+
 		/*
 		 * As per overriding in Java, the display() method of the Child class should be
 		 * called, but since it is a static method overriding, it will not happen here
 		 * and hence the Parent class display() method is called here. We cannot
 		 * Override a static method in Java.
 		 */
+		parent.display();
+
+		// Child will be showed as it is non-static and the child class is created.
 		parent.show();
-		OverrideConceptChild child = new OverrideConceptChild();
+
+		OverrideStaticMethodChild child = new OverrideStaticMethodChild();
 		child.display();
 
 	}
