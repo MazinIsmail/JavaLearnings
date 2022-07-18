@@ -25,9 +25,9 @@ public class StaticNestedOuterCall {
 
 		/*
 		 * Below line will throw error as the non-static class require instantiation of
-		 * the outer class NestedClassDemo.InnerClass2 normal = new
-		 * NestedClassDemo.InnerClass2();
+		 * the outer class
 		 */
+		// NestedClassDemo.InnerClass2 normal = new NestedClassDemo.InnerClass2();
 
 		// Nested non-static class require instantiation of the outer class
 		NestedClassDemo1 users = new NestedClassDemo1();

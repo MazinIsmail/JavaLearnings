@@ -19,16 +19,26 @@ class Parent {
  */
 public class OverrideStaticMethodChild extends Parent {
 	public static void display() {
-		System.out.println("Welcome to Child class");
+		System.out.println("OverrideStaticMethodChild: Welcome to Child class");
 	}
 
 	public void show() {
-		System.out.println("Welcome to Child class");
+		System.out.println("OverrideStaticMethodChild: Welcome to Child class");
 	}
 
 	public static void main(String args[]) {
+
+		Parent parent = new Parent();
+		parent.display();
+		parent.show();
+
+		OverrideStaticMethodChild child = new OverrideStaticMethodChild();
+		child.display();
+		child.show();
+
+		System.out.println("parentChild: -");
 		// Assign Child class object to Parent reference
-		Parent parent = new OverrideStaticMethodChild();
+		Parent parentChild = new OverrideStaticMethodChild();
 
 		/*
 		 * As per overriding in Java, the display() method of the Child class should be
@@ -36,13 +46,10 @@ public class OverrideStaticMethodChild extends Parent {
 		 * and hence the Parent class display() method is called here. We cannot
 		 * Override a static method in Java.
 		 */
-		parent.display();
+		parentChild.display();
 
 		// Child will be showed as it is non-static and the child class is created.
-		parent.show();
-
-		OverrideStaticMethodChild child = new OverrideStaticMethodChild();
-		child.display();
+		parentChild.show();
 
 	}
 }

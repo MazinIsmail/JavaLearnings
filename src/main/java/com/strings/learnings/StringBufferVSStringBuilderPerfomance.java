@@ -1,6 +1,6 @@
 package com.strings.learnings;
 
-public class StringBufferVsStringBuilderPerfomance {
+public class StringBufferVSStringBuilderPerfomance {
 
 	public static void main(String[] args) {
 		// This is to iterate for loop N times
@@ -13,7 +13,7 @@ public class StringBufferVsStringBuilderPerfomance {
 			StringBuffer sb = new StringBuffer();
 			// current time is assigned to t
 			t = System.currentTimeMillis();
-			for (int i = N; i-- > 0;) {
+			for (int i = N; i > 0; i--) {
 				sb.append("");
 			}
 			System.out.println("Time taken by StringBuffer is: " + (System.currentTimeMillis() - t));

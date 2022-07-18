@@ -23,15 +23,14 @@ public class NestedClassDemo {
 
 		/*
 		 * Below line will throw error as the non-static class require instantiation of
-		 * the outer class NestedClassDemo.InnerClass2 normal = new
-		 * NestedClassDemo.InnerClass2();
+		 * the outer class.
 		 */
+		// NestedClassDemo.InnerClass2 normal = new NestedClassDemo.InnerClass2();
 
 		// Nested non-static class require instantiation of the outer class
 		NestedClassDemo users = new NestedClassDemo();
-		NestedClassDemo.InnerClass2 obj = users.new InnerClass2();
+		InnerClass2 obj = users.new InnerClass2();
 		obj.show();
-
 	}
 
 }

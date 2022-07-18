@@ -1,6 +1,8 @@
 package com.staticModifier.learnings;
 
 public class InnerClassStatic {
+	
+	private String name;
 
 	// Inner class have to be static if a method is static
 	public static class StaticMethod {

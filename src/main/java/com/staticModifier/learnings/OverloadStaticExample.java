@@ -16,7 +16,12 @@ public class OverloadStaticExample {
 	}
 
 	public static void disp(String name) {
-		System.out.println("disp() method with parameter called : " + name);
+		System.out.println("disp() method with parameter called: " + name);
+	}
+
+	public void disp(String name, int age) {
+		System.out.println("disp() method with parameter called: " + name);
+		System.out.println("disp() age: " + age);
 	}
 
 	public static void main(String args[]) {
@@ -24,6 +29,9 @@ public class OverloadStaticExample {
 		OverloadStaticExample.disp();
 
 		// Calling disp() method which has one parameter
-		OverloadStaticExample.disp("JavaInterviewPoint");
+		OverloadStaticExample.disp("Hi Hi");
+
+		OverloadStaticExample overloadStaticExample = new OverloadStaticExample();
+		overloadStaticExample.disp("Mazin", 123);
 	}
 }

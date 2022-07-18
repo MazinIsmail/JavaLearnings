@@ -1,7 +1,7 @@
 package com.strings.learnings;
 
 /**
- * String is immutable ( nce created can not be changed) object, if you try to
+ * String is immutable ( Once created can not be changed) object, if you try to
  * alter their values, another object gets created. The object created as a
  * String is stored in the Constant String Pool. Every immutable object in Java
  * is thread safe, that implies String is also thread safe. String can not be

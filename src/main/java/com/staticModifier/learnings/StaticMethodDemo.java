@@ -13,14 +13,23 @@ public class StaticMethodDemo {
 	 */
 	static String studentName;
 	static int age;
+	private int salary = 100;
 
 	public static void displayStudentDetails() {
 		StaticMethodDemo.studentName = "Test123";
 		StaticMethodDemo.age = 22;
 		System.out.println("Stundent Name : " + studentName + " Age : " + age);
+
+		// Cannot make a static reference to the non-static field salary
+		// salary = 1000;
 	}
 
 	public static void main(String args[]) {
 		StaticMethodDemo.displayStudentDetails();
+
+		StaticMethodDemo staticMethodDemo = new StaticMethodDemo();
+		// The static method displayStudentDetails() from the type StaticMethodDemo
+		// should be accessed in a static way.
+		staticMethodDemo.displayStudentDetails();
 	}
 }

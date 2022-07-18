@@ -1,16 +1,16 @@
 package com.finalModifier.learnings;
 
 /**
- * Immutable means that the object’s actual value can’t be changed, but you can
+ * Immutable means that the objectï¿½s actual value canï¿½t be changed, but you can
  * change its reference to another one. It is applicable for an object but not
- * for variables. Immutable suggests that we can’t change the state of the
+ * for variables. Immutable suggests that we canï¿½t change the state of the
  * object once created.
  * 
  * Following are the requirements:-
  * 
- * The class must be declared as final (So that child classes can’t be created)
+ * The class must be declared as final (So that child classes canï¿½t be created)
  * 
- * Data members in the class must be declared as final (So that we can’t change
+ * Data members in the class must be declared as final (So that we canï¿½t change
  * the value of it after object creation)
  * 
  * Make all fields private so that direct access is not allowed.
@@ -19,7 +19,7 @@ package com.finalModifier.learnings;
  * 
  * Getter method for all the variables in it
  * 
- * Don’t expose setter methods.
+ * Donï¿½t expose setter methods.
  * 
  * If the class holds a mutable object: Inside the constructor, make sure to use
  * a clone deep copy of the passed argument and never set your mutable field to
@@ -80,7 +80,9 @@ public class ImmutableBaseClassDemo {
 		ageSample.setDay(1);
 		ageSample.setMonth(1);
 		ageSample.setYear(1992);
+		// use final below to stop new creation
 		ImmutableClass immutableClass = new ImmutableClass("ABC", 101, ageSample);
+
 		immutableClass = new ImmutableClass("XYZ", 109, ageSample);
 		System.out.println(immutableClass.getName());
 		System.out.println(immutableClass.getRegNo());

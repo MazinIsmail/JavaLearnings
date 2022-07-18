@@ -1,6 +1,6 @@
 package com.strings.learnings;
 
-public class Example3 {
+public class StringBufferVSString {
 
 	public static void main(String[] args) {
 		/**
@@ -11,12 +11,8 @@ public class Example3 {
 		 */
 		String s1 = "abc";
 		StringBuffer s2 = new StringBuffer(s1);
-		System.out.println(s1.equals(s2));
+		System.out.println("String with StringBuffer: " + s1.equals(s2));
+		System.out.println("String with StringBuffer converted to string: " + s1.equals(s2.toString()));
 
-		String s = new String("foo");
-		String str = new String("foo");
-
-		System.out.println("Hash code of String s:" + s.hashCode());
-		System.out.println("Hash code of String str:" + str.hashCode());
 	}
 }
