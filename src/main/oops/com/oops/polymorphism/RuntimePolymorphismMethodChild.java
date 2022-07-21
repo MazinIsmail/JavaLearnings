@@ -26,7 +26,7 @@ public class RuntimePolymorphismMethodChild extends RuntimePolymorphismMethodPar
 	}
 
 	public static void main(String[] args) {
-		RuntimePolymorphismMethodParent runtimePolymorphismMethodParent = new RuntimePolymorphismMethodChild();// upcasting
+		RuntimePolymorphismMethodParent runtimePolymorphismMethodParent = new RuntimePolymorphismMethodChild();
 		runtimePolymorphismMethodParent.run();
 	}
 }

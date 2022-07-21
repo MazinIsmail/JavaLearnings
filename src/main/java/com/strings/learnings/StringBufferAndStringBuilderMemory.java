@@ -16,14 +16,15 @@ package com.strings.learnings;
 public class StringBufferAndStringBuilderMemory {
 	public static void main(String[] args) {
 		StringBuffer stringBuffer = new StringBuffer("Mazin");
-		System.out.println("Hashcode for stringBuffer: " + stringBuffer.hashCode());
+		System.out.println("Hashcode for StringBuffer: " + stringBuffer.hashCode());
 		stringBuffer.append(" Ismail");
-		System.out.println("Hashcode for stringBuffer: " + stringBuffer.hashCode());
+		System.out.println("Hashcode for StringBuffer: " + stringBuffer.hashCode());
 		stringBuffer.insert(0, "I'm ");
-		System.out.println("Hashcode for stringBuffer: " + stringBuffer.hashCode());
+		System.out.println("Hashcode for StringBuffer: " + stringBuffer.hashCode());
 		System.out.println();
+
 		stringBuffer = new StringBuffer("Bye");
-		System.out.println("Hashcode for new stringBuffer: " + stringBuffer.hashCode());
+		System.out.println("Hashcode for new StringBuffer: " + stringBuffer.hashCode());
 		// when new is used, new memory is allocated
 		System.out.println();
 

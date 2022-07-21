@@ -34,6 +34,8 @@ public class CovariantReturnType extends A {
 	}
 
 	public static void main(String args[]) {
-		new CovariantReturnType().get().message();
+		CovariantReturnType covariantReturnType = new CovariantReturnType();
+		covariantReturnType.get().message();
+		covariantReturnType.message();
 	}
 }

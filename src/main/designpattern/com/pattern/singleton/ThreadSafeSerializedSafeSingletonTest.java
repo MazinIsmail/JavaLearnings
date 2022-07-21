@@ -9,7 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
-import com.serializationdeserialization.learning.DeserializationLearning;
+import com.markerinterfaces.learning.Deserialization;
 
 public class ThreadSafeSerializedSafeSingletonTest {
 
@@ -24,7 +24,7 @@ public class ThreadSafeSerializedSafeSingletonTest {
 		// deserailize from file to object
 		final String filaName = "SerializedSingleton.txt";
 		// Loading the file from the current classloaders classpath
-		BufferedInputStream bufferedInputStream = (BufferedInputStream) DeserializationLearning.class.getClassLoader()
+		BufferedInputStream bufferedInputStream = (BufferedInputStream) Deserialization.class.getClassLoader()
 				.getResourceAsStream(filaName);
 		ObjectInput in = new ObjectInputStream(bufferedInputStream);
 		ThreadSafeSerializedSafeSingleton instanceTwo = (ThreadSafeSerializedSafeSingleton) in.readObject();

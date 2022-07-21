@@ -1,4 +1,4 @@
-package com.markableinterfaces.learning;
+package com.markerinterfaces.learning;
 
 class Student implements Cloneable {
 	private int id;
@@ -7,6 +7,10 @@ class Student implements Cloneable {
 
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
+		/*
+		 * In here employee is not cloned. That means any changes made to those objects
+		 * through clone object will be reflected in original object or vice-versa.
+		 */
 	}
 
 	@Override

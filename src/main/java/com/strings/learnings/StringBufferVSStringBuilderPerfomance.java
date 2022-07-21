@@ -5,18 +5,18 @@ public class StringBufferVSStringBuilderPerfomance {
 	public static void main(String[] args) {
 		// This is to iterate for loop N times
 		int N = 77777777;
-		long t;
 		/**
 		 * StringBuffer is tested
 		 */
 		{
 			StringBuffer sb = new StringBuffer();
 			// current time is assigned to t
-			t = System.currentTimeMillis();
+			long beforeTime = System.currentTimeMillis();
 			for (int i = N; i > 0; i--) {
 				sb.append("");
 			}
-			System.out.println("Time taken by StringBuffer is: " + (System.currentTimeMillis() - t));
+			long afterTime = System.currentTimeMillis();
+			System.out.println("Time taken by StringBuffer is: " + (afterTime - beforeTime));
 		}
 		/**
 		 * StringBuilder is tested
@@ -24,11 +24,12 @@ public class StringBufferVSStringBuilderPerfomance {
 		{
 			StringBuilder sb = new StringBuilder();
 			// current time is assigned to t before loop
-			t = System.currentTimeMillis();
+			long beforeTime = System.currentTimeMillis();
 			for (int i = N; i > 0; i--) {
 				sb.append("");
 			}
-			System.out.println("Time taken by StringBuilder is: " + (System.currentTimeMillis() - t));
+			long afterTime = System.currentTimeMillis();
+			System.out.println("Time taken by StringBuilder is: " + (afterTime - beforeTime));
 		}
 	}
 

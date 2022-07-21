@@ -1,4 +1,4 @@
-package com.markableinterfaces.learning;
+package com.markerinterfaces.learning;
 
 import java.util.ArrayList;
 

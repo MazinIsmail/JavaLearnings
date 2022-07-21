@@ -1,6 +1,6 @@
 package com.oops.polymorphism;
 
-public class CompiletimeTypePromotion {
+public class CompileTimeTypePromotion {
 	void sum(int a, long b) {
 		System.out.println(a + b);
 	}
@@ -10,8 +10,10 @@ public class CompiletimeTypePromotion {
 	}
 
 	public static void main(String args[]) {
-		CompiletimeTypePromotion obj = new CompiletimeTypePromotion();
-		obj.sum(20, 20);// now second int literal will be promoted to long
+		CompileTimeTypePromotion obj = new CompileTimeTypePromotion();
+		// now second int literal will be promoted to long
+		// Autoboxing and Unboxing concept
+		obj.sum(20, 20);
 		obj.sum(20, 20, 20);
 
 	}

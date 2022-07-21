@@ -1,4 +1,4 @@
-package com.markableinterfaces.learning;
+package com.markerinterfaces.learning;
 
 public class Department implements Cloneable {
 	private String name;

@@ -1,10 +1,14 @@
-package com.markableinterfaces.learning;
+package com.markerinterfaces.learning;
 
 import java.io.*;
 
+/**
+ * Deserialization is the process of reconstructing the object from the
+ * serialized state.
+ */
 public class Deserialization {
 
-	public static void main(String[] args) throws IOException,FileNotFoundException {
+	public static void main(String[] args) throws IOException, FileNotFoundException {
 		FileInputStream fileInputStream = null;
 		ObjectInputStream objectInputStream = null;
 		try {

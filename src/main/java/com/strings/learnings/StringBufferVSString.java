@@ -10,8 +10,9 @@ public class StringBufferVSString {
 		 * then return false.
 		 */
 		String s1 = "abc";
-		StringBuffer s2 = new StringBuffer(s1);
+		StringBuilder s2 = new StringBuilder(s1);
 		System.out.println("String with StringBuffer: " + s1.equals(s2));
+		// Do not use == to check if values are equal
 		System.out.println("String with StringBuffer converted to string: " + s1.equals(s2.toString()));
 
 	}

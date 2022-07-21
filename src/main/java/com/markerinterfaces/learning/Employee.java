@@ -1,12 +1,12 @@
-package com.markableinterfaces.learning;
+package com.markerinterfaces.learning;
 
 import java.io.Serializable;
 
 public class Employee implements Serializable, Cloneable {
 
 	private static final long serialVersionUID = -6378696130311453802L;
-	private transient int transientVariable;
-	private static int staticVariable;
+	private transient int transientVariable; // This will not be serialized.
+	private static int staticVariable; // This will not be serialized.
 	private String name;
 	private int age;
 

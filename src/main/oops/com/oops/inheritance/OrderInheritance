@@ -1,0 +1,9 @@
+ParentA
+ChildBExtendsA (Teach debugging in eclipse)
+
+IsARelationship
+HasARelationship - Address, Employee, Student, EmployeeService
+
+Types_Of_Inheritance
+(However, a class can implement one or more interfaces, 
+which has helped Java get rid of the impossibility of multiple inheritance.)

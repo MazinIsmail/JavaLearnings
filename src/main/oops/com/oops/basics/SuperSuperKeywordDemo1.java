@@ -15,6 +15,7 @@ class Grandparent {
 class Parent extends Grandparent {
 	@Override
 	public void print() {
+		super.print();
 		System.out.println("Parent's Print()");
 	}
 }
@@ -25,6 +26,7 @@ class Child extends Parent {
 		// super.print();
 		// Trying to access Grandparent's Print() Compiler Error occurs
 		// super.super.Print();
+		super.print();
 		System.out.println("Child's Print()");
 	}
 }

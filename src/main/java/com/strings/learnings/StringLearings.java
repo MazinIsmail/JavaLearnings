@@ -7,17 +7,15 @@ package com.strings.learnings;
  * is thread safe, that implies String is also thread safe. String can not be
  * used by two threads simultaneously. String once assigned can not be changed.
  */
-
 public class StringLearings {
 
 	public static void main(String[] args) {
 
-		System.out.println("String datatype");
 		String string1 = "Hello";
 		// The above object is stored in constant string
 		// pool and its value can not be modified.
 		System.out.println("Old string1: " + string1.hashCode());
-		string1 += "World";
+		string1 = string1 + "World";
 		System.out.println("New string1: " + string1.hashCode());
 
 		// string is created in constant pool and referenced by the demo variable
@@ -32,7 +30,7 @@ public class StringLearings {
 		// When you do a new it will check the pool for same hashcode
 		String string3 = new String("Hello");
 		System.out.println("String3 is in memory :" + string3.hashCode());
-		string3 += "Mazin";
+		string3 = string3 + "Mazin";
 		System.out.println("String3 is in memory post value change :" + string3.hashCode());
 
 	}

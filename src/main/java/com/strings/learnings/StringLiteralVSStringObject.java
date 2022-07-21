@@ -20,6 +20,7 @@ public class StringLiteralVSStringObject {
 		System.out.println("Hash code of String s2: " + s2.hashCode());
 		// Hashcode may or may not be same, if the memories are different.
 		System.out.println("s1 == s2 :: " + (s1 == s2));
+		System.out.println("s1 equals s2 :: " + s1.equals(s2));
 		System.out.println("[s1 and s2 refers to two different memory location]");
 		System.out.println("Brand new object will be created on Heap and different references.\n");
 
@@ -45,8 +46,6 @@ public class StringLiteralVSStringObject {
 		 */
 		s5 = "bbbb";
 		System.out.println("Changed s5, s4 == s5: " + (s4 == s5));
-
-		System.out.println("s1.equals(s2): " + s1.equals(s2));
 
 	}
 

@@ -1,11 +1,11 @@
 package com.oops.polymorphism;
 
-class ClassBextendsA extends ClassA {
+class ChildBextendsA extends ParentA {
 
 	int x = 20;
 
 	// overriding m1()
 	void m1() {
-		System.out.println("Inside B's m1 method");
+		System.out.println("Inside Child B's m1 method");
 	}
 }

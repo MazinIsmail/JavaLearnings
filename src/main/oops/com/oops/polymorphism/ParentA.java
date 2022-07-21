@@ -1,10 +1,10 @@
 package com.oops.polymorphism;
 
-class ClassA {
+class ParentA {
 
 	int x = 10;
 
 	void m1() {
-		System.out.println("Inside A's m1 method");
+		System.out.println("Inside Parent A's m1 method");
 	}
 }
