@@ -28,10 +28,17 @@ package com.oops.abstractlearnings;
  * operation. More about it in "com.markableinterfaces.learning".
  * 
  */
+// instead of class keyword you will use interface keyword.
 public interface InterfaceLearnings {
+
+	// adds public, static and final
+	int a = 0;
+
+	// adds public and abstract
 	void print();
 }
 
+// implements for interface implementation
 class ImplementationInterface implements InterfaceLearnings {
 
 	@Override

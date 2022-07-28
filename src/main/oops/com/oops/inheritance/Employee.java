@@ -6,6 +6,7 @@ public class Employee {
 	private int age;
 	private String department;
 	private double salary;
+	// One-to-one mapping
 	private Address address;
 
 	public String getName() {

@@ -1,10 +1,13 @@
 package com.oops.inheritance;
 
+import java.util.List;
+
 public class Student {
 
 	private String name;
 	private long rollNumber;
-	private Address address;
+	// One-to-many mapping
+	private List<Address> address;
 
 	public String getName() {
 		return name;
@@ -22,11 +25,11 @@ public class Student {
 		this.rollNumber = rollNumber;
 	}
 
-	public Address getAddress() {
+	public List<Address> getAddress() {
 		return address;
 	}
 
-	public void setAddress(Address address) {
+	public void setAddress(List<Address> address) {
 		this.address = address;
 	}
 

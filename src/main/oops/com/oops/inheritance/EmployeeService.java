@@ -1,5 +1,8 @@
 package com.oops.inheritance;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class EmployeeService {
 
 	public static void main(String[] args) {
@@ -15,8 +18,13 @@ public class EmployeeService {
 		Student student = new Student();
 		student.setName("Nizam");
 		student.setRollNumber(123345);
-		Address addressStudent = new Address(12, "makrham", "L3F 443", "Canada", "BC");
-		student.setAddress(addressStudent);
+
+		List<Address> addressList = new ArrayList<>();
+		Address addressStudentFirst = new Address(12, "makrham", "L3F 443", "Canada", "BC");
+		addressList.add(addressStudentFirst);
+		Address addressStudentSecond = new Address(12, "Barrie", "L2V 3F4", "Canada", "BC");
+		addressList.add(addressStudentSecond);
+		student.setAddress(addressList);
 		System.out.println("Student: " + student);
 	}
 }
