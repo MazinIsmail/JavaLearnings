@@ -1,13 +1,12 @@
 package com.markerinterfaces.learning;
 
 public class Department implements Cloneable {
-	private String name;
 	private int id;
-
+	private String name;
 	private Employee employee = new Employee();
 
 	public Object clone() throws CloneNotSupportedException {
-		// Assign the shallow copy to new refernce variable department
+		// Assign the shallow copy to new reference variable department
 		Department department = (Department) super.clone();
 		department.employee = (Employee) employee.clone();
 		// Create a new object for the field employee and assign it to shallow copy

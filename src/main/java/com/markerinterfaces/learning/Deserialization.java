@@ -23,10 +23,10 @@ public class Deserialization {
 			employee = (Employee) objectInputStream.readObject();
 
 			System.out.println("Object has been deserialized\n" + "Data after Deserialization.");
-			System.out.println("getTransientVariable : " + employee.getTransientVariable());
-			System.out.println("getStaticVariable : " + Employee.getStaticVariable());
-			System.out.println("Age : " + employee.getAge());
-			System.out.println("Name : " + employee.getName());
+			System.out.println("Transient Value: " + employee.getTransientVariable());
+			System.out.println("Static Value: " + Employee.getStaticVariable());
+			System.out.println("Age: " + employee.getAge());
+			System.out.println("Name: " + employee.getName());
 
 		} catch (IOException ex) {
 			System.out.println("IOException is caught");

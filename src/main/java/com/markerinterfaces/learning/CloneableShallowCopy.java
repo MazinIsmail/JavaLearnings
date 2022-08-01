@@ -15,6 +15,9 @@ package com.markerinterfaces.learning;
  *
  */
 
+/**
+ * Purpose of Cloning?
+ */
 public class CloneableShallowCopy {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
@@ -29,7 +32,8 @@ public class CloneableShallowCopy {
 		studentorginal.setEmployee(employee);
 
 		Student studentAssigned = (Student) studentorginal;
-		Student studentcloned = (Student) studentorginal.clone();
+		Student studentcloned = (Student) studentorginal.clone(); // Cloning
+
 		System.out.println("studentorginal : " + studentorginal.toString());
 		System.out.println("studentcloned  : " + studentcloned.toString());
 		System.out.println("studentAssigned: " + studentAssigned.toString());

@@ -25,6 +25,10 @@ import java.io.*;
  * When calling the ObjectOutputStream.writeObject() method, the JVM checks if
  * the object implements the Serializable marker interface.
  */
+
+/**
+ * Purpose of Serialization?
+ */
 class Serialization {
 	public static void main(String[] args) throws IOException {
 
