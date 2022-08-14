@@ -2,8 +2,10 @@ package com.puzzle.string;
 
 import java.util.Arrays;
 
-/*Same set of characters but in different order.
-For example, ¡§Dormitory ¡V Dirty Room¡¨, ¡§keep ¡V peek¡¨,  ¡§School Master ¡V The Classroom¡¨*/
+/**
+ * Same set of characters but in different order. For example, ï¿½ï¿½Dormitory ï¿½V
+ * Dirty Roomï¿½ï¿½, ï¿½ï¿½keep ï¿½V peekï¿½ï¿½, ï¿½ï¿½School Master ï¿½V The Classroomï¿½ï¿½
+ */
 public class AnagramProgram {
 	static void isAnagram(String s1, String s2) {
 		String copyOfs1 = s1.replaceAll("\\s", "");

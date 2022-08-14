@@ -4,7 +4,9 @@ import java.io.IOException;
 
 /**
  * When child class method is throwing border checked exception compared to the
- * same method of base class
+ * same method of base class.
+ * 
+ * 
  *
  */
 class ParentException {

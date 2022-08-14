@@ -12,6 +12,7 @@ public class NestedTryException {
 			} catch (ArithmeticException e1) {
 				System.out.println("Exception: e1");
 			}
+
 			// Child try block2
 			try {
 				System.out.println("Inside block2");
@@ -21,6 +22,8 @@ public class NestedTryException {
 				System.out.println("Exception: e2");
 			}
 			System.out.println("Just other statement");
+
+			// more code here
 		} catch (ArithmeticException e3) {
 			System.out.println("Arithmetic Exception");
 			System.out.println("Inside parent try catch block");

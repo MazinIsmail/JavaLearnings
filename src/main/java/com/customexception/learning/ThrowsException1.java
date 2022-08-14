@@ -11,8 +11,8 @@ package com.customexception.learning;
  * exception using catch block or the method must declare it using throws
  * declaration.
  */
-class ThrowException {
-	static void validate(int age) {
+class ThrowsException1 {
+	static void validate(int age) throws ArithmeticException {
 		if (age < 18)
 			throw new ArithmeticException("not valid");
 		else
@@ -20,7 +20,11 @@ class ThrowException {
 	}
 
 	public static void main(String args[]) {
-		validate(13);
+		try {
+			validate(13);
+		} catch (ArithmeticException e) {
+			System.out.println("ArithmeticException catched");
+		}
 		System.out.println("Rest of the code...");
 	}
 }

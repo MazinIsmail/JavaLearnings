@@ -1,15 +1,6 @@
 package com.customexception.learning;
 
-import java.io.IOException;
-
 /**
- * If the superclass method does not declare an exception, subclass overridden
- * method cannot declare the checked exception but it can declare unchecked
- * exception.
- * 
- * Check this example "OnlyChildClassThrowsUncheckedException.java"
- * 
- * 
  * If the superclass method does not declare an exception, subclass overridden
  * method cannot declare the checked exception but it can declare unchecked
  * exception.
@@ -28,15 +19,17 @@ class SuperClass {
 
 class OnlyChildClassThrowsCheckedException extends SuperClass {
 
-	// SuperClass inherited by the SubClass method() declaring Checked Exception
-	// IOException is not allowed
+	// SuperClass inherited by the SubClass method() declaring Unchecked Exception
 	void method() throws RuntimeException {
-
-		// IOException is of type Checked Exception, so the compiler will give Error
 		System.out.println("SubClass");
 	}
 
-	// Driver code
+	// Gives compile time error.
+	// IOException is not allowed. IOException is Checked Exception.
+	/*
+	 * void msg() throws IOException { System.out.println("TestExceptionChild"); }
+	 */
+
 	public static void main(String args[]) {
 		SuperClass s = new OnlyChildClassThrowsCheckedException();
 		s.method();

@@ -5,8 +5,14 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * This program demonstrates Checked Exceptions: These are exceptions which are
- * checked at compile time.
+ * 
+ * Checked Exception: -
+ * 
+ * The classes that directly inherit the Throwable class except RuntimeException
+ * and Error are known as checked exceptions.
+ * 
+ * For example, IOException, SQLException, etc. Checked exceptions are checked
+ * at compile-time.
  */
 public class CheckedException {
 

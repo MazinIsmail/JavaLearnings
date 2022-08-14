@@ -1,16 +1,12 @@
 package com.customexception.learning;
 
 /**
+ * Unchecked Exception: -
  * 
- * This code will demonstrate the Exception handling using the keywords
- * try,catch and finally.
- * 
- * Exception: An event which disrupts the normal flow of the program.
- * 
- * Exception Handling: A mechanism to handle runtime errors. This is an example
- * for Unchecked exception.
- * 
- * Unchecked Exception: Classes which inherit Runtime Exception.
+ * The classes that inherit the RuntimeException are known as unchecked
+ * exceptions. For example, ArithmeticException, NullPointerException,
+ * ArrayIndexOutOfBoundsException, etc. Unchecked exceptions are not checked at
+ * compile-time, but they are checked at runtime.
  */
 public class UncheckedException {
 	public static void ArithException() {

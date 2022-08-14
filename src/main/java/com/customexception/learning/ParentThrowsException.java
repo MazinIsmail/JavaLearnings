@@ -15,13 +15,22 @@ class Parent {
 	}
 }
 
-class BothParentChildThrowsException extends Parent {
+class ParentThrowsException extends Parent {
+
+	// Same exception, subclass exception or no exception is allowed.
 	void brand() throws IOException {
 		System.out.println("Bajaj");
 	}
 
+	/**
+	 * Parent exception not allowed
+	 * 
+	 * // Exception is not compatible with throws clause in Parent.brand() void
+	 * brand() throws Exception { System.out.println("Bajaj"); }
+	 */
+
 	public static void main(String args[]) {
-		Parent obj = new BothParentChildThrowsException();
+		Parent obj = new ParentThrowsException();
 		try {
 			obj.brand();
 		} catch (Exception e) {

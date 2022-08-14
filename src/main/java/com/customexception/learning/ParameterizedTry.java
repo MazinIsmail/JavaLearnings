@@ -9,11 +9,9 @@ import java.io.IOException;
  * Java code illustrating try-with-resource
  *
  */
-
 public class ParameterizedTry {
 	public static void main(String args[]) throws IOException {
 
-		// TODO: Take using classpath
 		File file = new File("C:\\Users\\MA20011300\\Desktop\\hello.txt");
 
 		BufferedReader br = new BufferedReader(new FileReader(file));
