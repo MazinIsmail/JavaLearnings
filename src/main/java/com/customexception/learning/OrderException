@@ -19,7 +19,7 @@ ThrowsException2
 FinalFinallyFinalize
 
 OnlyChildClassThrowsCheckedException - OnlyChildClassThrowsUncheckedException
-BothParentChildThrowsException
+ParentThrowsException
 
 ParameterizedTry
 

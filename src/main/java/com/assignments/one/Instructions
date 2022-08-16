@@ -1,0 +1,22 @@
+Student Class
+
+Create a class "Student" which contains name, age, studentId and marks of 5 subjects.
+Create function to display student details
+
+Create method to find the average marks of all the students.
+How many students passed if the pass mark is 50%?
+How many studensts failed if the pass mark is 50%?
+
+Subject Class in Student Class which will have two fields mark and subject
+Use string builder to display marks of each subject.
+Create function to find total mark of a student.
+
+
+Total there should be 10 students use static field to count the number of students you created.
+Create 1 student using deep copy.
+Make sure name of the student cannot be changed once created. (Use final)
+
+Create custom exception if the age is below 5.
+Find the student with highest total marks.
+Who has the highest marks in a single subject.
+Check if 2 students have same average mark.
