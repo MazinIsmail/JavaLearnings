@@ -17,6 +17,7 @@
 	<classpathentry kind="src" path="src/main/collections"/>
 	<classpathentry kind="src" path="src/main/puzzle"/>
 	<classpathentry kind="src" path="src/main/datastructuresAlgorithms"/>
+	<classpathentry kind="src" path="src/main/assignments"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
