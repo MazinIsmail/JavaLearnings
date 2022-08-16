@@ -5,7 +5,7 @@ Create function to display student details
 
 Create method to find the average marks of all the students.
 How many students passed if the pass mark is 50%?
-How many studensts failed if the pass mark is 50%?
+How many students failed if the pass mark is 50%?
 
 Subject Class in Student Class which will have two fields mark and subject
 Use string builder to display marks of each subject.
