@@ -1,4 +1,4 @@
-package com.solid.liskovsubstitutionprinciple;
+package com.solid.learnings;
 
 /**
  * Liskov Substitution Principle
@@ -12,13 +12,13 @@ package com.solid.liskovsubstitutionprinciple;
  * parent type without making any complication or blowing things up should have
  * the ability to stand in for that parent.
  * 
- * This avoids misusing inheritance. It helps us conform to the “is-a”
- * relationship. For example, it’s tempting to say that a circle is a type of
- * ellipse but circles don’t have two foci or major/minor axes.
+ * This avoids misusing inheritance. It helps us confirm to the
+ * is-a-relationship. For example, its tempting to say that a circle is a type
+ * of ellipse but circles don't have two foci or major/minor axes.
  * 
  * The LSP is popularly explained using the square and rectangle example. If we
- * assume an ISA relationship between Square and Rectangle. Thus, we call
- * “Square is a Rectangle.” As per the principle, the functions that use
+ * assume an is-a relationship between Square and Rectangle. Thus, we call
+ * Square is a Rectangle. As per the principle, the functions that use
  * references to the base classes must be able to use objects of derived class
  * without knowing it. The Square class always assumes that the width is equal
  * with the height. If a Square object is used in a context where a Rectangle is
@@ -27,4 +27,6 @@ package com.solid.liskovsubstitutionprinciple;
  */
 public class LiskovSubstitutionPrinciple {
 
+	// Rectangle example
+	// ShapeService example
 }

@@ -1,0 +1,8 @@
+DesignPrinciples
+
+Single Responsibility Principle (SRP) - SingleResponsibilityPrinciple
+Open-Closed Principle (OCP) - OpenClosedPrinciple: StudentInfo, StudentInfoAgain, StudentService
+Liskov Substitution Principle (LSP) - LiskovSubstitutionPrinciple: Rectangle, ShapeService
+Interface Segregation Principle (ISP) - InterfaceSegregationPrinciple: Vehicle, BikeAgain
+Dependency Inversion Principle (DIP) - DependencyInversionPrinciple
+

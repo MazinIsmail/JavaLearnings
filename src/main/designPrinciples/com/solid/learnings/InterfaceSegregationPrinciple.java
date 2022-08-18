@@ -1,4 +1,4 @@
-package com.solid.interfacesegregationprinciple;
+package com.solid.learnings;
 
 /**
  * Interface Segregation Principle
@@ -9,7 +9,7 @@ package com.solid.interfacesegregationprinciple;
  * So basically, the interface segregation principles as you prefer the
  * interfaces, which are small but client specific instead of monolithic and
  * bigger interface. In short, it would be bad for you to force the client to
- * depend on a certain thing, which they don’t need.
+ * depend on a certain thing, which they don't need.
  * 
  * For example, a single logging interface for writing and reading logs is
  * useful for a database but not for a console. Reading logs make no sense for a
@@ -17,4 +17,6 @@ package com.solid.interfacesegregationprinciple;
  */
 public class InterfaceSegregationPrinciple {
 
+	// Vehicle example
+	// BikeAgain example
 }

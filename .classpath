@@ -8,7 +8,7 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src/main/java9"/>
 	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry kind="src" path="src/main/solid"/>
+	<classpathentry kind="src" path="src/main/designPrinciples"/>
 	<classpathentry kind="src" path="src/main/concurrency"/>
 	<classpathentry kind="src" path="src/main/certification"/>
 	<classpathentry kind="src" path="src/main/java8"/>

@@ -1,4 +1,4 @@
-package com.solid.openclosedprinciple;
+package com.solid.learnings;
 
 /**
  * Open Closed Principle
@@ -25,4 +25,7 @@ package com.solid.openclosedprinciple;
  */
 public class OpenClosedPrinciple {
 
+	// StudentInfo example
+	// StudentInfoAgain example
+	// StudentService
 }
