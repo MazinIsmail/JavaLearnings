@@ -12,5 +12,7 @@ public class ShapeService {
 		 * substituting Rectangle with Square class may result in unexpected behaviour.
 		 */
 		Rectangle rectangleSquare = new Square();
+		rectangleSquare.setHeight(2);
+		rectangleSquare.setWidth(5);
 	}
 }

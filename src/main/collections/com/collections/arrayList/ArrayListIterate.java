@@ -13,8 +13,7 @@ public class ArrayListIterate {
 		list.add("Ravi");
 		list.add("Sai");
 		list.add("Raj");
-
-		System.out.println("Values in the list are : " + list);
+		System.out.println("Values in the list are: " + list);
 
 		// Iterate using for loop
 		System.out.println("For Loop");
@@ -22,7 +21,7 @@ public class ArrayListIterate {
 			System.out.println(list.get(count));
 		}
 
-		// Advanced For Loop
+		// Foreach Loop
 		System.out.println("Advanced For Loop");
 		for (String str : list) {
 			System.out.println(str);
@@ -42,16 +41,16 @@ public class ArrayListIterate {
 		 * Iterator object can be created by using iterator() method present in
 		 * Collection Interface
 		 */
-		System.out.println("Iterator Loop");
 		/**
 		 * Here 'list' is any Collection object 'iterator' is of type Iterator interface
 		 * and refers to Collection object 'list'
 		 */
-		Iterator iterator = list.iterator();
+		Iterator<String> iterator = list.iterator();
 		/**
-		 * hasNext() returns boolean value and returns true if it has more iteration
+		 * hasNext() returns boolean value and returns true if it has more iteration.
 		 * next() returns Next element in the Iteration
 		 */
+		System.out.println("Iterator Loop");
 		while (iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}
@@ -65,13 +64,15 @@ public class ArrayListIterate {
 		listInt.add(25);
 		listInt.add(15);
 		listInt.add(20);
-		System.out.println("Integer List values : " + listInt);
-		Iterator iteratorInt = listInt.iterator();
+		System.out.println("Integer List values: " + listInt);
+		System.out.println("");
+		Iterator<Integer> iteratorInt = listInt.iterator();
 		while (iteratorInt.hasNext()) {
 			int value = (Integer) iteratorInt.next();
 			if (value % 2 == 0) {
 				iteratorInt.remove();
-				System.out.println("The value after remove method : " + listInt);
+				System.out.println("Removed: " + value);
+				System.out.println("The value after remove method: " + listInt);
 			}
 		}
 

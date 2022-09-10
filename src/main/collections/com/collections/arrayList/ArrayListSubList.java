@@ -26,8 +26,9 @@ public class ArrayListSubList {
 		System.out.println("SubList values in ArrayList : " + subList);
 
 		subList.remove(2);
-		System.out.println("SubList value after removing an element : " + subList);
-		System.out.println("List value after removing an element from SubList : " + list);
+		System.out.println("SubList value after removing an element: " + subList);
+		// Original won't be affected.
+		System.out.println("List value after removing an element from SubList: " + list);
 
 		// Throws Exception
 		/*
@@ -40,20 +41,20 @@ public class ArrayListSubList {
 		// System.out.println(list.subList(3, 1));
 
 		// To find the first occurrence of a particular value in List
-		System.out.println(list.indexOf("Ram"));
+		System.out.println("\nindexOf(\"Ram\"): " + list.indexOf("Ram"));
 
 		// To find the last occurrence of a particular value in List
-		System.out.println(list.lastIndexOf("Raj"));
+		System.out.println("lastIndexOf(\"Raj\"): " + list.lastIndexOf("Raj"));
 
 		// returns -1 if value is not in List
-		System.out.println(list.lastIndexOf("AA"));
+		System.out.println("list.lastIndexOf(\"AA\"): " + list.lastIndexOf("AA"));
 
 		/**
 		 * To check specified element is present in List returns 'true' if value is
 		 * present in the list returns 'false' if value is not present in the list
 		 */
-		System.out.println(list.contains("Ram"));
-		System.out.println(list.contains("AA"));
+		System.out.println("contains(\"Ram\"): " + list.contains("Ram"));
+		System.out.println("contains(\"AA\"): " + list.contains("AA"));
 	}
 
 }

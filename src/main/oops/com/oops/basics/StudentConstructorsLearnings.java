@@ -1,6 +1,8 @@
 package com.oops.basics;
 
 /**
+ * Constructors
+ * 
  * It is called when an instance of the class is created. At the time of calling
  * constructor, memory for the object is allocated in the memory.
  * 
@@ -19,11 +21,11 @@ public class StudentConstructorsLearnings {
 	private int id;
 
 	/*
-	 * Rules for creating Java constructor
+	 * Rules for creating Java constructor: -
 	 * 
-	 * Constructor name must be the same as its class name
+	 * Constructor name must be the same as its class name.
 	 * 
-	 * No explicit return type
+	 * No explicit return type.
 	 * 
 	 * A Java constructor cannot be abstract, static, final, and synchronized
 	 */
@@ -54,12 +56,10 @@ public class StudentConstructorsLearnings {
 		StudentConstructorsLearnings studentConstructorsLearnings = new StudentConstructorsLearnings();
 		studentConstructorsLearnings.display();
 
-		StudentConstructorsLearnings studentConstructorsLearningsParameterized1 = new StudentConstructorsLearnings(
-				"Maz");
-		studentConstructorsLearningsParameterized1.display();
-		StudentConstructorsLearnings studentConstructorsLearningsParameterized2 = new StudentConstructorsLearnings(
-				"Maz", 123);
-		studentConstructorsLearningsParameterized2.display();
+		StudentConstructorsLearnings stParameterized1 = new StudentConstructorsLearnings("Maz");
+		stParameterized1.display();
+		StudentConstructorsLearnings stParameterized2 = new StudentConstructorsLearnings("Maz", 123);
+		stParameterized2.display();
 	}
 
 	/*

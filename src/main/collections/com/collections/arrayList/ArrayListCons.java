@@ -8,12 +8,13 @@ public class ArrayListCons {
 	public static void main(String args[]) {
 
 		/**
-		 * no args constructor creates ArrayList with default initial capacity as 10
+		 * no args constructor creates ArrayList with default initial capacity as 10 but
+		 * after Java 8 its 0.
 		 */
 		ArrayList<String> noArgsObj = new ArrayList<String>();
 		noArgsObj.add("Tom");
 		noArgsObj.add("Jerry");
-		System.out.println("No args Constructor : " + noArgsObj);
+		System.out.println("No args Constructor: " + noArgsObj);
 
 		/**
 		 * args constructor creates an ArrayList with initial capacity as 11
@@ -31,7 +32,7 @@ public class ArrayListCons {
 		argsObj.add("Becky");
 		argsObj.add("Raj");
 		argsObj.add("Tonny");
-		System.out.println("Args Constructor : " + argsObj);
+		System.out.println("Args Constructor: " + argsObj);
 
 		/**
 		 * convert and pass an ordinary array as an argument to the ArrayList
@@ -46,7 +47,7 @@ public class ArrayListCons {
 		 */
 		List<String> list = Arrays.asList(sArray);
 		ArrayList<String> argObjArr = new ArrayList<String>(list);
-		System.out.println("Values of Arrays to ArrayList : " + argObjArr);
+		System.out.println("Values of Arrays to ArrayList: " + argObjArr);
 
 	}
 }

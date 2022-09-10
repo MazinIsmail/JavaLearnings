@@ -21,6 +21,7 @@ public class Student {
 	public static void main(String args[]) {
 		// Creating an object or instance
 		Student s1 = new Student();
+		Student s2 = new Student();
 
 		System.out.println(s1.id);
 		System.out.println(s1.name);

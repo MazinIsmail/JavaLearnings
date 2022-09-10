@@ -172,6 +172,6 @@ class CustomLinkedList {
 
 	public static void main(String[] args) {
 		CustomLinkedList customLinkedList = new CustomLinkedList();
-		
+
 	}
 }

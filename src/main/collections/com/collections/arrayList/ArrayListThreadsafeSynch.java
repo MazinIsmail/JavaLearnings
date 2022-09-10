@@ -8,9 +8,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * ArrayList is not Thread-Safe, it should not be used in multi-thread
- * environment by default, it is not Synchronized. It is need to make it as
- * Synchronized explicitly by using Collections.synchronizedList() method and
- * Iterator should be present inside synchronized(listObject) method
+ * environment by default, it is not Synchronized. Make it as Synchronized
+ * explicitly by using Collections.synchronizedList() method and Iterator should
+ * be present inside synchronized(listObject) method.
  */
 public class ArrayListThreadsafeSynch {
 	public static void main(String a[]) {
@@ -44,7 +44,7 @@ public class ArrayListThreadsafeSynch {
 		syncalCopy.add("Jerry");
 		syncalCopy.add("Sai");
 
-		System.out.println("Displaying ThreadSafe ArrayList Elements:" + syncalCopy);
+		System.out.println("Displaying ThreadSafe ArrayList Elements: " + syncalCopy);
 		// Synchronized block is not required
 		/**
 		 * Iterator on CopyOnWriteArrayList does not perform remove() operation
@@ -58,7 +58,7 @@ public class ArrayListThreadsafeSynch {
 		 * at com.collections.arrayList.ArrayListCopy.main(ArrayListCopy.java:29)
 		 * 
 		 */
-		iterator.remove();
-		System.out.println(syncalCopy);
+		// iterator.remove();
+		System.out.println("CopyOnWriteArrayList: " + syncalCopy);
 	}
 }

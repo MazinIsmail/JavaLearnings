@@ -19,7 +19,7 @@ public class ArrayListToArray {
 		list.add("Tom");
 
 		// Displaying ArrayList elements
-		System.out.println("LinkedList elements: " + list);
+		System.out.println("ArrayList elements: " + list);
 
 		/**
 		 * Creates an Array variable of type String with length(equals to the size of
@@ -27,6 +27,7 @@ public class ArrayListToArray {
 		 */
 		System.out.println("Size of ArrayList : " + list.size());
 		String[] arrVar = list.toArray(new String[list.size()]);
+
 		System.out.println("Length of Array : " + arrVar.length);
 		for (int i = 0; i < arrVar.length; i++) {
 			System.out.println(arrVar[i]);

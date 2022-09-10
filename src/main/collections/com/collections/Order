@@ -8,3 +8,8 @@ DequeInterface
 
 SetInterface
 SortedSetInterface
+
+CollectionsClass
+
+FailFastLearnings
+FailSafeLearnings

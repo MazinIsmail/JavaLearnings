@@ -6,7 +6,7 @@ public interface StudentInfoAgain {
 
 class ScienceAgain implements StudentInfoAgain {
 	public String streamName() {
-		return "";
+		return "Science";
 	}
 }
 

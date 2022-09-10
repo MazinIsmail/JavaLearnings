@@ -1,4 +1,4 @@
-package com.collections.iterators;
+package com.collections;
 
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
@@ -10,9 +10,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * First of all, there is no term as fail-safe given in many places as Java SE
  * specifications does not use this term.
  * 
- * Fail-Safe iterators don’t throw any exceptions if a collection is
+ * Fail-Safe iterators don't throw any exceptions if a collection is
  * structurally modified while iterating over it. This is because, they operate
- * on the clone of the collection, not on the original collection and that’s why
+ * on the clone of the collection, not on the original collection and that's why
  * they are called fail-safe iterators. Iterator on CopyOnWriteArrayList,
  * ConcurrentHashMap classes are examples of fail-safe Iterator.
  * 
@@ -24,9 +24,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * ConcurrentHashMap, CopyOnWriteArrayList
  * 
  * The major difference between fail-fast and fail-safe is that fail-safe
- * iterator doesn’t throw any Exception, contrary to fail-fast Iterator. This is
+ * iterator doesn't throw any Exception, contrary to fail-fast Iterator. This is
  * because they work on a clone of Collection instead of the original collection
- * and that’s why they are called as the fail-safe iterator.
+ * and that's why they are called as the fail-safe iterator.
  * 
  */
 public class FailSafeLearnings {
@@ -45,7 +45,7 @@ public class FailSafeLearnings {
 	}
 
 	/**
-	 * Collections which don’t use fail-fast concept may not necessarily create
+	 * Collections which don't use fail-fast concept may not necessarily create
 	 * clone/snapshot of it in memory to avoid ConcurrentModificationException. For
 	 * example, in case of ConcurrentHashMap, it does not operate on a separate copy
 	 * although it is not fail-fast. Instead, it has semantics that is described by
@@ -67,7 +67,7 @@ public class FailSafeLearnings {
 		Iterator<String> it = map.keySet().iterator();
 		while (it.hasNext()) {
 			String key = (String) it.next();
-			System.out.println(key + " : " + map.get(key));
+			System.out.println(key + ": " + map.get(key));
 			// This will reflect in iterator. Hence, it has not created separate copy.
 			map.put("SEVEN", 7);
 		}

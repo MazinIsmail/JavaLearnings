@@ -26,3 +26,31 @@ public class BikeAgain implements Driving, Stops, Refueling {
 	public void refuel() {
 	}
 }
+
+class CarAgain implements Driving, Stops, Refueling, Opening {
+
+	@Override
+	public void openDoors() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void refuel() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void stop() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void drive() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

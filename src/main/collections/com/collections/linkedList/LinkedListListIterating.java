@@ -33,15 +33,15 @@ public class LinkedListListIterating {
 		/**
 		 * Adding value while traversing through the list
 		 */
-		System.out.println("Forward Traverse");
+		System.out.println("Forward Traverse using ListIterator: - ");
 		while (listIterateObj.hasNext()) {
 			listIterateObj.add("Srri");
 			System.out.println(listIterateObj.next());
 		}
-		System.out.println("Adding values while traversing through the List : " + list);
+		System.out.println("\nAdding values while traversing through the List: " + list);
 
 		// Backward Traverse
-		System.out.println("Backward Traverse");
+		System.out.println("\nBackward Traverse using ListIterator: -");
 		while (listIterateObj.hasPrevious()) {
 			System.out.println(listIterateObj.previous());
 		}
@@ -60,8 +60,9 @@ public class LinkedListListIterating {
 		listObjString.add("John");
 		listObjString.add("Tom");
 		listObjString.add("John");
-		System.out.println(listObjString);
+		System.out.println("\n" + listObjString);
 
+		System.out.println("Forward Traverse using Iterator: -");
 		Iterator<String> it = listObjString.iterator();
 		while (it.hasNext()) {
 			System.out.println(it.next());

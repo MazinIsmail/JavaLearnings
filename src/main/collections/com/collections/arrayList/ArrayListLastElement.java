@@ -1,6 +1,6 @@
 package com.collections.arrayList;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class ArrayListLastElement {
 
@@ -11,16 +11,16 @@ public class ArrayListLastElement {
 		list.add("Ravi");
 		list.add("Sai");
 		list.add("Raj");
-		System.out.println("Values in the list are : " + list);
+		System.out.println("Values in the list are: " + list);
 
 		// To fetch lastIndex value from the list
 		// Check whether list contains values or List is not empty
 		if (list != null && !list.isEmpty()) {
-			System.out.println("The size of List is : " + list.size());
+			System.out.println("The size of List is: " + list.size());
 			/**
 			 * Finds and Fetches the last value from the List
 			 */
-			System.out.println("The Last value in the List is : " + (list.get(list.size() - 1)));
+			System.out.println("The Last value in the List: " + (list.get(list.size() - 1)));
 		}
 	}
 }

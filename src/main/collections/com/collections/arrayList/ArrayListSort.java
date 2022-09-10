@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * ArrayList sorting is used to Sort the elements in either Ascending or
- * Descending order in the List
+ * Descending order in the List.
  */
 public class ArrayListSort {
 

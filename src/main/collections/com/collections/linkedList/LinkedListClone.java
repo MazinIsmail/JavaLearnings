@@ -27,10 +27,8 @@ public class LinkedListClone {
 		 */
 		LinkedList<String> llClone = (LinkedList<String>) llOriginal.clone();
 		System.out.println("Shallow copy of LinkedList: " + llClone);
-
 		llOriginal.add("Pomo");
 		llOriginal.add("Watermelon");
-
 		System.out.println("Original LinkedList after adding new values :" + llOriginal);
 
 		/**
@@ -38,6 +36,6 @@ public class LinkedListClone {
 		 * LinkedList
 		 */
 		System.out.println(
-				"Shallow copy LinkedList after adding new values to llOriginal does not effect llClone : " + llClone);
+				"Shallow copy LinkedList after adding new values to Original does not effect Clone: " + llClone);
 	}
 }

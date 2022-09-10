@@ -9,7 +9,6 @@ public class StudentInfo {
 			return "Commerce";
 		}
 		// You will have to add if statements to add streams here.
-
 		return null;
 	}
 }

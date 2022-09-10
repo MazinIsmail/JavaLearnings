@@ -1,4 +1,4 @@
-package com.collections.iterators;
+package com.collections;
 
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
@@ -36,7 +36,7 @@ import java.util.Map;
  * 
  * They use original collection to traverse over the elements of the collection.
  * 
- * These iterators don’t require extra memory.
+ * These iterators don't require extra memory.
  */
 public class FailFastLearnings {
 	public static void main(String[] args) {
@@ -60,6 +60,7 @@ public class FailFastLearnings {
 			e.printStackTrace();
 		}
 
+		System.out.println("\nRemove Check:-");
 		iteratorRemove();
 	}
 

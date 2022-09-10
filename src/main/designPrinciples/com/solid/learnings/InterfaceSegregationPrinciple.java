@@ -4,9 +4,7 @@ package com.solid.learnings;
  * Interface Segregation Principle
  * 
  * Clients should not be forced to implement unnecessary methods which they will
- * not use.
- * 
- * So basically, the interface segregation principles as you prefer the
+ * not use. So basically, the interface segregation principles as you prefer the
  * interfaces, which are small but client specific instead of monolithic and
  * bigger interface. In short, it would be bad for you to force the client to
  * depend on a certain thing, which they don't need.

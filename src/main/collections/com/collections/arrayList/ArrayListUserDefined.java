@@ -22,6 +22,7 @@ public class ArrayListUserDefined {
 			Student st = (Student) itr.next();
 			System.out.println(st.rollno + " " + st.name + " " + st.age);
 		}
+		System.out.println("Student ArrayList: " + al);
 
 		ArrayList<Student> alObj = new ArrayList<Student>();
 		alObj.add(s1);// adding Student class object

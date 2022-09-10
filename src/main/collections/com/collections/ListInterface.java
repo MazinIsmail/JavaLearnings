@@ -26,6 +26,9 @@ public class ListInterface implements List {
 		List<String> list2 = new LinkedList<>();
 		List<String> list3 = new Vector<>();
 		List<String> list4 = new Stack<>();
+
+		list1.size();
+		list1.isEmpty();
 	}
 
 	@Override

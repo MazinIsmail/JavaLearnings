@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * LinkedList can be converted to an Array of same type using toArray() method
  */
-public class LinkedListToArray {
+public class LinkedListToArrayAndArrayList {
 	public static void main(String args[]) {
 		LinkedList<String> listArr = new LinkedList<String>();
 
@@ -37,7 +37,6 @@ public class LinkedListToArray {
 		 * an argument to ArrayList
 		 */
 		LinkedList<String> list = new LinkedList<String>();
-
 		// Adding elements to the LinkedList
 		list.add("Harry");
 		list.add("Ajeet");

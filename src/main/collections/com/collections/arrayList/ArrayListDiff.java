@@ -15,8 +15,7 @@ public class ArrayListDiff {
 		List<String> listObj = new ArrayList<String>();
 
 		// To find the size of the list
-		System.out.println("Initial ArrayList size :" + listObj.size());
-
+		System.out.println("Initial ArrayList size: " + listObj.size());
 		// Adding values to the list(List1)
 		listObj.add("Ram");
 		listObj.add("Raj");

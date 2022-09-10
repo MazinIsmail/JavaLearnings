@@ -1,5 +1,6 @@
 package com.collections.deque;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -16,11 +17,14 @@ import java.util.LinkedList;
  * java.util.LinkedList
  * 
  * java.util.ArrayDeque
+ * 
+ * The Deque interface does not extend the Java Stack interface, but the Deque
+ * interface defines methods that enable you to do the same operations you would
+ * normally do on a stack (push, peek, pop).
  */
 public class DequeLearnings {
 	public static void main(String[] args) {
 		Deque<String> deque = new LinkedList<String>();
-
 		deque.add("Element 1 (Tail)");
 		deque.addFirst("Element 2 (Head)");
 		deque.addLast("Element 3 (Tail)");
@@ -35,6 +39,9 @@ public class DequeLearnings {
 		deque.removeFirst();
 		deque.removeLast();
 		System.out.println("Deque after removing " + "first and last: " + deque);
+
+		Deque<String> arrayDeque = new ArrayDeque<>();
+		arrayDeque.add("Hi");
 
 	}
 }

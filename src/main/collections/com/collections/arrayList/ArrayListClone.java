@@ -9,19 +9,17 @@ import java.util.ArrayList;
  * ArrayList, the cloned ArrayList didn't get affected. It means that the
  * clone() method just returns a Shallow copy of ArrayList
  */
-
 public class ArrayListClone {
 
 	public static void main(String args[]) {
 
 		ArrayList<String> alOriginal = new ArrayList<String>();
-
 		// Adding elements to the ArrayList
 		alOriginal.add("Apple");
 		alOriginal.add("Orange");
 		alOriginal.add("Mango");
 		alOriginal.add("Grapes");
-		System.out.println("ArrayList Original : " + alOriginal);
+		System.out.println("ArrayList Original: " + alOriginal);
 
 		/**
 		 * Clone ArrayList 'alOriginal' to another ArrayList 'alClone'
@@ -31,19 +29,18 @@ public class ArrayListClone {
 
 		alOriginal.add("Pomo");
 		alOriginal.add("Watermelon");
-
-		System.out.println("Original ArrayList after adding new values in Original:" + alOriginal);
+		System.out.println("Original ArrayList after adding new values in Original: " + alOriginal);
 
 		/**
 		 * Shallow copy will not get affected when there is a change in the Original
 		 * ArrayList
 		 */
 		System.out.println("Shallow copy ArrayList after adding new values in Original:" + alClone);
-		
+
 		alClone.add("Berry");
-		System.out.println("After adding values in Clone :");
-		System.out.println("Original ArrayList after adding new values in Clone:" + alOriginal);
-		System.out.println("Shallow copy ArrayList after adding new values in Clone:" + alClone);
-		
+		System.out.println("\nAfter adding values in Clone:-");
+		System.out.println("Original ArrayList after adding new values in Clone: " + alOriginal);
+		System.out.println("Shallow copy ArrayList after adding new values in Clone: " + alClone);
+
 	}
 }
