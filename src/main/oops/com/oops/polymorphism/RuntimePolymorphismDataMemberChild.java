@@ -21,8 +21,17 @@ public class RuntimePolymorphismDataMemberChild extends RuntimePolymorphismDataM
 
 	public static void main(String[] args) {
 
+		RuntimePolymorphismDataMemberParent objParent = new RuntimePolymorphismDataMemberParent();
+		System.out.println("objParent: " + objParent.speedlimit);// 90
+
+		RuntimePolymorphismDataMemberChild objChild = new RuntimePolymorphismDataMemberChild();
+		System.out.println("objChild: " + objChild.speedlimit);// 150
+
 		RuntimePolymorphismDataMemberParent obj = new RuntimePolymorphismDataMemberChild();
 		System.out.println(obj.speedlimit);// 90
+
+		// RuntimePolymorphismDataMemberChild objError = new
+		// RuntimePolymorphismDataMemberParent();
 
 	}
 

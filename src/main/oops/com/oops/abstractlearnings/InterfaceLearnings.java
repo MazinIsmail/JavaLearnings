@@ -34,8 +34,12 @@ public interface InterfaceLearnings {
 	// adds public, static and final
 	int a = 0;
 
+	public static final int aAgain = 0;
+
 	// adds public and abstract
 	void print();
+
+	public abstract void printAgain();
 }
 
 // implements for interface implementation
@@ -43,6 +47,12 @@ class ImplementationInterface implements InterfaceLearnings {
 
 	@Override
 	public void print() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void printAgain() {
 		// TODO Auto-generated method stub
 
 	}

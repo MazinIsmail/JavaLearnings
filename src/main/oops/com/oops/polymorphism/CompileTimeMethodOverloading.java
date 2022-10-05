@@ -21,8 +21,8 @@ public class CompileTimeMethodOverloading {
 
 	public static void main(String[] args) {
 		CompileTimeMethodOverloading obj = new CompileTimeMethodOverloading();
-		obj.sum(10, 10, 10);
 		obj.sum(10, 10);
+		obj.sum(10, 10, 10);
 		obj.sum("20", "20");
 	}
 

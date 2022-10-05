@@ -37,6 +37,10 @@ public class StartingPointToCode {
 	public static void main(String[] args) {
 		// StartingPointToCode startingPointToCode = new StartingPointToCode(3, "Maz");
 		// StartingPointToCode startingPointToCode2 = new StartingPointToCode();
+		int mark = 10;
+		int totalMark = 100;
+		float per = ((float)mark/(float)totalMark)*100;
+		System.out.println(per);
 	}
 
 }

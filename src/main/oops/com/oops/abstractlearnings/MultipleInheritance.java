@@ -6,6 +6,14 @@ package com.oops.abstractlearnings;
  * no ambiguity. It is because its implementation is provided by the
  * implementation class.
  */
+interface Printable {
+	void print();
+}
+
+interface Showable {
+	void print();
+}
+
 public class MultipleInheritance implements Printable, Showable {
 	public void print() {
 		System.out.println("Hello");
@@ -15,12 +23,4 @@ public class MultipleInheritance implements Printable, Showable {
 		MultipleInheritance obj = new MultipleInheritance();
 		obj.print();
 	}
-}
-
-interface Printable {
-	void print();
-}
-
-interface Showable {
-	void print();
 }

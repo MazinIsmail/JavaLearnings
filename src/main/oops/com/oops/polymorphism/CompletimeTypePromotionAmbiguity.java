@@ -16,9 +16,9 @@ public class CompletimeTypePromotionAmbiguity {
 
 	public static void main(String args[]) {
 		CompletimeTypePromotionAmbiguity obj = new CompletimeTypePromotionAmbiguity();
-		// obj.sum(20,20); Now ambiguity
+		// obj.sum(20,20); // Now ambiguity
 		obj.sum(20, 20l);
 		obj.sum(20l, 20);
-		// obj.sum(20l,20l); Now ambiguity
+		// obj.sum(20l,20l); // Now ambiguity
 	}
 }

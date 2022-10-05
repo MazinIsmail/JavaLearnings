@@ -33,6 +33,12 @@ class Movies implements Comparable<Movies> {
 	public int getYear() {
 		return year;
 	}
+
+	@Override
+	public String toString() {
+		return "Movies [rating=" + rating + ", name=" + name + ", year=" + year + "]";
+	}
+
 }
 
 // Class to compare Movies by ratings 
@@ -87,6 +93,29 @@ public class ComparatorMain {
 		for (Movies movie : list)
 			System.out.println(movie.getYear() + " " + movie.getRating() + " " + movie.getName() + " ");
 
+		System.out.println("\nSorted by rarting using Comparator Java 8");
+		Comparator<Movies> moviesListByRating = Comparator.comparing(Movies::getRating);
+		Collections.sort(list, moviesListByRating);
+		System.out.println("Sorted list by Rating");
+		list.forEach(element -> {
+			System.out.println(element);
+		});
+
+		System.out.println("\nSorted by name using Comparator Java 8");
+		Comparator<Movies> moviesListByName = Comparator.comparing(Movies::getName);
+		Collections.sort(list, moviesListByName);
+		System.out.println("Sorted list by Name");
+		list.forEach(element -> {
+			System.out.println(element);
+		});
+
+		System.out.println("\nSorted by name and then rating using Comparator Java 8");
+		Comparator<Movies> moviesListByNameThenRating = moviesListByName.thenComparing(moviesListByRating);
+		Collections.sort(list, moviesListByNameThenRating);
+		System.out.println("Sorted list by name and then rating");
+		list.forEach(element -> {
+			System.out.println(element);
+		});
 	}
 
 }

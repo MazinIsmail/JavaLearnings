@@ -11,7 +11,7 @@ package com.oops.polymorphism;
  * Parent class method, the subclass method is invoked at runtime.
  * 
  * Method invocation is determined by the JVM not compiler, it is known as
- * runtime polymorphism
+ * runtime polymorphism.
  */
 class RuntimePolymorphismMethodParent {
 	void run() {
@@ -26,6 +26,12 @@ public class RuntimePolymorphismMethodChild extends RuntimePolymorphismMethodPar
 	}
 
 	public static void main(String[] args) {
+		RuntimePolymorphismMethodParent parentOnly = new RuntimePolymorphismMethodParent();
+		parentOnly.run();
+
+		RuntimePolymorphismMethodChild childOnly = new RuntimePolymorphismMethodChild();
+		childOnly.run();
+
 		RuntimePolymorphismMethodParent runtimePolymorphismMethodParent = new RuntimePolymorphismMethodChild();
 		runtimePolymorphismMethodParent.run();
 	}

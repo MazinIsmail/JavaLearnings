@@ -1,4 +1,4 @@
-package com.oops.basics;
+package com.oops.inheritance;
 
 /**
  * In Java, a class cannot directly access the grandparent's members, compiler

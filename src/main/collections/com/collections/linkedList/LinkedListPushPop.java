@@ -16,10 +16,11 @@ public class LinkedListPushPop {
 
 		// Inserts value at the front of the list
 		list.push("Tom");
-		System.out.println("Push Value" + list);
+		System.out.println("Push Value: " + list);
 
 		// removes front value from the list
-		list.pop();
-		System.out.println("Push Value" + list);
+		String temp = list.pop();
+		System.out.println("Pop Value: " + list);
+		System.out.println("Poped Value: " + temp);
 	}
 }

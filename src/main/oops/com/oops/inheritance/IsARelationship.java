@@ -2,15 +2,20 @@ package com.oops.inheritance;
 
 public class IsARelationship {
 	public static void main(String args[]) {
+		Animal an = new Animal();
 		Mammal m = new Mammal();
 		Dog d = new Dog();
+		Reptile rep = new Reptile();
 
 		// instanceof operator to check determine whether Mammal is actually an Animal
 		System.out.println("Mammal instanceof Animal? " + (m instanceof Animal));
 		System.out.println("Dog instanceof Mammal? " + (d instanceof Mammal));
 		System.out.println("Dog instanceof Animal? " + (d instanceof Animal));
 		System.out.println("Dog instanceof Object? " + (d instanceof Object));
-		System.out.println("Dog instanceof Object? " + (m instanceof Dog));
+		System.out.println("Mammal instanceof Dog? " + (m instanceof Dog));
+
+		System.out.println("Animal instanceof Reptile? " + (an instanceof Reptile));
+		System.out.println("Reptile instanceof Animal? " + (rep instanceof Animal));
 
 		/**
 		 * Connecting a method call to the method body is known as binding.

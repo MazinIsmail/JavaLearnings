@@ -9,7 +9,7 @@ public class LinkedListSublistIndexes {
 	public static void main(String args[]) {
 
 		LinkedList<String> listObj = new LinkedList<String>();
-		System.out.println("Initial ArrayList size:" + listObj.size());
+		System.out.println("Initial LinkedList size:" + listObj.size());
 
 		// Adding values to the list(List1)
 		listObj.add("Ram");
@@ -45,13 +45,13 @@ public class LinkedListSublistIndexes {
 		// Searching values in LinkedList
 
 		// Searching first occurrence
-		System.out.println("Searching first occurrence: " + listObj.indexOf("John"));
+		System.out.println("Searching first occurrence (John): " + listObj.indexOf("John"));
 
 		// Searching last occurrence
-		System.out.println("Searching last occurrence: " + listObj.lastIndexOf("Raj"));
+		System.out.println("Searching last occurrence (Raj): " + listObj.lastIndexOf("Raj"));
 
 		// Searching last occurrence
-		System.out.println("Searching last occurrence: " + listObj.lastIndexOf("Raju"));
+		System.out.println("Searching last occurrence (Raju): " + listObj.lastIndexOf("Raju"));
 
 		// Get First element
 		System.out.println("Getting first element: " + listObj.getFirst());

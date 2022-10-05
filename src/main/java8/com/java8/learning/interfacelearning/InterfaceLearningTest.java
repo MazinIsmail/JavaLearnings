@@ -11,9 +11,10 @@ public class InterfaceLearningTest implements InterfaceLearning {
 
 		System.out.println(interfaceLearning.calculate(100)); // 100.0
 		System.out.println(interfaceLearning.sqrt(-23)); // 0.0
+		interfaceLearning.defaultDisplay();
 		System.out.println(InterfaceLearning.positive(-4)); // 0.0
 
-		// Formula formula2 = (a) -> sqrt( a * 100);
+		// Formula formula2 = (a) -> sqrt(a * 100);
 	}
 
 	@Override
@@ -21,5 +22,15 @@ public class InterfaceLearningTest implements InterfaceLearning {
 		System.out.println("Implemented abstract method");
 		return 0;
 	}
+
+	@Override
+	public double sqrt(int a) {
+		return Math.sqrt(a * a);
+	}
+
+	// @Override
+	// public int positive(int a) {
+	// return a > 0 ? a : 0;
+	// }
 
 }

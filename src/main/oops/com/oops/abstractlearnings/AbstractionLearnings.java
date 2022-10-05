@@ -22,5 +22,22 @@ package com.oops.abstractlearnings;
  * Rectangle and Circle classes.
  */
 public abstract class AbstractionLearnings {
+
+	private int age;
+
+	public AbstractionLearnings() {
+		super();
+	}
+
+	public AbstractionLearnings(int age) {
+		super();
+		this.age = age;
+	}
+
 	abstract void run();
+
+	public static void main(String[] args) {
+		// Cannot instantiated
+		// AbstractionLearnings abstractionLearnings = new AbstractionLearnings();
+	}
 }

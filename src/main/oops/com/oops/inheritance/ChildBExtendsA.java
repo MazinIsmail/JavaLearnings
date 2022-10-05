@@ -25,10 +25,8 @@ public class ChildBExtendsA extends ParentA {
 
 		// Instantiating subclass
 		ChildBExtendsA childBExtendsA = new ChildBExtendsA();
-
 		// debug tester
 		num++;
-
 		// Invoking the display() method of sub class
 		childBExtendsA.display();
 
@@ -37,10 +35,12 @@ public class ChildBExtendsA extends ParentA {
 
 		++num;
 		// printing the value of variable num of subclass
-		System.out.println("Child class num:" + childBExtendsA.num);
+		System.out.println("Child class num: " + childBExtendsA.num);
+		System.out.println("Child class num: " + this.num);
+		System.out.println("Local method num: " + num);
 
 		// printing the value of variable num of superclass
-		System.out.println("Parent class num:" + super.num);
+		System.out.println("Parent class num: " + super.num);
 	}
 
 	public static void main(String args[]) {

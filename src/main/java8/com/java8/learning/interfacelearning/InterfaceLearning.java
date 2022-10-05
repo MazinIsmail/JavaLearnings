@@ -2,11 +2,12 @@ package com.java8.learning.interfacelearning;
 
 /**
  * Static methods and default methods in interfaces. Can have any number of
- * default and static methods
+ * default and static methods.
  */
 public interface InterfaceLearning {
 	double calculate(int a);
 
+	// For "default" methods, I can override this, if I want to.
 	default double sqrt(int a) {
 		return Math.sqrt(positive(a));
 	}

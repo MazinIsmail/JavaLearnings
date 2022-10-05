@@ -2,6 +2,7 @@ package com.oops.abstractlearnings;
 
 // extends for abstract implementation
 class AbstractionImplementationLearnings extends AbstractionLearnings {
+
 	void run() {
 		System.out.println("Running...");
 	}

@@ -28,8 +28,8 @@ public class LinkedListToArrayAndArrayList {
 		System.out.println("Size of LinkedList : " + listArr.size());
 		String[] arrVar = listArr.toArray(new String[listArr.size()]);
 		System.out.println("Length of Array : " + arrVar.length);
-		for (int i = 0; i < arrVar.length; i++) {
-			System.out.println(arrVar[i]);
+		for (String arV : arrVar) {
+			System.out.println(arV);
 		}
 
 		/**
