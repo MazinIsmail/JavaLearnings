@@ -27,6 +27,9 @@ public class SuperSuperKeywordDemo2 {
 	public static void main(String[] args) {
 		Child1 c = new Child1();
 		c.print();
+		System.out.println();
+		Parent1 p = new Parent1();
+		p.print();
 	}
 
 }

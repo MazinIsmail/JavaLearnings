@@ -25,6 +25,7 @@ public class StudentMethodLearnings {
 		StudentMethodLearnings studentMethodLearningsSet1 = new StudentMethodLearnings();
 		studentMethodLearningsSet1.setName("Maz");
 		studentMethodLearningsSet1.setRoll(123);
+		studentMethodLearningsSet1.setName("Mazin"); // Replaces with new value
 		System.out.println(
 				"First Student: " + studentMethodLearningsSet1.getName() + " " + studentMethodLearningsSet1.getRoll());
 
@@ -57,6 +58,9 @@ public class StudentMethodLearnings {
 		this.name = name;
 	}
 
+	// Function
+	// Access Specifier || Return Type || Method Name || Parameter List || Method
+	// Body
 	/*
 	 * user-defined method because we have not used static keyword
 	 */

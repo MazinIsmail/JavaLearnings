@@ -5,13 +5,11 @@ java-data-types.png
 DataTypesIntegersLearnings
 DataTypesFloatPointLearnings
 
+Try creating class with variables. Assign the variables and call a display method.
+HelloWorld - HelloWorldService (Class vs Objects)
 Class and Objects.png
 
-Try creating class with variables. Assign the variables and call a display method.
 StudentConstructorsLearnings
-
-SuperSuperKeywordDemo1
-SuperSuperKeywordDemo2
 
 StudentMethodLearnings
 

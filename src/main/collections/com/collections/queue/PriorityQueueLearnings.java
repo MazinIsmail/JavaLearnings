@@ -1,4 +1,4 @@
-package com.collections.deque;
+package com.collections.queue;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

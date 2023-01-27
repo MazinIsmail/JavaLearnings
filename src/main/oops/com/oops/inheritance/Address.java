@@ -5,16 +5,20 @@ public class Address {
 	private int streetNumber;
 	private String streeName;
 	private String postalCode;
-	private String country;
 	private String stateOrProvince;
+	private String country;
 
-	public Address(int streetNumber, String streeName, String postalCode, String country, String stateOrProvince) {
+	public Address() {
+		super();
+	}
+
+	public Address(int streetNumber, String streeName, String postalCode, String stateOrProvince, String country) {
 		super();
 		this.streetNumber = streetNumber;
 		this.streeName = streeName;
 		this.postalCode = postalCode;
-		this.country = country;
 		this.stateOrProvince = stateOrProvince;
+		this.country = country;
 	}
 
 	public int getStreetNumber() {
@@ -41,14 +45,6 @@ public class Address {
 		this.postalCode = postalCode;
 	}
 
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
-	}
-
 	public String getStateOrProvince() {
 		return stateOrProvince;
 	}
@@ -57,10 +53,18 @@ public class Address {
 		this.stateOrProvince = stateOrProvince;
 	}
 
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
 	@Override
 	public String toString() {
 		return "Address [streetNumber=" + streetNumber + ", streeName=" + streeName + ", postalCode=" + postalCode
-				+ ", country=" + country + ", stateOrProvince=" + stateOrProvince + "]";
+				+ ", stateOrProvince=" + stateOrProvince + ", country=" + country + "]";
 	}
 
 }

@@ -50,15 +50,20 @@ public class StudentConstructorsLearnings {
 
 	void display() {
 		System.out.println("Name: " + name);
+		System.out.println("Id: " + id);
 	}
 
 	public static void main(String[] args) {
+		System.out.println("Default Cons");
 		StudentConstructorsLearnings studentConstructorsLearnings = new StudentConstructorsLearnings();
 		studentConstructorsLearnings.display();
 
+		System.out.println("Default Parameterized with 1: - ");
 		StudentConstructorsLearnings stParameterized1 = new StudentConstructorsLearnings("Maz");
 		stParameterized1.display();
-		StudentConstructorsLearnings stParameterized2 = new StudentConstructorsLearnings("Maz", 123);
+
+		System.out.println("Default Parameterized with 2: - ");
+		StudentConstructorsLearnings stParameterized2 = new StudentConstructorsLearnings("Mazin", 123);
 		stParameterized2.display();
 	}
 
