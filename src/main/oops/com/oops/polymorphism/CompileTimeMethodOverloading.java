@@ -1,9 +1,16 @@
 package com.oops.polymorphism;
 
 /**
+ * Compile Time Polymorphism - Static Polymorphism
+ * 
  * Compile-time polymorphism is achieved through method overloading.
  * 
- * It is always the number of arguments and the type of arguments.
+ * Create multiple methods of the same name in the same class. It is always the
+ * number of arguments and the type of arguments that differs.
+ * 
+ * number of arguments and the type of arguments
+ * number of arguments and the type of arguments
+ * number of arguments and the type of arguments
  */
 public class CompileTimeMethodOverloading {
 

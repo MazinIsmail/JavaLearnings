@@ -23,6 +23,10 @@ class Parent extends Grandparent {
 		System.out.println("Parent's Print() specifically");
 	}
 
+	protected void printProtectedParent() {
+		System.out.println("Parent's Print() specifically");
+	}
+
 	private void printPrivateParent() {
 		System.out.println("Parent's Print() specifically");
 	}
@@ -36,6 +40,7 @@ class Child extends Parent {
 		// super.super.Print();
 		super.print();
 		super.printParent();
+		super.printProtectedParent();
 		// super.printPrivateParent()
 		System.out.println("Child's Print()");
 	}
@@ -49,6 +54,8 @@ public class SuperSuperKeywordDemo1 {
 	public static void main(String[] args) {
 		Child c = new Child();
 		c.print();
+		// this. ???
+		System.out.println();
 		c.printParent();
 	}
 }

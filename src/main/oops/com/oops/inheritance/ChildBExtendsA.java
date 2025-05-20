@@ -16,7 +16,7 @@ public class ChildBExtendsA extends ParentA {
 
 	// display method of sub class
 	public void display() {
-		System.out.println("This is the display method of subclass");
+		System.out.println("ChildBExtendsA: This is the display method of subclass");
 	}
 
 	public void m1() {
@@ -27,11 +27,17 @@ public class ChildBExtendsA extends ParentA {
 		ChildBExtendsA childBExtendsA = new ChildBExtendsA();
 		// debug tester
 		num++;
-		// Invoking the display() method of sub class
+		// Invoking the display() method of sub class. We have overridden the ability
 		childBExtendsA.display();
+		childBExtendsA.display2();
+		childBExtendsA.display3();
 
-		// Invoking the display() method of superclass
+		// childBExtendsA.display4();
+
+		// Invoking the display() method of superclass. super always refers to parent.
 		super.display();
+		// Always refers to current class.
+		this.display();
 
 		++num;
 		// printing the value of variable num of subclass
@@ -44,8 +50,8 @@ public class ChildBExtendsA extends ParentA {
 	}
 
 	public static void main(String args[]) {
-		ChildBExtendsA obj = new ChildBExtendsA();
-		obj.m1();
+		ChildBExtendsA childBExtendsA = new ChildBExtendsA();
+		childBExtendsA.m1();
 	}
 
 }

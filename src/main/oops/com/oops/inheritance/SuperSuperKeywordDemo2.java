@@ -30,6 +30,9 @@ public class SuperSuperKeywordDemo2 {
 		System.out.println();
 		Parent1 p = new Parent1();
 		p.print();
+		System.out.println();
+		Parent1 pc = new Child1();
+		pc.print();
 	}
 
 }

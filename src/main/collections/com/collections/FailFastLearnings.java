@@ -14,6 +14,14 @@ import java.util.Map;
  * means adding, removing or updating any element from collection while a thread
  * is iterating over that collection.
  * 
+ * throw ConcurrentModificationException if there is structural modification
+ * throw ConcurrentModificationException if there is structural modification
+ * throw ConcurrentModificationException if there is structural modification
+ * 
+ * cannot be guaranteed
+ * cannot be guaranteed
+ * cannot be guaranteed
+ * 
  * The fail-fast behavior of an iterator cannot be guaranteed as it is,
  * generally speaking, impossible to make any hard guarantees in the presence of
  * unsynchronized concurrent modification. Fail-fast iterators throw

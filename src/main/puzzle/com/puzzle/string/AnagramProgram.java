@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Same set of characters but in different order. For example, ��Dormitory �V
- * Dirty Room��, ��keep �V peek��, ��School Master �V The Classroom��
+ * Dirty Room, keep V peek, School Master V The Classroom
  */
 public class AnagramProgram {
 	static void isAnagram(String s1, String s2) {

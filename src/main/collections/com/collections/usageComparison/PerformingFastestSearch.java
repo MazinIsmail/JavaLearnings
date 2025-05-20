@@ -5,10 +5,25 @@ package com.collections.usageComparison;
  * 
  * If you need fast access to elements using index, ArrayList should be choice.
  * 
+ * 
+ * fast access to elements using index, ArrayList
+ * fast access to elements using index, ArrayList
+ * fast access to elements using index, ArrayList
+ * 
+ * 
  * If you need fast access to elements using a key, use HashMap.
+ * 
+ * fast access to elements using a key, use HashMap
+ * fast access to elements using a key, use HashMap
+ * fast access to elements using a key, use HashMap
  * 
  * If you need fast add and removal of elements, use LinkedList (but it has a
  * very poor seeking performance).
+ * 
+ * fast add and removal of elements, use LinkedList
+ * fast add and removal of elements, use LinkedList
+ * fast add and removal of elements, use LinkedList
+ * 
  * 
  * The thing which is often skipped when comparing ArrayList and LinkedList is
  * cache and memory management optimisations. ArrayList is effectively just an
@@ -28,8 +43,21 @@ package com.collections.usageComparison;
  * be a better idea. Although remember that HashMap has O(1) access time, while
  * TreeMap has O(logn) access time.
  * 
+ * HashMap has O(1)
+ * HashMap has O(1)
+ * HashMap has O(1)
+ * 
+ * TreeMap has O(logn)
+ * TreeMap has O(logn)
+ * TreeMap has O(logn)
+ * 
  * If you care about traversing elements in specific order, you should choose
  * TreeMap (natural order) or LinkedHashMap (insertion order).
+ * 
+ * traversing elements in specific order, you should choose TreeMap (natural order)
+ * traversing elements in specific order, you should choose TreeMap (natural order)
+ * traversing elements in specific order, you should choose TreeMap (natural order)
+ * 
  */
 public class PerformingFastestSearch {
 

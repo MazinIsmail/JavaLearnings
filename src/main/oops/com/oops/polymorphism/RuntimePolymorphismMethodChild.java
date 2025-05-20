@@ -12,6 +12,10 @@ package com.oops.polymorphism;
  * 
  * Method invocation is determined by the JVM not compiler, it is known as
  * runtime polymorphism.
+ * 
+ * determined by the JVM not compiler
+ * determined by the JVM not compiler
+ * determined by the JVM not compiler
  */
 class RuntimePolymorphismMethodParent {
 	void run() {
@@ -32,6 +36,12 @@ public class RuntimePolymorphismMethodChild extends RuntimePolymorphismMethodPar
 		RuntimePolymorphismMethodChild childOnly = new RuntimePolymorphismMethodChild();
 		childOnly.run();
 
+		/*
+		 * This is also known as Upcasting.
+		 * 
+		 * Upcasting takes place when the Parent class’s reference variable refers to
+		 * the object of the child class.
+		 */
 		RuntimePolymorphismMethodParent runtimePolymorphismMethodParent = new RuntimePolymorphismMethodChild();
 		runtimePolymorphismMethodParent.run();
 	}

@@ -1,7 +1,9 @@
 package com.oops.polymorphism;
 
 /**
- * Java Runtime Polymorphism with Data Member
+ * Runtime polymorphism - Dynamic Binding - Dynamic Method Dispatch
+ * 
+ * Java Runtime Polymorphism with Data Member ???
  * 
  * A method can be overridden, not the data members, so runtime polymorphism
  * can't be achieved by data members. In the example given below, both the

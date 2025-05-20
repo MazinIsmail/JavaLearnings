@@ -30,6 +30,10 @@ import java.util.function.IntBinaryOperator;
  * R apply(T t, U u);
  * 
  * }
+ * 
+ * takes two parameters and returns a single value of the same type
+ * takes two parameters and returns a single value of the same type
+ * takes two parameters and returns a single value of the same type
  */
 public class BinaryOperatorInterface {
 	public static void main(String[] args) {

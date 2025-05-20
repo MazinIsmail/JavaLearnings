@@ -1,0 +1,79 @@
+Making sure that encapsulation is not violated (i.e., instance variables must be private); design an inheritance hierarchy of classes Employee, CommissionEmployee, and BasePlusCommisionEmployee based on the following description.
+CommisionEmployee is an Employee. BasePlusCommissionEmployee is a CommisionEmployee. 
+
+Note: BasePlusCommissionEmployee receives a base salary and commission. SSN is the Social Security Number.
+(a) (10 Points) Definition of class Employee
+Instance variables: 
+•	firstName               that holds the first name of employee (string)
+•	lastName               that holds the last name of employee (string)
+•	socialSecurityNumber that holds the social security number of employee (string)
+ 
+Methods:
+•	a default constructor with no arguments.
+•	a second constructor that accepts the Employee's firstName, lastName, the socialSecurityNumber as arguments. These values should be assigned to the object's instance variables: firstName and socialSecurityNumber. 
+•	A copy constructor that accepts an existing employee object reference as argument and copies the values of instance variables to the newly created object.
+•	Accessor methods (getFirstName(), getLastName() and getSocialSecurityNumber()) that get the values of instance variables. 
+•	Mutator methods (setFirstName(string), setLastName(String), setSocialSecurityNumber(string)) that set the values of instance variables.
+•	toString() should return a string with the values of instance variables of employee object as follows. For example, the method should return the following string for a employee Karan Sharma with SSN as 1234567XX.
+First name: Karan, Last name : Sharma, SSN: 1234567XX
+ 
+•	equals() should accept a employee object reference as argument and return true if all instance variables of calling object are same values as those of passed employee object, respectively, or false otherwise.
+•	earnings() should do nothing (i.e., empty body). This method is for polymorphism to call appropriate earnings() method of subclass.
+ 
+(b) (10 Points) Definition of class CommisionEmployee, which is a subclass of Employee.
+Instance variables: 
+•	grossSales              that holds the employee's gross weekly sales (double)
+•	commisionRate      that holds the employee's commission percentage(double)
+ 
+Methods:
+•	a default constructor with no arguments.
+•	a second constructor that accepts the Employee's firstName, lastName, the socialSecurityNumber as arguments. These values should be assigned to the object's instance variables: firstName, lastName, grossSales, commissionRate and socialSecurityNumber. 
+•	A copy constructor that accepts an existing CommisionEmployee object reference as argument and copies the values of instance variables to the newly created object.
+•	Accessor methods (getGrossSales() and getCommisionRate()) that get the values of instance variables.
+•	Mutator methods (setGrossSales(double) and setCommisionRate(double)) that set the values of instance variables with those of argument values.
+•	toString() should return a formatted string with the values of instance variables of a employee. For example, the method should return the following string for a Commision based employee named Karan Sharma with SSN 1234567XXX has gross sale of $5000 and commission rate: 0.4.
+Commision based employee:
+First name: Karan, Last Name: Sharma, Gross sales: $5000, Commission rate: 0.4.
+ 
+         This toString() should call the parent class's toString() method to return the string given above.
+•	equals() should accept a CommisionEmployee object reference as argument and return true if all instance variables of calling object are same values as those of passed CommisionEmission object, respectively, or false otherwise.
+•	earnings() should print the following information for employee with Gross sales of $5000 and commission rate of 0.4% will be $20 i.e. getCommisionRate() * getGrossSales()
+Earnings of Commission employee: $20 
+(c) (10 Points) Definition of class BasePlusCommissionEmployee, which is a subclass of CommissionEmployee.
+Instance variables: 
+•	baseSalary holds the employee's base salary (double)
+ 
+Methods:
+•	a default constructor with no arguments.
+•	another constructor that accepts the values and should be assigned to object's instance variables: firstName, lastName, grossSales, commissionRate, socialSecurityNumber, baseSalary. 
+•	Accessor method (getBaseSalary() method) that gets the value of instance variable. 
+•	Mutator method (setBaseSalary() method) that sets the value of instance variable with that of argument.
+•	toString() should returns a formatted string with the values of instance variables of a employee.. For example, the method should return the following string for a Base plus Commission based employee named Karan Sharma with SSN 1234567XXX has gross sale of $5000, commission rate: 0.4 and base salary of $2000
+ 
+Base plus Commission based employee:
+•	First name: Karan, Last Name: Sharma, Gross sales: $5000, Commission rate: 0.4, Base Salary: $2000.
+         This toString() should call the parent class's toString() method to return the string given above.
+•	equals() should accept a BasePlusCommisionEmployee object reference as argument and return true if all instance variables of calling object are same values as those of passed BasePlusCommisionEmployee object, respectively, or false otherwise.
+•	earnings() should print the following information for employee with base salary of $2000, Gross sales of $5000 and commission rate of 0.4% will be $2020 i.e. getCommisionRate() * getGrossSales() + baseSalary
+Earnings of Base plus Commission based employee:  $2020 
+ 
+(d) (10 Points) Write a client program (i.e., class Client) to accomplish the following:
+•	Declare a Employee object (with employee1 to be the name of reference variable) by calling the default constructor, and then set the instance variables by calling the appropriate set methods for person with first name as Karan and last name as Sharma, SSN as 123456789
+•	Declare a CommisionBasedEmployee object (with employee2 to be the name of reference variable) by calling the constructor for person with first name as John and last name as Smith,  SSN as 123456790, set commission rate to be 1.0 and gross sales as 1000
+•	Print the employee1 object.
+•	Print the employee2 object.
+•	Alter employee2's gross sale by calling setGrossSales(double) method by passing 2000 in argument.
+•	Print the employee2 object.
+•	Using the copy constructor, create a Employee object (with employee3 to be the name of reference variable) by passing the reference variable employee1 as argument.
+•	Using equals() method, check if employee1 is same employee3 and print " employee1 is same as employee3 " if both employees are the same, otherwise print " employee1 is not same as employee3"
+•	Using equals() method, check if employee1 is same employee2 and print " employee1 is same as employee2" if both employees are the same, otherwise print " employee1 is not same as employee2"
+•	Set employee3's SSN to 123456788.
+•	Declare a BasePlusCommissionEmployee object (with basePlusCommisionEmployee1 to be the name of reference variable) by calling arguments constructor for Harry Potter with SSN as 123456737, commission rate as 0.5 percent, base salary as $1500, gross sales as $1800 and base salary of $2050.
+•	Declare a BasePlusCommissionEmployee object (with basePlusCommisionEmployee2 to be the name of reference variable) by calling the default constructor. By calling the set methods, set the instance variables to Sherlock Holmes with SSN as 123456721, commission rate as 0.3 percent, base salary as $1800, gross sales as $1800 and base salary of $1200.
+•	Print the basePlusCommisionEmployee1 object.
+•	Print the basePlusCommisionEmployee2 object.
+•	Create an array of five Employee objects with elements to be the two employee(i.e. employee1 and employee3), one commission based(i.e. employee2), two base plus commission based employee references (i.e., basePlusCommisionEmployee1, basePlusCommisionEmployee2).
+•	Using a for loop, print all employee objects in the array.
+Submission instructions:
+Please submit only the source code of java classes (Employee.java, CommissionEmployee.java, BasePlusCommissionEmployee.java, Client.java) all of them in the same answer textbox by cut/paste one after another, or by directly coding in the textbox.
+

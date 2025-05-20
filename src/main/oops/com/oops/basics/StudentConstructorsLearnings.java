@@ -35,6 +35,9 @@ public class StudentConstructorsLearnings {
 		this.name = "Hardcoded";
 	}
 
+	// What is this keyword?
+	// super keyword we will lean later
+
 	// Parameterized constructor
 	public StudentConstructorsLearnings(String name) {
 		super();
@@ -48,23 +51,23 @@ public class StudentConstructorsLearnings {
 		this.id = id;
 	}
 
-	void display() {
+	public void display() {
 		System.out.println("Name: " + name);
 		System.out.println("Id: " + id);
 	}
 
 	public static void main(String[] args) {
 		System.out.println("Default Cons");
-		StudentConstructorsLearnings studentConstructorsLearnings = new StudentConstructorsLearnings();
-		studentConstructorsLearnings.display();
+		StudentConstructorsLearnings stl = new StudentConstructorsLearnings();
+		stl.display();
 
 		System.out.println("Default Parameterized with 1: - ");
-		StudentConstructorsLearnings stParameterized1 = new StudentConstructorsLearnings("Maz");
-		stParameterized1.display();
+		StudentConstructorsLearnings stlP1 = new StudentConstructorsLearnings("Maz");
+		stlP1.display();
 
 		System.out.println("Default Parameterized with 2: - ");
-		StudentConstructorsLearnings stParameterized2 = new StudentConstructorsLearnings("Mazin", 123);
-		stParameterized2.display();
+		StudentConstructorsLearnings stlP2 = new StudentConstructorsLearnings("Mazin", 123);
+		stlP2.display();
 	}
 
 	/*

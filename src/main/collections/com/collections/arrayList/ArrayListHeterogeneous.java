@@ -8,8 +8,16 @@ import java.util.ArrayList;
  * thrown at runtime. That's why they are considered as "homegeneous". Size is
  * fixed in array.
  * 
+ * "homegeneous". Size is fixed in array.
+ * "homegeneous". Size is fixed in array.
+ * "homegeneous". Size is fixed in array.
+ * 
  * This is not true for ArrayLists (Lists in general). Due to type erasure at
  * runtime, it can practically hold any object.
+ * 
+ * Lists in general are heterogeneous. Size is dynamic in List.
+ * Lists in general are heterogeneous. Size is dynamic in List.
+ * Lists in general are heterogeneous. Size is dynamic in List.
  */
 public class ArrayListHeterogeneous {
 	public static void main(String[] args) {

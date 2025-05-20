@@ -37,4 +37,9 @@ public class StudentSettersAndGetters {
 		this.age = age;
 	}
 
+	@Override
+	public String toString() {
+		return "StudentSettersAndGetters [fullname=" + fullname + ", rollNum=" + rollNum + ", age=" + age + "]";
+	}
+
 }

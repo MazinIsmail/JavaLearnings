@@ -12,10 +12,14 @@ package com.pattern.facade;
  * unified and simplified interface to a set of interfaces in a subsystem,
  * therefore it hides the complexities of the subsystem from the client
  * 
+ * hides the complexities of the system and provides an interface to the client
+ * hides the complexities of the system and provides an interface to the client
+ * hides the complexities of the system and provides an interface to the client
+ * 
  * Examples in Java:-
  * 
  * javax.faces.context.FacesContext uses LifeCycle, ViewHandler,
- * NavigationHandler classes under the hood, but most clients aren’t aware of
+ * NavigationHandler classes under the hood, but most clients arenï¿½t aware of
  * that.
  * 
  * javax.faces.context.ExternalContext uses ServletContext, HttpSession,

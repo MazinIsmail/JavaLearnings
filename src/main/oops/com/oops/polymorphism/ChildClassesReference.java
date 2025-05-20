@@ -1,4 +1,4 @@
-package com.oops.basics;
+package com.oops.polymorphism;
 
 /**
  * A child class cannot be used as a reference to an object of super class.

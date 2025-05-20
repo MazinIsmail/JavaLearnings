@@ -17,5 +17,6 @@ class Speed {
 }
 
 class Van extends Vehicle {
+	private int age;
 	private Speed sp;
 }

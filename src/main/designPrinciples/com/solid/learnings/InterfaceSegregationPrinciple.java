@@ -12,6 +12,12 @@ package com.solid.learnings;
  * For example, a single logging interface for writing and reading logs is
  * useful for a database but not for a console. Reading logs make no sense for a
  * console logger.
+ * 
+ * 
+ * Clients should not be forced to implement unnecessary methods which they will not use.
+ * Clients should not be forced to implement unnecessary methods which they will not use.
+ * Clients should not be forced to implement unnecessary methods which they will not use.
+ * 
  */
 public class InterfaceSegregationPrinciple {
 

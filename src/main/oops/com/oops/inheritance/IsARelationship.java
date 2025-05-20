@@ -1,6 +1,7 @@
 package com.oops.inheritance;
 
 public class IsARelationship {
+
 	public static void main(String args[]) {
 		Animal an = new Animal();
 		Mammal m = new Mammal();
@@ -11,6 +12,7 @@ public class IsARelationship {
 		System.out.println("Mammal instanceof Animal? " + (m instanceof Animal));
 		System.out.println("Dog instanceof Mammal? " + (d instanceof Mammal));
 		System.out.println("Dog instanceof Animal? " + (d instanceof Animal));
+		// Every class is by default a subclass of Object class
 		System.out.println("Dog instanceof Object? " + (d instanceof Object));
 		System.out.println("Mammal instanceof Dog? " + (m instanceof Dog));
 
@@ -28,6 +30,14 @@ public class IsARelationship {
 		// When type of the object is determined at run-time, it is known as dynamic
 		// binding.
 		Animal a = new Dog();
+		Mammal mam = new Dog();
+
+		a = new Reptile();
+		// Reptile rep = new Mammal();
+		// Dog d1 = new Animal();
+		Dog d2 = new Dog();
+		d2 = new Dog();
+		// d2 = new Mammal();
 	}
 
 }

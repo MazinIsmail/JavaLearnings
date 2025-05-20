@@ -16,6 +16,13 @@ import java.util.TreeSet;
  * does not allow to insert Heterogeneous objects. It will throw
  * classCastException at Runtime
  * 
+ * Elements will be sorted
+ * Elements will be sorted
+ * Elements will be sorted
+ * 
+ * Red-Black Tree
+ * Red-Black Tree
+ * Red-Black Tree
  */
 public class TreesetMain {
 

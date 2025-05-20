@@ -1,6 +1,9 @@
+PPT: -
+Example: the "+" usage for adding and concatenating.
 ParentA
 ChildBextendsA
 ChildCextendsA
+ShapeService - One more good example.
 
 CompileTimeMethodOverloading
 CompileTimeReturnTypeAmbiguity
@@ -11,3 +14,4 @@ CovariantReturnType
 
 RuntimePolymorphismDataMemberChild
 RuntimePolymorphismMethodChild
+ChildClassesReference

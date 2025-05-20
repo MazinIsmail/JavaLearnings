@@ -2,6 +2,13 @@ package com.staticModifier.learnings;
 
 public class StaticVariable {
 
+	private static double objectCount = 0;
+
+	public StaticVariable() {
+		super();
+		objectCount++;
+	}
+
 	// static variable
 	private static double demo = 140;
 

@@ -6,6 +6,17 @@ import java.util.Set;
 
 public class DuplicateWords {
 	private static void duplicateWords(String inputString) {
+		/*
+		 * Map<String, Integer> wordCount = new HashMap<>(); 
+		 * for (String word : words) { * } 
+		 * wordCount.containsKey(word.toLowerCase()) 
+		 * wordCount.put(word.toLowerCase(), wordCount.get(word.toLowerCase()) + 1);
+		 *
+		 * Set<String> wordsInString = wordCount.keySet();
+		 * for (Map.Entry<String, Integer> wordEntrySet : wordCount.entrySet()) {}
+		 */
+		
+		
 		String[] words = inputString.split(" ");
 		Map<String, Integer> wordCount = new HashMap<>();
 		for (String word : words) {

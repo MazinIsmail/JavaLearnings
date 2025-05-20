@@ -15,6 +15,14 @@ public class EmployeeService {
 		employee.setAddress(addressEmployee);
 		System.out.println("Employee: " + employee);
 
+		Employee employee2 = new Employee();
+		employee2.setAge(29);
+		employee2.setName("Rasba");
+		employee2.setSalary(120000000);
+		employee2.setDepartment("Law");
+		employee2.setAddress(null);
+		System.out.println("Employee 2: " + employee2);
+
 		Student student = new Student();
 		student.setName("Nizam");
 		student.setRollNumber(123345);

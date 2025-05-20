@@ -9,6 +9,19 @@ public class Employee {
 	// One-to-one mapping
 	private Address address;
 
+	public Employee() {
+		super();
+	}
+
+	public Employee(String name, int age, String department, double salary, Address address) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.department = department;
+		this.salary = salary;
+		this.address = address;
+	}
+
 	public String getName() {
 		return name;
 	}

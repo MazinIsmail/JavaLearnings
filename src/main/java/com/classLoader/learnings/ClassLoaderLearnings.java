@@ -8,7 +8,7 @@ package com.classLoader.learnings;
  * time system does not need to know about files and file systems because of
  * classloaders.
  * 
- * Java classes aren’t loaded into memory all at once, but when required by an
+ * Java classes arent loaded into memory all at once, but when required by an
  * application. At this point, the Java ClassLoader is called by the JRE and
  * these ClassLoaders load classes into memory dynamically.
  * 
@@ -19,12 +19,12 @@ package com.classLoader.learnings;
  * these classes are not found then it returns a NoClassDefFoundError or
  * ClassNotFoundException.
  * 
- * A Java Classloader is of three types:_
+ * A Java Classloader is of three types: -
  * 
  * 1. BootStrap ClassLoader: A Bootstrap Classloader is a Machine code which
  * kickstarts the operation when the JVM calls it. It is not a java class. Its
  * job is to load the first pure Java ClassLoader. Bootstrap ClassLoader loads
- * classes from the location rt.jar. Bootstrap ClassLoader doesn’t have any
+ * classes from the location rt.jar. Bootstrap ClassLoader doesnï¿½t have any
  * parent ClassLoaders. It is also called as the Primodial ClassLoader.
  * 
  * 2. Extension ClassLoader: The Extension ClassLoader is a child of Bootstrap

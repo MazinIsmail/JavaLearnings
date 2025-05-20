@@ -20,6 +20,11 @@ package com.oops.abstractlearnings;
  * 
  * Shape is the abstract class, and its implementation is provided by the
  * Rectangle and Circle classes.
+ * 
+ * cannot be instantiated
+ * cannot be instantiated
+ * cannot be instantiated
+ * 
  */
 public abstract class AbstractionLearnings {
 

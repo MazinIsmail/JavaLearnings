@@ -16,6 +16,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * they are called fail-safe iterators. Iterator on CopyOnWriteArrayList,
  * ConcurrentHashMap classes are examples of fail-safe Iterator.
  * 
+ * don't throw any exceptions if a collection is structurally modified. they operate on the clone
+ * don't throw any exceptions if a collection is structurally modified. they operate on the clone
+ * don't throw any exceptions if a collection is structurally modified. they operate on the clone
+ * 
  * Any structural modification done to the iterator affects the copied
  * collection, not original collection. So, original collection remains
  * structurally unchanged.

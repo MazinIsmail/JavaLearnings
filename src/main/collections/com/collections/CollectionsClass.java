@@ -15,6 +15,14 @@ import java.util.List;
  * 
  * Java collection class is used exclusively with static methods that operate on
  * or return collections.
+ * 
+ * 
+ * Collections Class is a utility class that consists of static methods for 
+ * manipulating collections (like sorting and searching).
+ * Collections Class is a utility class that consists of static methods for 
+ * manipulating collections (like sorting and searching).
+ * Collections Class is a utility class that consists of static methods for 
+ * manipulating collections (like sorting and searching).
  */
 public class CollectionsClass {
 

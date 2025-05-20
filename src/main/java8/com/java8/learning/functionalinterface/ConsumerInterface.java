@@ -9,6 +9,10 @@ import java.util.function.Consumer;
  * function that consumes only one value without returning any value. A Java
  * Consumer implementation could be printing out a value, or writing it to a
  * file, or over the network etc.
+ * 
+ * consumes only one value without returning any value
+ * consumes only one value without returning any value
+ * consumes only one value without returning any value
  */
 public class ConsumerInterface {
 	public static void main(String[] args) {

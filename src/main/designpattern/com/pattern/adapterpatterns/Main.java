@@ -5,6 +5,11 @@ package com.pattern.adapterpatterns;
  * unrelated/uncommon interfaces to work together. In other words, the adapter
  * pattern makes two incompatible interfaces compatible without changing their
  * existing code.
+ * 
+ * 
+ * two incompatible interfaces compatible without changing their existing code
+ * two incompatible interfaces compatible without changing their existing code
+ * two incompatible interfaces compatible without changing their existing code
  */
 public class Main {
 

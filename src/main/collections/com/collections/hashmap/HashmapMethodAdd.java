@@ -7,7 +7,7 @@ public class HashmapMethodAdd {
 
 	public static void main(String[] args) {
 
-		HashMap<Integer, String> hm = new HashMap<Integer, String>();
+		Map<Integer, String> hm = new HashMap<Integer, String>();
 		System.out.println("Initial list of elements: " + hm);
 		// put() : to add methods to hashMap.
 		hm.put(100, "Amit");

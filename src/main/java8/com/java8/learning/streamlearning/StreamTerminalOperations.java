@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 /**
  * Terminal Operations
  * 
- * The terminal operations of the Java Stream interface typicall return a single
+ * The terminal operations of the Java Stream interface typically return a single
  * value. Once the terminal operation is invoked on a Stream, the iteration of
  * the Stream and any of the chained streams will get started. Once the
  * iteration is done, the result of the terminal operation is returned.
