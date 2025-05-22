@@ -1,8 +1,6 @@
 package com.puzzle.string;
 
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
@@ -52,8 +50,9 @@ public class ValidParentheses {
 
 			// If the character is a closing parenthesis
 			if (charValue == ')' || charValue == '}' || charValue == ']') {
-				// If the stack is empty or the top of the stack does not match the current
-				// closing parenthesis, return false
+				// If the stack is empty or
+				// the top of the stack does not match the current closing parenthesis,
+				// return false
 				if (stack.isEmpty() || stack.peek() != mapPair.get(charValue)) {
 					return false;
 				}

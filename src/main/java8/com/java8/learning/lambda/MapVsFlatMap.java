@@ -25,6 +25,10 @@ public class MapVsFlatMap {
 		// One-to-one mapping occurs in map(). map() is used only for transformation.
 		// One-to-one mapping occurs in map(). map() is used only for transformation.
 
+		// map operation produces one output value for each input value
+		// map operation produces one output value for each input value
+		// map operation produces one output value for each input value
+
 		ArrayList<String> fruit = new ArrayList<>();
 		fruit.add("Apple");
 		fruit.add("mango");
@@ -48,6 +52,13 @@ public class MapVsFlatMap {
 		// transformation and mapping.
 		// One-to-many mapping occurs in flatMap(). flatMap() is used both for
 		// transformation and mapping.
+
+		// flatMap operation produces an arbitrary number (zero or more) values for each
+		// input value.
+		// flatMap operation produces an arbitrary number (zero or more) values for each
+		// input value.
+		// flatMap operation produces an arbitrary number (zero or more) values for each
+		// input value.
 
 		List<List<Integer>> number = new ArrayList<>();
 
