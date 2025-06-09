@@ -18,7 +18,10 @@
 	<classpathentry kind="src" path="src/main/puzzle"/>
 	<classpathentry kind="src" path="src/main/datastructuresAlgorithms"/>
 	<classpathentry kind="src" path="src/main/assignments"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+	<classpathentry kind="src" path="src/main/java17"/>
+	<classpathentry kind="src" path="src/main/java11"/>
+	<classpathentry kind="src" path="src/main/java21"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-21.0.2">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
