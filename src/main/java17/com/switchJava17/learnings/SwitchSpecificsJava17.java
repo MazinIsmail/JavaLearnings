@@ -9,12 +9,17 @@ public class SwitchSpecificsJava17 {
 		// redefining switch expressions with multiple labels
 		// This is a new feature in Java 17 that allows us to use multiple labels in a
 		// single case block, making the code more concise and readable.
-		redefiningSwitchExpressionsMultipleLabels();
+		redefiningSwitchExpressionsWithMultipleLabels();
 
 		// The yield statement is used to return a value from a switch expression.
 		redefiningSwitchExpressionsWithYield();
 	}
 
+	/*
+	 * In Java 17, we can use the yield statement to return a value from a switch
+	 * expression. This is a new feature that allows us to use switch expressions
+	 * more effectively and return values from them.
+	 */
 	private static void redefiningSwitchExpressionsWithYield() {
 		int value = 2;
 		String result = switch (value) {
@@ -44,7 +49,7 @@ public class SwitchSpecificsJava17 {
 	 * used in the case. The default behaviour of Switch Expressions is no
 	 * fall-through, so no break is needed.
 	 */
-	private static void redefiningSwitchExpressionsMultipleLabels() {
+	private static void redefiningSwitchExpressionsWithMultipleLabels() {
 		switch (1) {
 		case 1, 2, 3 -> System.out.println("One, Two or Three");
 		case 4, 5 -> System.out.println("Four or Five");

@@ -14,14 +14,15 @@ package com.javamemorymanagement.learning;
  * The heap itself is divided into a few parts, which facilitates the process of
  * garbage collection.
  * 
- * JVM Heap memory is physically divided into two parts – Young Generation and
+ * JVM Heap memory is physically divided into two parts ï¿½ Young Generation and
  * Old Generation.
+ * 
  * 
  * 1. Young Generation
  * 
  * The young generation is the place where all the new objects are created. When
  * the young generation is filled, garbage collection is performed. This garbage
- * collection is called Minor GC. Young Generation is divided into three parts –
+ * collection is called Minor GC. Young Generation is divided into three parts ï¿½
  * Eden Memory and two Survivor Memory spaces.
  * 
  * Most of the newly created objects are located in the Eden memory space.
@@ -33,20 +34,26 @@ package com.javamemorymanagement.learning;
  * space. So at a time, one of the survivor space is always empty.
  * 
  * Objects that are survived after many cycles of GC, are moved to the Old
- * generation memory space. Usually, it’s done by setting a threshold for the
+ * generation memory space. Usually, itï¿½s done by setting a threshold for the
  * age of the young generation objects before they become eligible to promote to
  * Old generation.
+ * 
  * 
  * 2. Old Generation
  * 
  * Old Generation memory contains the objects that are long-lived and survived
  * after many rounds of Minor GC. Usually, garbage collection is performed in
- * Old Generation memory when it’s full. Old Generation Garbage Collection is
+ * Old Generation memory when itï¿½s full. Old Generation Garbage Collection is
  * called Major GC and usually takes a longer time.
  * 
  * 
+ * 3. Permanent Generation (only in JVMs before Java 8): This part of the heap
+ * holds metadata such as classes and methods, which do not change frequently.
+ * With Java 8 and later, the introduction of Metaspace has replaced the
+ * Permanent Generation.
  * 
- * Minor GC is very fast and the application doesn’t get affected by this.
+ * 
+ * Minor GC is very fast and the application doesnt get affected by this.
  * However, Major GC takes a long time because it checks all the live objects.
  * Major GC should be minimized because it will make your application
  * unresponsive for the garbage collection duration.

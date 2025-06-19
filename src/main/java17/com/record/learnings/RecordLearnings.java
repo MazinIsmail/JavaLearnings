@@ -5,6 +5,7 @@ package com.record.learnings;
  * 
  * They are both immutable and final. The fields of the Record cannot be changed
  * after creation and the extension of the Records class is also not allowed.
+ * 
  */
 public class RecordLearnings {
 
@@ -13,6 +14,13 @@ public class RecordLearnings {
 
 	}
 
+	/*
+	 * Record classes are a special kind of class in Java that are used to model
+	 * immutable data. They provide a concise way to create classes that are
+	 * primarily used to hold data without the need for boilerplate code like
+	 * constructors, getters, equals(), hashCode(), and toString() methods.
+	 * 
+	 */
 	record DataUsingRecord(long a, long b) {
 	}
 
@@ -35,6 +43,21 @@ public class RecordLearnings {
 		}
 		// Implementation of equals() and hashCode(), which specify
 		// An implementation of toString() that returns a string
+	}
+
+	/*
+	 * The constructor can be extended with some field validation. Note that the
+	 * assignment of the parameters to the record fields occur at the end of the
+	 * constructor.
+	 */
+	record GrapeRecord(String color, int nbrOfPits) {
+		GrapeRecord {
+			System.out.println("Parameter color=" + color + ", Field color=" + this.color());
+			System.out.println("Parameter nbrOfPits=" + nbrOfPits + ", Field nbrOfPits=" + this.nbrOfPits());
+			if (color == null) {
+				throw new IllegalArgumentException("Color may not be null");
+			}
+		}
 	}
 
 }

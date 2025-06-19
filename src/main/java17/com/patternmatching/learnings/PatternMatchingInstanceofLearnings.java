@@ -4,7 +4,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Pattern Matching Learnings
+ * Pattern Matching Instanceof Learnings
+ * 
+ * Pattern matching is a feature that allows developers to match data structures
+ * against patterns and extract information from them in a more concise and
+ * readable way.
+ * 
+ * Pattern matching for instanceof is a feature introduced in Java 14 and
+ * permanently available since Java 16. It simplifies the code by allowing
+ * developers to test the type of an object and simultaneously cast it to that
+ * type, eliminating the need for explicit casting.
  * 
  */
 public class PatternMatchingInstanceofLearnings {

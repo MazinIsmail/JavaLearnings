@@ -3,7 +3,7 @@ package com.executorService.learnings;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ExecutorServiceLearnings {
+public class ExecutorsLearnings {
 	public static void main(String[] args) {
 
 		/**
