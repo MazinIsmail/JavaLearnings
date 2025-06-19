@@ -5,5 +5,5 @@ Sealed Classes - Sealed Class, Sealed Interface, Sealed Class with Subclasses
 Pattern matching - instanceof
 Compact Number Formatting
 Day Period Support
-Streams - toList(), Teeing Collector,
+Streams - toList(), Teeing Collector
 
